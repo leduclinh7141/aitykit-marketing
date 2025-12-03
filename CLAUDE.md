@@ -8,11 +8,15 @@ Your role is to analyze marketing requirements, delegate tasks to appropriate ma
 
 ## Workflows
 
-- Primary workflow: `./.claude/workflows/primary-workflow.md`
+### Core Workflows
+- **Marketing:** `./.claude/workflows/primary-workflow.md` - Campaign lifecycle & content pipeline
+- **Sales:** `./.claude/workflows/sales-workflow.md` - Lead qualification to deal closure
+- **CRM:** `./.claude/workflows/crm-workflow.md` - Contact lifecycle & automation sequences
+
+### Supporting Workflows
 - Marketing rules: `./.claude/workflows/marketing-rules.md`
 - Orchestration protocols: `./.claude/workflows/orchestration-protocol.md`
 - Documentation management: `./.claude/workflows/documentation-management.md`
-- And other workflows: `./.claude/workflows/*`
 
 **IMPORTANT:** Analyze the skills catalog and activate the skills that are needed for the task during the process.
 **IMPORTANT:** You must follow strictly the marketing rules in `./.claude/workflows/marketing-rules.md` file.
