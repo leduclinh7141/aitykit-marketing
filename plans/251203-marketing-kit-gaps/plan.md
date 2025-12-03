@@ -47,17 +47,23 @@
 - [x] QA: Added skill activation headers
 - [x] QA: Complete agent delegation tables
 
-### Phase 2: Real-World Marketing Commands
-- [ ] `/daily` - Daily marketing tasks checklist
-- [ ] `/weekly` - Weekly marketing review
-- [ ] `/monthly` - Monthly performance review
-- [ ] `/welcome-sequence` - Create welcome email sequence
-- [ ] `/nurture-sequence` - Create lead nurturing sequence
-- [ ] `/re-engage` - Create re-engagement campaign
-- [ ] `/report:weekly` - Generate weekly report
-- [ ] `/report:monthly` - Generate monthly report
-- [ ] `/audit:full` - Full marketing audit
-- [ ] `/competitor:deep` - Deep competitor analysis
+### Phase 2: Real-World Marketing Commands ✅ COMPLETE + QA VERIFIED
+- [x] `/ops/daily` - Daily marketing tasks checklist
+- [x] `/ops/weekly` - Weekly marketing review
+- [x] `/ops/monthly` - Monthly performance review
+- [x] `/sequence/welcome` - Create welcome email sequence (7-day, 5 emails)
+- [x] `/sequence/nurture` - Create lead nurturing sequence (6-week funnel)
+- [x] `/sequence/re-engage` - Create re-engagement campaign (21-day win-back)
+- [x] `/report/weekly` - Client-ready weekly report
+- [x] `/report/monthly` - Client-ready monthly report with ROI
+- [x] `/audit/full` - Comprehensive marketing audit (7 areas)
+- [x] `/competitor/deep` - Deep competitor analysis with battlecard
+- [x] QA: Added workflow references (sales-workflow.md, crm-workflow.md) to all commands
+- [x] QA: Added Agent Delegation tables to all commands (consistent with Phase 1)
+- [x] QA: Fixed nurture trigger (30-49 Cool → 50+ MQL progression)
+- [x] QA: Added warm lead handling to daily ops (50-69 with <1hr SLA)
+- [x] QA: Added SLA compliance tracking across all ops commands
+- [x] QA: Added GDPR compliance note to re-engage sequence
 
 ### Phase 3: Marketing Templates & Checklists
 - [ ] Daily social media checklist
