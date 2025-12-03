@@ -65,3 +65,10 @@ Use when optimizing content for search, conducting keyword research, or performi
 - `references/technical-seo.md` - Technical SEO requirements
 - `references/link-building.md` - Link acquisition strategies
 - `references/local-seo.md` - Local search optimization
+- `references/seo-audit-checklist.md` - Comprehensive SEO audit framework
+
+## Related Commands
+
+- `/checklist/seo-weekly` - Weekly SEO maintenance
+- `/audit/full` - Full marketing audit (includes SEO)
+- `/competitor/deep` - SEO competitor analysis

@@ -68,3 +68,9 @@ Use when working on any marketing task requiring foundational knowledge, underst
 - `references/conversion-principles.md` - Psychology of persuasion
 - `references/copywriting-frameworks.md` - Proven copy formulas
 - `references/marketing-metrics.md` - Key marketing KPIs
+- `references/competitor-analysis.md` - Competitive intelligence & battlecards
+
+## Related Commands
+
+- `/competitor/deep` - Full competitor analysis
+- `/audit/full` - Comprehensive marketing audit

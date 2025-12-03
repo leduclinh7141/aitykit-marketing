@@ -48,3 +48,15 @@ Preview: [Extends subject curiosity]
 - `references/deliverability.md` - Getting to inbox
 - `references/segmentation.md` - Audience segmentation
 - `references/automation.md` - Automation workflows
+- `references/lead-nurturing-workflows.md` - Lead nurturing sequences (Welcome, Nurture, Re-engage)
+
+## Workflow Integration
+
+- `crm-workflow.md` - Lead lifecycle stages
+- `sales-workflow.md` - Lead scoring thresholds (Hot 70-100, Warm 50-69, Cool 30-49)
+
+## Related Commands
+
+- `/sequence/welcome` - 7-day welcome sequence
+- `/sequence/nurture` - 6-week lead nurture
+- `/sequence/re-engage` - 21-day win-back

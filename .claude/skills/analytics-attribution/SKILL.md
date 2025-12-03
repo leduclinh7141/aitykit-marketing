@@ -45,3 +45,15 @@ Use when setting up tracking, analyzing performance, or building attribution mod
 - `references/search-console.md` - SEO performance
 - `references/attribution-models.md` - Attribution deep dive
 - `references/dashboards.md` - Reporting best practices
+- `references/reporting-templates.md` - Client-ready report templates (Weekly, Monthly, Campaign)
+
+## Workflow Integration
+
+- `crm-workflow.md` - Lead stage definitions
+- `sales-workflow.md` - Lead scoring for ROI calculation
+
+## Related Commands
+
+- `/report/weekly` - Weekly performance report
+- `/report/monthly` - Monthly strategic report
+- `/checklist/analytics-monthly` - Monthly analytics review
