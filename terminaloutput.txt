@@ -1,0 +1,998 @@
+(.venv) darragh@UltimatePowerV6:/mnt/c/Projects/Lighthouse/.claude/skills/ai-multimodal/scripts$ pip install -r requirements.txt
+Requirement already satisfied: google-genai>=0.1.0 in ./.venv/lib/python3.12/site-packages (from -r requirements.txt (line 5)) (1.50.1)
+Requirement already satisfied: pypdf>=4.0.0 in ./.venv/lib/python3.12/site-packages (from -r requirements.txt (line 8)) (6.2.0)
+Requirement already satisfied: python-docx>=1.0.0 in ./.venv/lib/python3.12/site-packages (from -r requirements.txt (line 11)) (1.2.0)
+Requirement already satisfied: docx2pdf>=0.1.8 in ./.venv/lib/python3.12/site-packages (from -r requirements.txt (line 12)) (0.1.8)
+Requirement already satisfied: markdown>=3.5.0 in ./.venv/lib/python3.12/site-packages (from -r requirements.txt (line 15)) (3.10)
+Requirement already satisfied: Pillow>=10.0.0 in ./.venv/lib/python3.12/site-packages (from -r requirements.txt (line 18)) (12.0.0)
+Requirement already satisfied: python-dotenv>=1.0.0 in ./.venv/lib/python3.12/site-packages (from -r requirements.txt (line 21)) (1.2.1)
+Requirement already satisfied: pytest>=8.0.0 in ./.venv/lib/python3.12/site-packages (from -r requirements.txt (line 24)) (9.0.1)
+Requirement already satisfied: pytest-cov>=4.1.0 in ./.venv/lib/python3.12/site-packages (from -r requirements.txt (line 25)) (7.0.0)
+Requirement already satisfied: pytest-mock>=3.12.0 in ./.venv/lib/python3.12/site-packages (from -r requirements.txt (line 26)) (3.15.1)
+Requirement already satisfied: anyio<5.0.0,>=4.8.0 in ./.venv/lib/python3.12/site-packages (from google-genai>=0.1.0->-r requirements.txt (line 5)) (4.11.0)
+Requirement already satisfied: google-auth<3.0.0,>=2.14.1 in ./.venv/lib/python3.12/site-packages (from google-genai>=0.1.0->-r requirements.txt (line 5)) (2.43.0)
+Requirement already satisfied: httpx<1.0.0,>=0.28.1 in ./.venv/lib/python3.12/site-packages (from google-genai>=0.1.0->-r requirements.txt (line 5)) (0.28.1)
+Requirement already satisfied: pydantic<3.0.0,>=2.9.0 in ./.venv/lib/python3.12/site-packages (from google-genai>=0.1.0->-r requirements.txt (line 5)) (2.12.4)
+Requirement already satisfied: requests<3.0.0,>=2.28.1 in ./.venv/lib/python3.12/site-packages (from google-genai>=0.1.0->-r requirements.txt (line 5)) (2.32.5)
+Requirement already satisfied: tenacity<9.2.0,>=8.2.3 in ./.venv/lib/python3.12/site-packages (from google-genai>=0.1.0->-r requirements.txt (line 5)) (9.1.2)
+Requirement already satisfied: websockets<15.1.0,>=13.0.0 in ./.venv/lib/python3.12/site-packages (from google-genai>=0.1.0->-r requirements.txt (line 5)) (15.0.1)
+Requirement already satisfied: typing-extensions<5.0.0,>=4.11.0 in ./.venv/lib/python3.12/site-packages (from google-genai>=0.1.0->-r requirements.txt (line 5)) (4.15.0)
+Requirement already satisfied: lxml>=3.1.0 in ./.venv/lib/python3.12/site-packages (from python-docx>=1.0.0->-r requirements.txt (line 11)) (6.0.2)
+Requirement already satisfied: tqdm>=4.41.0 in ./.venv/lib/python3.12/site-packages (from docx2pdf>=0.1.8->-r requirements.txt (line 12)) (4.67.1)
+Requirement already satisfied: iniconfig>=1.0.1 in ./.venv/lib/python3.12/site-packages (from pytest>=8.0.0->-r requirements.txt (line 24)) (2.3.0)
+Requirement already satisfied: packaging>=22 in ./.venv/lib/python3.12/site-packages (from pytest>=8.0.0->-r requirements.txt (line 24)) (25.0)
+Requirement already satisfied: pluggy<2,>=1.5 in ./.venv/lib/python3.12/site-packages (from pytest>=8.0.0->-r requirements.txt (line 24)) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in ./.venv/lib/python3.12/site-packages (from pytest>=8.0.0->-r requirements.txt (line 24)) (2.19.2)
+Requirement already satisfied: coverage>=7.10.6 in ./.venv/lib/python3.12/site-packages (from coverage[toml]>=7.10.6->pytest-cov>=4.1.0->-r requirements.txt (line 25)) (7.11.3)
+Requirement already satisfied: idna>=2.8 in ./.venv/lib/python3.12/site-packages (from anyio<5.0.0,>=4.8.0->google-genai>=0.1.0->-r requirements.txt (line 5)) (3.11)
+Requirement already satisfied: sniffio>=1.1 in ./.venv/lib/python3.12/site-packages (from anyio<5.0.0,>=4.8.0->google-genai>=0.1.0->-r requirements.txt (line 5)) (1.3.1)
+Requirement already satisfied: cachetools<7.0,>=2.0.0 in ./.venv/lib/python3.12/site-packages (from google-auth<3.0.0,>=2.14.1->google-genai>=0.1.0->-r requirements.txt (line 5)) (6.2.2)
+Requirement already satisfied: pyasn1-modules>=0.2.1 in ./.venv/lib/python3.12/site-packages (from google-auth<3.0.0,>=2.14.1->google-genai>=0.1.0->-r requirements.txt (line 5)) (0.4.2)
+Requirement already satisfied: rsa<5,>=3.1.4 in ./.venv/lib/python3.12/site-packages (from google-auth<3.0.0,>=2.14.1->google-genai>=0.1.0->-r requirements.txt (line 5)) (4.9.1)
+Requirement already satisfied: certifi in ./.venv/lib/python3.12/site-packages (from httpx<1.0.0,>=0.28.1->google-genai>=0.1.0->-r requirements.txt (line 5)) (2025.11.12)
+Requirement already satisfied: httpcore==1.* in ./.venv/lib/python3.12/site-packages (from httpx<1.0.0,>=0.28.1->google-genai>=0.1.0->-r requirements.txt (line 5)) (1.0.9)
+Requirement already satisfied: h11>=0.16 in ./.venv/lib/python3.12/site-packages (from httpcore==1.*->httpx<1.0.0,>=0.28.1->google-genai>=0.1.0->-r requirements.txt (line 5)) (0.16.0)
+Requirement already satisfied: annotated-types>=0.6.0 in ./.venv/lib/python3.12/site-packages (from pydantic<3.0.0,>=2.9.0->google-genai>=0.1.0->-r requirements.txt (line 5)) (0.7.0)
+Requirement already satisfied: pydantic-core==2.41.5 in ./.venv/lib/python3.12/site-packages (from pydantic<3.0.0,>=2.9.0->google-genai>=0.1.0->-r requirements.txt (line 5)) (2.41.5)
+Requirement already satisfied: typing-inspection>=0.4.2 in ./.venv/lib/python3.12/site-packages (from pydantic<3.0.0,>=2.9.0->google-genai>=0.1.0->-r requirements.txt (line 5)) (0.4.2)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.12/site-packages (from requests<3.0.0,>=2.28.1->google-genai>=0.1.0->-r requirements.txt (line 5)) (3.4.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./.venv/lib/python3.12/site-packages (from requests<3.0.0,>=2.28.1->google-genai>=0.1.0->-r requirements.txt (line 5)) (2.5.0)
+Requirement already satisfied: pyasn1<0.7.0,>=0.6.1 in ./.venv/lib/python3.12/site-packages (from pyasn1-modules>=0.2.1->google-auth<3.0.0,>=2.14.1->google-genai>=0.1.0->-r requirements.txt (line 5)) (0.6.1)
+(.venv) darragh@UltimatePowerV6:/mnt/c/Projects/Lighthouse/.claude/skills/ai-multimodal/scripts$ python -m pytest tests/ -v --cov=. --cov-report=term-missing
+============================================================================================== test session starts ==============================================================================================
+platform linux -- Python 3.12.3, pytest-9.0.1, pluggy-1.6.0 -- /mnt/c/Projects/Lighthouse/.claude/skills/ai-multimodal/scripts/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /mnt/c/Projects/Lighthouse/.claude/skills/ai-multimodal/scripts
+plugins: anyio-4.11.0, cov-7.0.0, mock-3.15.1
+collected 61 items
+
+tests/test_document_converter.py::TestEnvLoading::test_load_env_files_success FAILED                                                                                                                      [  1%]
+tests/test_document_converter.py::TestEnvLoading::test_load_env_files_no_dotenv FAILED                                                                                                                    [  3%]
+tests/test_document_converter.py::TestDependencyCheck::test_check_all_dependencies_available FAILED                                                                                                       [  4%]
+tests/test_document_converter.py::TestDependencyCheck::test_check_dependencies_missing PASSED                                                                                                             [  6%]
+tests/test_document_converter.py::TestPDFPageExtraction::test_extract_single_page FAILED                                                                                                                  [  8%]
+tests/test_document_converter.py::TestPDFPageExtraction::test_extract_page_range FAILED                                                                                                                   [  9%]
+tests/test_document_converter.py::TestPDFPageExtraction::test_extract_pages_no_pypdf FAILED                                                                                                               [ 11%]
+tests/test_document_converter.py::TestPDFOptimization::test_optimize_pdf_success FAILED                                                                                                                   [ 13%]
+tests/test_document_converter.py::TestPDFOptimization::test_optimize_pdf_no_pypdf FAILED                                                                                                                  [ 14%]
+tests/test_document_converter.py::TestImageExtraction::test_extract_images_success FAILED                                                                                                                 [ 16%]
+tests/test_document_converter.py::TestImageExtraction::test_extract_images_no_dependencies FAILED                                                                                                         [ 18%]
+tests/test_document_converter.py::TestMarkdownConversion::test_convert_markdown_success FAILED                                                                                                            [ 19%]
+tests/test_document_converter.py::TestMarkdownConversion::test_convert_markdown_no_wkhtmltopdf FAILED                                                                                                     [ 21%]
+tests/test_document_converter.py::TestMarkdownConversion::test_convert_markdown_no_markdown_lib FAILED                                                                                                    [ 22%]
+tests/test_document_converter.py::TestHTMLConversion::test_convert_html_success FAILED                                                                                                                    [ 24%]
+tests/test_document_converter.py::TestHTMLConversion::test_convert_html_no_wkhtmltopdf FAILED                                                                                                             [ 26%]
+tests/test_document_converter.py::TestIntegration::test_file_not_found PASSED                                                                                                                             [ 27%]
+tests/test_document_converter.py::TestIntegration::test_check_dependencies_integration FAILED                                                                                                             [ 29%]
+tests/test_gemini_batch_process.py::TestAPIKeyFinder::test_find_api_key_from_env PASSED                                                                                                                   [ 31%]
+tests/test_gemini_batch_process.py::TestAPIKeyFinder::test_find_api_key_not_found PASSED                                                                                                                  [ 32%]
+tests/test_gemini_batch_process.py::TestMimeTypeDetection::test_audio_mime_types PASSED                                                                                                                   [ 34%]
+tests/test_gemini_batch_process.py::TestMimeTypeDetection::test_image_mime_types PASSED                                                                                                                   [ 36%]
+tests/test_gemini_batch_process.py::TestMimeTypeDetection::test_video_mime_types PASSED                                                                                                                   [ 37%]
+tests/test_gemini_batch_process.py::TestMimeTypeDetection::test_document_mime_types PASSED                                                                                                                [ 39%]
+tests/test_gemini_batch_process.py::TestMimeTypeDetection::test_unknown_mime_type PASSED                                                                                                                  [ 40%]
+tests/test_gemini_batch_process.py::TestMimeTypeDetection::test_case_insensitive PASSED                                                                                                                   [ 42%]
+tests/test_gemini_batch_process.py::TestFileUpload::test_upload_file_success PASSED                                                                                                                       [ 44%]
+tests/test_gemini_batch_process.py::TestFileUpload::test_upload_video_with_processing PASSED                                                                                                              [ 45%]
+tests/test_gemini_batch_process.py::TestFileUpload::test_upload_file_failed PASSED                                                                                                                        [ 47%]
+tests/test_gemini_batch_process.py::TestProcessFile::test_process_small_file_inline PASSED                                                                                                                [ 49%]
+tests/test_gemini_batch_process.py::TestProcessFile::test_process_large_file_api PASSED                                                                                                                   [ 50%]
+tests/test_gemini_batch_process.py::TestProcessFile::test_process_file_error_handling PASSED                                                                                                              [ 52%]
+tests/test_gemini_batch_process.py::TestProcessFile::test_image_generation_with_aspect_ratio PASSED                                                                                                       [ 54%]
+tests/test_gemini_batch_process.py::TestBatchProcessing::test_batch_process_success PASSED                                                                                                                [ 55%]
+tests/test_gemini_batch_process.py::TestBatchProcessing::test_batch_process_no_api_key PASSED                                                                                                             [ 57%]
+tests/test_gemini_batch_process.py::TestBatchProcessing::test_batch_process_dry_run PASSED                                                                                                                [ 59%]
+tests/test_gemini_batch_process.py::TestResultsSaving::test_save_results_json PASSED                                                                                                                      [ 60%]
+tests/test_gemini_batch_process.py::TestResultsSaving::test_save_results_csv PASSED                                                                                                                       [ 62%]
+tests/test_gemini_batch_process.py::TestResultsSaving::test_save_results_markdown PASSED                                                                                                                  [ 63%]
+tests/test_media_optimizer.py::TestEnvLoading::test_load_env_files_success PASSED                                                                                                                         [ 65%]
+tests/test_media_optimizer.py::TestEnvLoading::test_load_env_files_no_dotenv PASSED                                                                                                                       [ 67%]
+tests/test_media_optimizer.py::TestFFmpegCheck::test_ffmpeg_installed PASSED                                                                                                                              [ 68%]
+tests/test_media_optimizer.py::TestFFmpegCheck::test_ffmpeg_not_installed PASSED                                                                                                                          [ 70%]
+tests/test_media_optimizer.py::TestFFmpegCheck::test_ffmpeg_error PASSED                                                                                                                                  [ 72%]
+tests/test_media_optimizer.py::TestMediaInfo::test_get_video_info PASSED                                                                                                                                  [ 73%]
+tests/test_media_optimizer.py::TestMediaInfo::test_get_media_info_no_ffmpeg PASSED                                                                                                                        [ 75%]
+tests/test_media_optimizer.py::TestMediaInfo::test_get_media_info_error PASSED                                                                                                                            [ 77%]
+tests/test_media_optimizer.py::TestVideoOptimization::test_optimize_video_success PASSED                                                                                                                  [ 78%]
+tests/test_media_optimizer.py::TestVideoOptimization::test_optimize_video_no_ffmpeg PASSED                                                                                                                [ 80%]
+tests/test_media_optimizer.py::TestVideoOptimization::test_optimize_video_no_info PASSED                                                                                                                  [ 81%]
+tests/test_media_optimizer.py::TestVideoOptimization::test_optimize_video_with_target_size PASSED                                                                                                         [ 83%]
+tests/test_media_optimizer.py::TestVideoOptimization::test_optimize_video_with_resolution PASSED                                                                                                          [ 85%]
+tests/test_media_optimizer.py::TestAudioOptimization::test_optimize_audio_success PASSED                                                                                                                  [ 86%]
+tests/test_media_optimizer.py::TestAudioOptimization::test_optimize_audio_no_ffmpeg PASSED                                                                                                                [ 88%]
+tests/test_media_optimizer.py::TestImageOptimization::test_optimize_image_success PASSED                                                                                                                  [ 90%]
+tests/test_media_optimizer.py::TestImageOptimization::test_optimize_image_resize PASSED                                                                                                                   [ 91%]
+tests/test_media_optimizer.py::TestImageOptimization::test_optimize_image_rgba_to_jpg PASSED                                                                                                              [ 93%]
+tests/test_media_optimizer.py::TestImageOptimization::test_optimize_image_no_pillow PASSED                                                                                                                [ 95%]
+tests/test_media_optimizer.py::TestVideoSplitting::test_split_video_success PASSED                                                                                                                        [ 96%]
+tests/test_media_optimizer.py::TestVideoSplitting::test_split_video_short_duration PASSED                                                                                                                 [ 98%]
+tests/test_media_optimizer.py::TestVideoSplitting::test_split_video_no_ffmpeg PASSED                                                                                                                      [100%]
+
+=================================================================================================== FAILURES ====================================================================================================
+__________________________________________________________________________________ TestEnvLoading.test_load_env_files_success ___________________________________________________________________________________
+
+self = <test_document_converter.TestEnvLoading object at 0x7aac302e01a0>, mock_exists = <MagicMock name='exists' id='134879959330080'>, mock_load_dotenv = <MagicMock name='load_dotenv' id='134879959597376'>
+
+    @patch('document_converter.load_dotenv')
+    @patch('pathlib.Path.exists')
+    def test_load_env_files_success(self, mock_exists, mock_load_dotenv):
+        """Test successful .env file loading."""
+        mock_exists.return_value = True
+>       dc.load_env_files()
+        ^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'document_converter' has no attribute 'load_env_files'
+
+tests/test_document_converter.py:23: AttributeError
+_________________________________________________________________________________ TestEnvLoading.test_load_env_files_no_dotenv __________________________________________________________________________________
+
+self = <test_document_converter.TestEnvLoading object at 0x7aac302e03b0>
+
+    @patch('document_converter.load_dotenv', None)
+    def test_load_env_files_no_dotenv(self):
+        """Test when dotenv is not available."""
+        # Should not raise an error
+>       dc.load_env_files()
+        ^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'document_converter' has no attribute 'load_env_files'
+
+tests/test_document_converter.py:31: AttributeError
+___________________________________________________________________________ TestDependencyCheck.test_check_all_dependencies_available ___________________________________________________________________________
+
+self = <test_document_converter.TestDependencyCheck object at 0x7aac302e0620>, mock_import = <MagicMock name='__import__' id='134879959505408'>
+
+    @patch('builtins.__import__')
+    def test_check_all_dependencies_available(self, mock_import):
+        """Test when all dependencies are available."""
+        mock_import.return_value = Mock()
+
+>       deps = dc.check_dependencies()
+               ^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'document_converter' has no attribute 'check_dependencies'
+
+tests/test_document_converter.py:42: AttributeError
+________________________________________________________________________________ TestPDFPageExtraction.test_extract_single_page _________________________________________________________________________________
+
+self = <test_document_converter.TestPDFPageExtraction object at 0x7aac302e0aa0>, mock_open = <MagicMock name='open' id='134879959601600'>, mock_writer_class = <MagicMock name='PdfWriter' id='134879970246384'>
+mock_reader_class = <MagicMock name='PdfReader' id='134879956674768'>
+
+    @patch('pypdf.PdfReader')
+    @patch('pypdf.PdfWriter')
+    @patch('builtins.open', create=True)
+    def test_extract_single_page(self, mock_open, mock_writer_class, mock_reader_class):
+        """Test extracting a single page."""
+        # Mock reader
+        mock_reader = Mock()
+        mock_page = Mock()
+        mock_reader.pages = [Mock(), mock_page, Mock()]
+        mock_reader_class.return_value = mock_reader
+
+        # Mock writer
+        mock_writer = Mock()
+        mock_writer.pages = [mock_page]
+        mock_writer_class.return_value = mock_writer
+
+>       result = dc.extract_pdf_pages(
+                 ^^^^^^^^^^^^^^^^^^^^
+            'input.pdf',
+            'output.pdf',
+            page_range='2',
+            verbose=False
+        )
+E       AttributeError: module 'document_converter' has no attribute 'extract_pdf_pages'
+
+tests/test_document_converter.py:83: AttributeError
+_________________________________________________________________________________ TestPDFPageExtraction.test_extract_page_range _________________________________________________________________________________
+
+self = <test_document_converter.TestPDFPageExtraction object at 0x7aac302e0ce0>, mock_open = <MagicMock name='open' id='134879959510016'>, mock_writer_class = <MagicMock name='PdfWriter' id='134879961292704'>
+mock_reader_class = <MagicMock name='PdfReader' id='134879956879216'>
+
+    @patch('pypdf.PdfReader')
+    @patch('pypdf.PdfWriter')
+    @patch('builtins.open', create=True)
+    def test_extract_page_range(self, mock_open, mock_writer_class, mock_reader_class):
+        """Test extracting a range of pages."""
+        mock_reader = Mock()
+        mock_reader.pages = [Mock() for _ in range(10)]
+        mock_reader_class.return_value = mock_reader
+
+        mock_writer = Mock()
+        mock_writer.pages = []
+        mock_writer_class.return_value = mock_writer
+
+>       result = dc.extract_pdf_pages(
+                 ^^^^^^^^^^^^^^^^^^^^
+            'input.pdf',
+            'output.pdf',
+            page_range='2-5',
+            verbose=False
+        )
+E       AttributeError: module 'document_converter' has no attribute 'extract_pdf_pages'
+
+tests/test_document_converter.py:106: AttributeError
+_______________________________________________________________________________ TestPDFPageExtraction.test_extract_pages_no_pypdf _______________________________________________________________________________
+
+self = <test_document_converter.TestPDFPageExtraction object at 0x7aac302e0f50>
+
+    def test_extract_pages_no_pypdf(self):
+        """Test page extraction without pypdf."""
+        with patch.dict('sys.modules', {'pypdf': None}):
+>           result = dc.extract_pdf_pages('input.pdf', 'output.pdf', '1-10')
+                     ^^^^^^^^^^^^^^^^^^^^
+E           AttributeError: module 'document_converter' has no attribute 'extract_pdf_pages'
+
+tests/test_document_converter.py:119: AttributeError
+_________________________________________________________________________________ TestPDFOptimization.test_optimize_pdf_success _________________________________________________________________________________
+
+self = <test_document_converter.TestPDFOptimization object at 0x7aac302e11c0>, mock_stat = <MagicMock name='stat' id='134879956887568'>, mock_open = <MagicMock name='open' id='134879956891744'>
+mock_writer_class = <MagicMock name='PdfWriter' id='134879956961280'>, mock_reader_class = <MagicMock name='PdfReader' id='134879956965120'>
+
+    @patch('pypdf.PdfReader')
+    @patch('pypdf.PdfWriter')
+    @patch('builtins.open', create=True)
+    @patch('pathlib.Path.stat')
+    def test_optimize_pdf_success(self, mock_stat, mock_open, mock_writer_class, mock_reader_class):
+        """Test successful PDF optimization."""
+        # Mock reader
+        mock_reader = Mock()
+        mock_page = Mock()
+        mock_reader.pages = [mock_page, mock_page]
+        mock_reader_class.return_value = mock_reader
+
+        # Mock writer
+        mock_writer = Mock()
+        mock_writer.pages = [mock_page, mock_page]
+        mock_writer_class.return_value = mock_writer
+
+        # Mock file sizes
+        mock_stat.return_value.st_size = 1024 * 1024
+
+>       result = dc.optimize_pdf('input.pdf', 'output.pdf', verbose=False)
+                 ^^^^^^^^^^^^^^^
+E       AttributeError: module 'document_converter' has no attribute 'optimize_pdf'
+
+tests/test_document_converter.py:146: AttributeError
+________________________________________________________________________________ TestPDFOptimization.test_optimize_pdf_no_pypdf _________________________________________________________________________________
+
+self = <test_document_converter.TestPDFOptimization object at 0x7aac302e1430>
+
+    def test_optimize_pdf_no_pypdf(self):
+        """Test PDF optimization without pypdf."""
+        with patch.dict('sys.modules', {'pypdf': None}):
+>           result = dc.optimize_pdf('input.pdf', 'output.pdf')
+                     ^^^^^^^^^^^^^^^
+E           AttributeError: module 'document_converter' has no attribute 'optimize_pdf'
+
+tests/test_document_converter.py:154: AttributeError
+________________________________________________________________________________ TestImageExtraction.test_extract_images_success ________________________________________________________________________________
+
+self = <test_document_converter.TestImageExtraction object at 0x7aac302e1700>, mock_open = <MagicMock name='open' id='134879956976560'>, mock_mkdir = <MagicMock name='mkdir' id='134879956980256'>
+mock_image = <MagicMock name='Image' id='134879956984336'>, mock_reader_class = <MagicMock name='PdfReader' id='134879956988320'>
+
+    @patch('pypdf.PdfReader')
+    @patch('PIL.Image')
+    @patch('pathlib.Path.mkdir')
+    @patch('builtins.open', create=True)
+    def test_extract_images_success(self, mock_open, mock_mkdir, mock_image, mock_reader_class):
+        """Test successful image extraction."""
+        # Mock PDF reader
+        mock_reader = Mock()
+        mock_page = MagicMock()
+
+        # Mock XObject with image
+        mock_obj = MagicMock()
+        mock_obj.__getitem__.side_effect = lambda k: {
+            '/Subtype': '/Image',
+            '/Width': 100,
+            '/Height': 100,
+            '/Filter': '/DCTDecode'
+        }[k]
+        mock_obj.get_data.return_value = b'image_data'
+
+        mock_xobjects = MagicMock()
+        mock_xobjects.__iter__.return_value = ['img1']
+        mock_xobjects.__getitem__.return_value = mock_obj
+
+        mock_resources = MagicMock()
+        mock_resources.get_object.return_value = mock_xobjects
+        mock_page.__getitem__.side_effect = lambda k: {
+            '/Resources': {'/XObject': mock_resources}
+        }[k]
+
+        mock_reader.pages = [mock_page]
+        mock_reader_class.return_value = mock_reader
+
+>       result = dc.extract_images_from_pdf('input.pdf', './output', verbose=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'document_converter' has no attribute 'extract_images_from_pdf'
+
+tests/test_document_converter.py:194: AttributeError
+____________________________________________________________________________ TestImageExtraction.test_extract_images_no_dependencies ____________________________________________________________________________
+
+self = <test_document_converter.TestImageExtraction object at 0x7aac302e1970>
+
+    def test_extract_images_no_dependencies(self):
+        """Test image extraction without required dependencies."""
+        with patch.dict('sys.modules', {'pypdf': None}):
+>           result = dc.extract_images_from_pdf('input.pdf', './output')
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           AttributeError: module 'document_converter' has no attribute 'extract_images_from_pdf'
+
+tests/test_document_converter.py:201: AttributeError
+_____________________________________________________________________________ TestMarkdownConversion.test_convert_markdown_success ______________________________________________________________________________
+
+self = <test_document_converter.TestMarkdownConversion object at 0x7aac302e1b80>, mock_unlink = <MagicMock name='unlink' id='134879957099648'>, mock_run = <MagicMock name='run' id='134879957103872'>
+mock_open = <MagicMock name='open' id='134879955207328'>, mock_markdown = <MagicMock name='markdown' id='134879955434624'>
+
+    @patch('markdown.markdown')
+    @patch('builtins.open', create=True)
+    @patch('subprocess.run')
+    @patch('pathlib.Path.unlink')
+    def test_convert_markdown_success(self, mock_unlink, mock_run, mock_open, mock_markdown):
+        """Test successful Markdown to PDF conversion."""
+        mock_markdown.return_value = '<h1>Test</h1>'
+
+        # Mock file reading and writing
+        mock_file = MagicMock()
+        mock_file.__enter__.return_value.read.return_value = '# Test'
+        mock_open.return_value = mock_file
+
+>       result = dc.convert_markdown_to_pdf('input.md', 'output.pdf', verbose=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'document_converter' has no attribute 'convert_markdown_to_pdf'
+
+tests/test_document_converter.py:221: AttributeError
+__________________________________________________________________________ TestMarkdownConversion.test_convert_markdown_no_wkhtmltopdf __________________________________________________________________________
+
+self = <test_document_converter.TestMarkdownConversion object at 0x7aac302e1df0>, mock_run = <MagicMock name='run' id='134879955708784'>, mock_open = <MagicMock name='open' id='134879955713056'>
+mock_markdown = <MagicMock name='markdown' id='134879955880752'>
+
+    @patch('markdown.markdown')
+    @patch('builtins.open', create=True)
+    @patch('subprocess.run')
+    def test_convert_markdown_no_wkhtmltopdf(self, mock_run, mock_open, mock_markdown):
+        """Test Markdown conversion without wkhtmltopdf."""
+        mock_markdown.return_value = '<h1>Test</h1>'
+
+        mock_file = MagicMock()
+        mock_file.__enter__.return_value.read.return_value = '# Test'
+        mock_open.return_value = mock_file
+
+        mock_run.side_effect = FileNotFoundError()
+
+>       result = dc.convert_markdown_to_pdf('input.md', 'output.pdf', verbose=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'document_converter' has no attribute 'convert_markdown_to_pdf'
+
+tests/test_document_converter.py:239: AttributeError
+_________________________________________________________________________ TestMarkdownConversion.test_convert_markdown_no_markdown_lib __________________________________________________________________________
+
+self = <test_document_converter.TestMarkdownConversion object at 0x7aac302e14f0>
+
+    def test_convert_markdown_no_markdown_lib(self):
+        """Test Markdown conversion without markdown library."""
+        with patch.dict('sys.modules', {'markdown': None}):
+>           result = dc.convert_markdown_to_pdf('input.md', 'output.pdf')
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           AttributeError: module 'document_converter' has no attribute 'convert_markdown_to_pdf'
+
+tests/test_document_converter.py:246: AttributeError
+_________________________________________________________________________________ TestHTMLConversion.test_convert_html_success __________________________________________________________________________________
+
+self = <test_document_converter.TestHTMLConversion object at 0x7aac302e1520>, mock_run = <MagicMock name='run' id='134879955594864'>
+
+    @patch('subprocess.run')
+    def test_convert_html_success(self, mock_run):
+        """Test successful HTML to PDF conversion."""
+>       result = dc.convert_html_to_pdf('input.html', 'output.pdf', verbose=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'document_converter' has no attribute 'convert_html_to_pdf'
+
+tests/test_document_converter.py:256: AttributeError
+______________________________________________________________________________ TestHTMLConversion.test_convert_html_no_wkhtmltopdf ______________________________________________________________________________
+
+self = <test_document_converter.TestHTMLConversion object at 0x7aac302e1640>, mock_run = <MagicMock name='run' id='134879955209680'>
+
+    @patch('subprocess.run')
+    def test_convert_html_no_wkhtmltopdf(self, mock_run):
+        """Test HTML conversion without wkhtmltopdf."""
+        mock_run.side_effect = FileNotFoundError()
+
+>       result = dc.convert_html_to_pdf('input.html', 'output.pdf', verbose=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'document_converter' has no attribute 'convert_html_to_pdf'
+
+tests/test_document_converter.py:266: AttributeError
+______________________________________________________________________________ TestIntegration.test_check_dependencies_integration ______________________________________________________________________________
+
+args = (<test_document_converter.TestIntegration object at 0x7aac302e0dd0>,), keywargs = {}
+
+    @wraps(func)
+    def patched(*args, **keywargs):
+>       with self.decoration_helper(patched,
+                                    args,
+                                    keywargs) as (newargs, newkeywargs):
+
+/usr/lib/python3.12/unittest/mock.py:1387:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+/usr/lib/python3.12/contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+/usr/lib/python3.12/unittest/mock.py:1369: in decoration_helper
+    arg = exit_stack.enter_context(patching)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.12/contextlib.py:526: in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+/usr/lib/python3.12/unittest/mock.py:1458: in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <unittest.mock._patch object at 0x7aac302b3aa0>
+
+    def get_original(self):
+        target = self.getter()
+        name = self.attribute
+
+        original = DEFAULT
+        local = False
+
+        try:
+            original = target.__dict__[name]
+        except (AttributeError, KeyError):
+            original = getattr(target, name, DEFAULT)
+        else:
+            local = True
+
+        if name in _builtins and isinstance(target, ModuleType):
+            self.create = True
+
+        if not self.create and original is DEFAULT:
+>           raise AttributeError(
+                "%s does not have the attribute %r" % (target, name)
+            )
+E           AttributeError: <module 'document_converter' from '/mnt/c/Projects/Lighthouse/.claude/skills/ai-multimodal/scripts/document_converter.py'> does not have the attribute 'check_dependencies'
+
+/usr/lib/python3.12/unittest/mock.py:1431: AttributeError
+================================================================================================ tests coverage =================================================================================================
+________________________________________________________________________________ coverage: platform linux, python 3.12.3-final-0 ________________________________________________________________________________
+
+Name                                 Stmts   Miss  Cover   Missing
+------------------------------------------------------------------
+document_converter.py                  170    151    11%   29-32, 36-37, 50-86, 91-98, 103-126, 131-155, 168-230, 243-314, 318-384, 395
+gemini_batch_process.py                227     83    63%   26-29, 33-34, 62-65, 73, 81, 128, 142, 148, 151, 173, 207, 235-244, 251, 263-266, 301-319, 324, 340-341, 345, 357-365, 395-476, 480
+media_optimizer.py                     262    120    54%   24-25, 139-144, 156, 163, 177-178, 186-192, 196-198, 216-217, 220-222, 235, 242-245, 249-251, 273-275, 283, 296-299, 303-305, 321, 328, 347, 352-353, 359-502, 506
+tests/test_document_converter.py       164     30    82%   25, 44-46, 52-54, 90-91, 113-114, 120, 148-149, 155, 196, 202, 223-224, 241, 247, 258-259, 268, 285-295, 299
+tests/test_gemini_batch_process.py     174      1    99%   362
+tests/test_media_optimizer.py          182      1    99%   373
+------------------------------------------------------------------
+TOTAL                                 1179    386    67%
+============================================================================================ short test summary info ============================================================================================
+FAILED tests/test_document_converter.py::TestEnvLoading::test_load_env_files_success - AttributeError: module 'document_converter' has no attribute 'load_env_files'
+FAILED tests/test_document_converter.py::TestEnvLoading::test_load_env_files_no_dotenv - AttributeError: module 'document_converter' has no attribute 'load_env_files'
+FAILED tests/test_document_converter.py::TestDependencyCheck::test_check_all_dependencies_available - AttributeError: module 'document_converter' has no attribute 'check_dependencies'
+FAILED tests/test_document_converter.py::TestPDFPageExtraction::test_extract_single_page - AttributeError: module 'document_converter' has no attribute 'extract_pdf_pages'
+FAILED tests/test_document_converter.py::TestPDFPageExtraction::test_extract_page_range - AttributeError: module 'document_converter' has no attribute 'extract_pdf_pages'
+FAILED tests/test_document_converter.py::TestPDFPageExtraction::test_extract_pages_no_pypdf - AttributeError: module 'document_converter' has no attribute 'extract_pdf_pages'
+FAILED tests/test_document_converter.py::TestPDFOptimization::test_optimize_pdf_success - AttributeError: module 'document_converter' has no attribute 'optimize_pdf'
+FAILED tests/test_document_converter.py::TestPDFOptimization::test_optimize_pdf_no_pypdf - AttributeError: module 'document_converter' has no attribute 'optimize_pdf'
+FAILED tests/test_document_converter.py::TestImageExtraction::test_extract_images_success - AttributeError: module 'document_converter' has no attribute 'extract_images_from_pdf'
+FAILED tests/test_document_converter.py::TestImageExtraction::test_extract_images_no_dependencies - AttributeError: module 'document_converter' has no attribute 'extract_images_from_pdf'
+FAILED tests/test_document_converter.py::TestMarkdownConversion::test_convert_markdown_success - AttributeError: module 'document_converter' has no attribute 'convert_markdown_to_pdf'
+FAILED tests/test_document_converter.py::TestMarkdownConversion::test_convert_markdown_no_wkhtmltopdf - AttributeError: module 'document_converter' has no attribute 'convert_markdown_to_pdf'
+FAILED tests/test_document_converter.py::TestMarkdownConversion::test_convert_markdown_no_markdown_lib - AttributeError: module 'document_converter' has no attribute 'convert_markdown_to_pdf'
+FAILED tests/test_document_converter.py::TestHTMLConversion::test_convert_html_success - AttributeError: module 'document_converter' has no attribute 'convert_html_to_pdf'
+FAILED tests/test_document_converter.py::TestHTMLConversion::test_convert_html_no_wkhtmltopdf - AttributeError: module 'document_converter' has no attribute 'convert_html_to_pdf'
+FAILED tests/test_document_converter.py::TestIntegration::test_check_dependencies_integration - AttributeError: <module 'document_converter' from '/mnt/c/Projects/Lighthouse/.claude/skills/ai-multimodal/scripts/document_converter.py'> does not have the attribute 'check_dependencies'
+======================================================================================== 16 failed, 45 passed in 10.08s =========================================================================================
+(.venv) darragh@UltimatePowerV6:/mnt/c/Projects/Lighthouse/.claude/skills/ai-multimodal/scripts$ cd ..
+(.venv) darragh@UltimatePowerV6:/mnt/c/Projects/Lighthouse/.claude/skills/ai-multimodal$ cd ..
+(.venv) darragh@UltimatePowerV6:/mnt/c/Projects/Lighthouse/.claude/skills$ cd
+(.venv) darragh@UltimatePowerV6:~$
+(.venv) darragh@UltimatePowerV6:~$ ls
+(.venv) darragh@UltimatePowerV6:~$ cd /mnt/c/Projects/Lighthouse/
+(.venv) darragh@UltimatePowerV6:/mnt/c/Projects/Lighthouse$ # Create virtual environment
+python3 -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+# Install all skill dependencies
+pip install -r .claude/skills/ai-multimodal/scripts/requirements.txt
+
+# Install test dependencies for development
+pip install pytest pytest-cov pytest-mock
+Requirement already satisfied: google-genai>=0.1.0 in ./.venv/lib/python3.12/site-packages (from -r .claude/skills/ai-multimodal/scripts/requirements.txt (line 5)) (1.50.1)
+Requirement already satisfied: pypdf>=4.0.0 in ./.venv/lib/python3.12/site-packages (from -r .claude/skills/ai-multimodal/scripts/requirements.txt (line 8)) (6.2.0)
+Requirement already satisfied: python-docx>=1.0.0 in ./.venv/lib/python3.12/site-packages (from -r .claude/skills/ai-multimodal/scripts/requirements.txt (line 11)) (1.2.0)
+Requirement already satisfied: docx2pdf>=0.1.8 in ./.venv/lib/python3.12/site-packages (from -r .claude/skills/ai-multimodal/scripts/requirements.txt (line 12)) (0.1.8)
+Requirement already satisfied: markdown>=3.5.0 in ./.venv/lib/python3.12/site-packages (from -r .claude/skills/ai-multimodal/scripts/requirements.txt (line 15)) (3.10)
+Requirement already satisfied: Pillow>=10.0.0 in ./.venv/lib/python3.12/site-packages (from -r .claude/skills/ai-multimodal/scripts/requirements.txt (line 18)) (12.0.0)
+Requirement already satisfied: python-dotenv>=1.0.0 in ./.venv/lib/python3.12/site-packages (from -r .claude/skills/ai-multimodal/scripts/requirements.txt (line 21)) (1.2.1)
+Requirement already satisfied: pytest>=8.0.0 in ./.venv/lib/python3.12/site-packages (from -r .claude/skills/ai-multimodal/scripts/requirements.txt (line 24)) (9.0.1)
+Requirement already satisfied: pytest-cov>=4.1.0 in ./.venv/lib/python3.12/site-packages (from -r .claude/skills/ai-multimodal/scripts/requirements.txt (line 25)) (7.0.0)
+Requirement already satisfied: pytest-mock>=3.12.0 in ./.venv/lib/python3.12/site-packages (from -r .claude/skills/ai-multimodal/scripts/requirements.txt (line 26)) (3.15.1)
+Requirement already satisfied: anyio<5.0.0,>=4.8.0 in ./.venv/lib/python3.12/site-packages (from google-genai>=0.1.0->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 5)) (4.11.0)
+Requirement already satisfied: google-auth<3.0.0,>=2.14.1 in ./.venv/lib/python3.12/site-packages (from google-genai>=0.1.0->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 5)) (2.43.0)
+Requirement already satisfied: httpx<1.0.0,>=0.28.1 in ./.venv/lib/python3.12/site-packages (from google-genai>=0.1.0->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 5)) (0.28.1)
+Requirement already satisfied: pydantic<3.0.0,>=2.9.0 in ./.venv/lib/python3.12/site-packages (from google-genai>=0.1.0->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 5)) (2.12.4)
+Requirement already satisfied: requests<3.0.0,>=2.28.1 in ./.venv/lib/python3.12/site-packages (from google-genai>=0.1.0->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 5)) (2.32.5)
+Requirement already satisfied: tenacity<9.2.0,>=8.2.3 in ./.venv/lib/python3.12/site-packages (from google-genai>=0.1.0->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 5)) (9.1.2)
+Requirement already satisfied: websockets<15.1.0,>=13.0.0 in ./.venv/lib/python3.12/site-packages (from google-genai>=0.1.0->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 5)) (15.0.1)
+Requirement already satisfied: typing-extensions<5.0.0,>=4.11.0 in ./.venv/lib/python3.12/site-packages (from google-genai>=0.1.0->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 5)) (4.15.0)
+Requirement already satisfied: lxml>=3.1.0 in ./.venv/lib/python3.12/site-packages (from python-docx>=1.0.0->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 11)) (6.0.2)
+Requirement already satisfied: tqdm>=4.41.0 in ./.venv/lib/python3.12/site-packages (from docx2pdf>=0.1.8->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 12)) (4.67.1)
+Requirement already satisfied: iniconfig>=1.0.1 in ./.venv/lib/python3.12/site-packages (from pytest>=8.0.0->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 24)) (2.3.0)
+Requirement already satisfied: packaging>=22 in ./.venv/lib/python3.12/site-packages (from pytest>=8.0.0->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 24)) (25.0)
+Requirement already satisfied: pluggy<2,>=1.5 in ./.venv/lib/python3.12/site-packages (from pytest>=8.0.0->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 24)) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in ./.venv/lib/python3.12/site-packages (from pytest>=8.0.0->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 24)) (2.19.2)
+Requirement already satisfied: coverage>=7.10.6 in ./.venv/lib/python3.12/site-packages (from coverage[toml]>=7.10.6->pytest-cov>=4.1.0->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 25)) (7.11.3)
+Requirement already satisfied: idna>=2.8 in ./.venv/lib/python3.12/site-packages (from anyio<5.0.0,>=4.8.0->google-genai>=0.1.0->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 5)) (3.11)
+Requirement already satisfied: sniffio>=1.1 in ./.venv/lib/python3.12/site-packages (from anyio<5.0.0,>=4.8.0->google-genai>=0.1.0->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 5)) (1.3.1)
+Requirement already satisfied: cachetools<7.0,>=2.0.0 in ./.venv/lib/python3.12/site-packages (from google-auth<3.0.0,>=2.14.1->google-genai>=0.1.0->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 5)) (6.2.2)
+Requirement already satisfied: pyasn1-modules>=0.2.1 in ./.venv/lib/python3.12/site-packages (from google-auth<3.0.0,>=2.14.1->google-genai>=0.1.0->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 5)) (0.4.2)
+Requirement already satisfied: rsa<5,>=3.1.4 in ./.venv/lib/python3.12/site-packages (from google-auth<3.0.0,>=2.14.1->google-genai>=0.1.0->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 5)) (4.9.1)
+Requirement already satisfied: certifi in ./.venv/lib/python3.12/site-packages (from httpx<1.0.0,>=0.28.1->google-genai>=0.1.0->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 5)) (2025.11.12)
+Requirement already satisfied: httpcore==1.* in ./.venv/lib/python3.12/site-packages (from httpx<1.0.0,>=0.28.1->google-genai>=0.1.0->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 5)) (1.0.9)
+Requirement already satisfied: h11>=0.16 in ./.venv/lib/python3.12/site-packages (from httpcore==1.*->httpx<1.0.0,>=0.28.1->google-genai>=0.1.0->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 5)) (0.16.0)
+Requirement already satisfied: annotated-types>=0.6.0 in ./.venv/lib/python3.12/site-packages (from pydantic<3.0.0,>=2.9.0->google-genai>=0.1.0->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 5)) (0.7.0)
+Requirement already satisfied: pydantic-core==2.41.5 in ./.venv/lib/python3.12/site-packages (from pydantic<3.0.0,>=2.9.0->google-genai>=0.1.0->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 5)) (2.41.5)
+Requirement already satisfied: typing-inspection>=0.4.2 in ./.venv/lib/python3.12/site-packages (from pydantic<3.0.0,>=2.9.0->google-genai>=0.1.0->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 5)) (0.4.2)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.12/site-packages (from requests<3.0.0,>=2.28.1->google-genai>=0.1.0->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 5)) (3.4.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./.venv/lib/python3.12/site-packages (from requests<3.0.0,>=2.28.1->google-genai>=0.1.0->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 5)) (2.5.0)
+Requirement already satisfied: pyasn1<0.7.0,>=0.6.1 in ./.venv/lib/python3.12/site-packages (from pyasn1-modules>=0.2.1->google-auth<3.0.0,>=2.14.1->google-genai>=0.1.0->-r .claude/skills/ai-multimodal/scripts/requirements.txt (line 5)) (0.6.1)
+Requirement already satisfied: pytest in ./.venv/lib/python3.12/site-packages (9.0.1)
+Requirement already satisfied: pytest-cov in ./.venv/lib/python3.12/site-packages (7.0.0)
+Requirement already satisfied: pytest-mock in ./.venv/lib/python3.12/site-packages (3.15.1)
+Requirement already satisfied: iniconfig>=1.0.1 in ./.venv/lib/python3.12/site-packages (from pytest) (2.3.0)
+Requirement already satisfied: packaging>=22 in ./.venv/lib/python3.12/site-packages (from pytest) (25.0)
+Requirement already satisfied: pluggy<2,>=1.5 in ./.venv/lib/python3.12/site-packages (from pytest) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in ./.venv/lib/python3.12/site-packages (from pytest) (2.19.2)
+Requirement already satisfied: coverage>=7.10.6 in ./.venv/lib/python3.12/site-packages (from coverage[toml]>=7.10.6->pytest-cov) (7.11.3)
+(.venv) darragh@UltimatePowerV6:/mnt/c/Projects/Lighthouse$ cd /mnt/c/Projects/Lighthouse/.claude/skills/ai-multimodal/scripts
+(.venv) darragh@UltimatePowerV6:/mnt/c/Projects/Lighthouse/.claude/skills/ai-multimodal/scripts$ python -m pytest tests/ -v --cov=. --cov-report=term-missing
+============================================================================================== test session starts ==============================================================================================
+platform linux -- Python 3.12.3, pytest-9.0.1, pluggy-1.6.0 -- /mnt/c/Projects/Lighthouse/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /mnt/c/Projects/Lighthouse/.claude/skills/ai-multimodal/scripts
+plugins: anyio-4.11.0, cov-7.0.0, mock-3.15.1
+collected 61 items
+
+tests/test_document_converter.py::TestEnvLoading::test_load_env_files_success FAILED                                                                                                                      [  1%]
+tests/test_document_converter.py::TestEnvLoading::test_load_env_files_no_dotenv FAILED                                                                                                                    [  3%]
+tests/test_document_converter.py::TestDependencyCheck::test_check_all_dependencies_available FAILED                                                                                                       [  4%]
+tests/test_document_converter.py::TestDependencyCheck::test_check_dependencies_missing PASSED                                                                                                             [  6%]
+tests/test_document_converter.py::TestPDFPageExtraction::test_extract_single_page FAILED                                                                                                                  [  8%]
+tests/test_document_converter.py::TestPDFPageExtraction::test_extract_page_range FAILED                                                                                                                   [  9%]
+tests/test_document_converter.py::TestPDFPageExtraction::test_extract_pages_no_pypdf FAILED                                                                                                               [ 11%]
+tests/test_document_converter.py::TestPDFOptimization::test_optimize_pdf_success FAILED                                                                                                                   [ 13%]
+tests/test_document_converter.py::TestPDFOptimization::test_optimize_pdf_no_pypdf FAILED                                                                                                                  [ 14%]
+tests/test_document_converter.py::TestImageExtraction::test_extract_images_success FAILED                                                                                                                 [ 16%]
+tests/test_document_converter.py::TestImageExtraction::test_extract_images_no_dependencies FAILED                                                                                                         [ 18%]
+tests/test_document_converter.py::TestMarkdownConversion::test_convert_markdown_success FAILED                                                                                                            [ 19%]
+tests/test_document_converter.py::TestMarkdownConversion::test_convert_markdown_no_wkhtmltopdf FAILED                                                                                                     [ 21%]
+tests/test_document_converter.py::TestMarkdownConversion::test_convert_markdown_no_markdown_lib FAILED                                                                                                    [ 22%]
+tests/test_document_converter.py::TestHTMLConversion::test_convert_html_success FAILED                                                                                                                    [ 24%]
+tests/test_document_converter.py::TestHTMLConversion::test_convert_html_no_wkhtmltopdf FAILED                                                                                                             [ 26%]
+tests/test_document_converter.py::TestIntegration::test_file_not_found PASSED                                                                                                                             [ 27%]
+tests/test_document_converter.py::TestIntegration::test_check_dependencies_integration FAILED                                                                                                             [ 29%]
+tests/test_gemini_batch_process.py::TestAPIKeyFinder::test_find_api_key_from_env PASSED                                                                                                                   [ 31%]
+tests/test_gemini_batch_process.py::TestAPIKeyFinder::test_find_api_key_not_found PASSED                                                                                                                  [ 32%]
+tests/test_gemini_batch_process.py::TestMimeTypeDetection::test_audio_mime_types PASSED                                                                                                                   [ 34%]
+tests/test_gemini_batch_process.py::TestMimeTypeDetection::test_image_mime_types PASSED                                                                                                                   [ 36%]
+tests/test_gemini_batch_process.py::TestMimeTypeDetection::test_video_mime_types PASSED                                                                                                                   [ 37%]
+tests/test_gemini_batch_process.py::TestMimeTypeDetection::test_document_mime_types PASSED                                                                                                                [ 39%]
+tests/test_gemini_batch_process.py::TestMimeTypeDetection::test_unknown_mime_type PASSED                                                                                                                  [ 40%]
+tests/test_gemini_batch_process.py::TestMimeTypeDetection::test_case_insensitive PASSED                                                                                                                   [ 42%]
+tests/test_gemini_batch_process.py::TestFileUpload::test_upload_file_success PASSED                                                                                                                       [ 44%]
+tests/test_gemini_batch_process.py::TestFileUpload::test_upload_video_with_processing PASSED                                                                                                              [ 45%]
+tests/test_gemini_batch_process.py::TestFileUpload::test_upload_file_failed PASSED                                                                                                                        [ 47%]
+tests/test_gemini_batch_process.py::TestProcessFile::test_process_small_file_inline PASSED                                                                                                                [ 49%]
+tests/test_gemini_batch_process.py::TestProcessFile::test_process_large_file_api PASSED                                                                                                                   [ 50%]
+tests/test_gemini_batch_process.py::TestProcessFile::test_process_file_error_handling PASSED                                                                                                              [ 52%]
+tests/test_gemini_batch_process.py::TestProcessFile::test_image_generation_with_aspect_ratio PASSED                                                                                                       [ 54%]
+tests/test_gemini_batch_process.py::TestBatchProcessing::test_batch_process_success PASSED                                                                                                                [ 55%]
+tests/test_gemini_batch_process.py::TestBatchProcessing::test_batch_process_no_api_key PASSED                                                                                                             [ 57%]
+tests/test_gemini_batch_process.py::TestBatchProcessing::test_batch_process_dry_run PASSED                                                                                                                [ 59%]
+tests/test_gemini_batch_process.py::TestResultsSaving::test_save_results_json PASSED                                                                                                                      [ 60%]
+tests/test_gemini_batch_process.py::TestResultsSaving::test_save_results_csv PASSED                                                                                                                       [ 62%]
+tests/test_gemini_batch_process.py::TestResultsSaving::test_save_results_markdown PASSED                                                                                                                  [ 63%]
+tests/test_media_optimizer.py::TestEnvLoading::test_load_env_files_success PASSED                                                                                                                         [ 65%]
+tests/test_media_optimizer.py::TestEnvLoading::test_load_env_files_no_dotenv PASSED                                                                                                                       [ 67%]
+tests/test_media_optimizer.py::TestFFmpegCheck::test_ffmpeg_installed PASSED                                                                                                                              [ 68%]
+tests/test_media_optimizer.py::TestFFmpegCheck::test_ffmpeg_not_installed PASSED                                                                                                                          [ 70%]
+tests/test_media_optimizer.py::TestFFmpegCheck::test_ffmpeg_error PASSED                                                                                                                                  [ 72%]
+tests/test_media_optimizer.py::TestMediaInfo::test_get_video_info PASSED                                                                                                                                  [ 73%]
+tests/test_media_optimizer.py::TestMediaInfo::test_get_media_info_no_ffmpeg PASSED                                                                                                                        [ 75%]
+tests/test_media_optimizer.py::TestMediaInfo::test_get_media_info_error PASSED                                                                                                                            [ 77%]
+tests/test_media_optimizer.py::TestVideoOptimization::test_optimize_video_success PASSED                                                                                                                  [ 78%]
+tests/test_media_optimizer.py::TestVideoOptimization::test_optimize_video_no_ffmpeg PASSED                                                                                                                [ 80%]
+tests/test_media_optimizer.py::TestVideoOptimization::test_optimize_video_no_info PASSED                                                                                                                  [ 81%]
+tests/test_media_optimizer.py::TestVideoOptimization::test_optimize_video_with_target_size PASSED                                                                                                         [ 83%]
+tests/test_media_optimizer.py::TestVideoOptimization::test_optimize_video_with_resolution PASSED                                                                                                          [ 85%]
+tests/test_media_optimizer.py::TestAudioOptimization::test_optimize_audio_success PASSED                                                                                                                  [ 86%]
+tests/test_media_optimizer.py::TestAudioOptimization::test_optimize_audio_no_ffmpeg PASSED                                                                                                                [ 88%]
+tests/test_media_optimizer.py::TestImageOptimization::test_optimize_image_success PASSED                                                                                                                  [ 90%]
+tests/test_media_optimizer.py::TestImageOptimization::test_optimize_image_resize PASSED                                                                                                                   [ 91%]
+tests/test_media_optimizer.py::TestImageOptimization::test_optimize_image_rgba_to_jpg PASSED                                                                                                              [ 93%]
+tests/test_media_optimizer.py::TestImageOptimization::test_optimize_image_no_pillow PASSED                                                                                                                [ 95%]
+tests/test_media_optimizer.py::TestVideoSplitting::test_split_video_success PASSED                                                                                                                        [ 96%]
+tests/test_media_optimizer.py::TestVideoSplitting::test_split_video_short_duration PASSED                                                                                                                 [ 98%]
+tests/test_media_optimizer.py::TestVideoSplitting::test_split_video_no_ffmpeg PASSED                                                                                                                      [100%]
+
+=================================================================================================== FAILURES ====================================================================================================
+__________________________________________________________________________________ TestEnvLoading.test_load_env_files_success ___________________________________________________________________________________
+
+self = <test_document_converter.TestEnvLoading object at 0x75a41f1b4200>, mock_exists = <MagicMock name='exists' id='129347757123360'>, mock_load_dotenv = <MagicMock name='load_dotenv' id='129347755295232'>
+
+    @patch('document_converter.load_dotenv')
+    @patch('pathlib.Path.exists')
+    def test_load_env_files_success(self, mock_exists, mock_load_dotenv):
+        """Test successful .env file loading."""
+        mock_exists.return_value = True
+>       dc.load_env_files()
+        ^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'document_converter' has no attribute 'load_env_files'
+
+tests/test_document_converter.py:23: AttributeError
+_________________________________________________________________________________ TestEnvLoading.test_load_env_files_no_dotenv __________________________________________________________________________________
+
+self = <test_document_converter.TestEnvLoading object at 0x75a41f1b4440>
+
+    @patch('document_converter.load_dotenv', None)
+    def test_load_env_files_no_dotenv(self):
+        """Test when dotenv is not available."""
+        # Should not raise an error
+>       dc.load_env_files()
+        ^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'document_converter' has no attribute 'load_env_files'
+
+tests/test_document_converter.py:31: AttributeError
+___________________________________________________________________________ TestDependencyCheck.test_check_all_dependencies_available ___________________________________________________________________________
+
+self = <test_document_converter.TestDependencyCheck object at 0x75a41f1b46b0>, mock_import = <MagicMock name='__import__' id='129347755188032'>
+
+    @patch('builtins.__import__')
+    def test_check_all_dependencies_available(self, mock_import):
+        """Test when all dependencies are available."""
+        mock_import.return_value = Mock()
+
+>       deps = dc.check_dependencies()
+               ^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'document_converter' has no attribute 'check_dependencies'
+
+tests/test_document_converter.py:42: AttributeError
+________________________________________________________________________________ TestPDFPageExtraction.test_extract_single_page _________________________________________________________________________________
+
+self = <test_document_converter.TestPDFPageExtraction object at 0x75a41f1b4b60>, mock_open = <MagicMock name='open' id='129347755299312'>, mock_writer_class = <MagicMock name='PdfWriter' id='129347755303152'>
+mock_reader_class = <MagicMock name='PdfReader' id='129347751717120'>
+
+    @patch('pypdf.PdfReader')
+    @patch('pypdf.PdfWriter')
+    @patch('builtins.open', create=True)
+    def test_extract_single_page(self, mock_open, mock_writer_class, mock_reader_class):
+        """Test extracting a single page."""
+        # Mock reader
+        mock_reader = Mock()
+        mock_page = Mock()
+        mock_reader.pages = [Mock(), mock_page, Mock()]
+        mock_reader_class.return_value = mock_reader
+
+        # Mock writer
+        mock_writer = Mock()
+        mock_writer.pages = [mock_page]
+        mock_writer_class.return_value = mock_writer
+
+>       result = dc.extract_pdf_pages(
+                 ^^^^^^^^^^^^^^^^^^^^
+            'input.pdf',
+            'output.pdf',
+            page_range='2',
+            verbose=False
+        )
+E       AttributeError: module 'document_converter' has no attribute 'extract_pdf_pages'
+
+tests/test_document_converter.py:83: AttributeError
+_________________________________________________________________________________ TestPDFPageExtraction.test_extract_page_range _________________________________________________________________________________
+
+self = <test_document_converter.TestPDFPageExtraction object at 0x75a41f1b4da0>, mock_open = <MagicMock name='open' id='129347785062208'>, mock_writer_class = <MagicMock name='PdfWriter' id='129347756973936'>
+mock_reader_class = <MagicMock name='PdfReader' id='129347751954480'>
+
+    @patch('pypdf.PdfReader')
+    @patch('pypdf.PdfWriter')
+    @patch('builtins.open', create=True)
+    def test_extract_page_range(self, mock_open, mock_writer_class, mock_reader_class):
+        """Test extracting a range of pages."""
+        mock_reader = Mock()
+        mock_reader.pages = [Mock() for _ in range(10)]
+        mock_reader_class.return_value = mock_reader
+
+        mock_writer = Mock()
+        mock_writer.pages = []
+        mock_writer_class.return_value = mock_writer
+
+>       result = dc.extract_pdf_pages(
+                 ^^^^^^^^^^^^^^^^^^^^
+            'input.pdf',
+            'output.pdf',
+            page_range='2-5',
+            verbose=False
+        )
+E       AttributeError: module 'document_converter' has no attribute 'extract_pdf_pages'
+
+tests/test_document_converter.py:106: AttributeError
+_______________________________________________________________________________ TestPDFPageExtraction.test_extract_pages_no_pypdf _______________________________________________________________________________
+
+self = <test_document_converter.TestPDFPageExtraction object at 0x75a41f1b5010>
+
+    def test_extract_pages_no_pypdf(self):
+        """Test page extraction without pypdf."""
+        with patch.dict('sys.modules', {'pypdf': None}):
+>           result = dc.extract_pdf_pages('input.pdf', 'output.pdf', '1-10')
+                     ^^^^^^^^^^^^^^^^^^^^
+E           AttributeError: module 'document_converter' has no attribute 'extract_pdf_pages'
+
+tests/test_document_converter.py:119: AttributeError
+_________________________________________________________________________________ TestPDFOptimization.test_optimize_pdf_success _________________________________________________________________________________
+
+self = <test_document_converter.TestPDFOptimization object at 0x75a41f1b52e0>, mock_stat = <MagicMock name='stat' id='129347751962736'>, mock_open = <MagicMock name='open' id='129347751966912'>
+mock_writer_class = <MagicMock name='PdfWriter' id='129347751987344'>, mock_reader_class = <MagicMock name='PdfReader' id='129347751991184'>
+
+    @patch('pypdf.PdfReader')
+    @patch('pypdf.PdfWriter')
+    @patch('builtins.open', create=True)
+    @patch('pathlib.Path.stat')
+    def test_optimize_pdf_success(self, mock_stat, mock_open, mock_writer_class, mock_reader_class):
+        """Test successful PDF optimization."""
+        # Mock reader
+        mock_reader = Mock()
+        mock_page = Mock()
+        mock_reader.pages = [mock_page, mock_page]
+        mock_reader_class.return_value = mock_reader
+
+        # Mock writer
+        mock_writer = Mock()
+        mock_writer.pages = [mock_page, mock_page]
+        mock_writer_class.return_value = mock_writer
+
+        # Mock file sizes
+        mock_stat.return_value.st_size = 1024 * 1024
+
+>       result = dc.optimize_pdf('input.pdf', 'output.pdf', verbose=False)
+                 ^^^^^^^^^^^^^^^
+E       AttributeError: module 'document_converter' has no attribute 'optimize_pdf'
+
+tests/test_document_converter.py:146: AttributeError
+________________________________________________________________________________ TestPDFOptimization.test_optimize_pdf_no_pypdf _________________________________________________________________________________
+
+self = <test_document_converter.TestPDFOptimization object at 0x75a41f1b5550>
+
+    def test_optimize_pdf_no_pypdf(self):
+        """Test PDF optimization without pypdf."""
+        with patch.dict('sys.modules', {'pypdf': None}):
+>           result = dc.optimize_pdf('input.pdf', 'output.pdf')
+                     ^^^^^^^^^^^^^^^
+E           AttributeError: module 'document_converter' has no attribute 'optimize_pdf'
+
+tests/test_document_converter.py:154: AttributeError
+________________________________________________________________________________ TestImageExtraction.test_extract_images_success ________________________________________________________________________________
+
+self = <test_document_converter.TestImageExtraction object at 0x75a41f1b5820>, mock_open = <MagicMock name='open' id='129347751871504'>, mock_mkdir = <MagicMock name='mkdir' id='129347751875296'>
+mock_image = <MagicMock name='Image' id='129347751879376'>, mock_reader_class = <MagicMock name='PdfReader' id='129347751883360'>
+
+    @patch('pypdf.PdfReader')
+    @patch('PIL.Image')
+    @patch('pathlib.Path.mkdir')
+    @patch('builtins.open', create=True)
+    def test_extract_images_success(self, mock_open, mock_mkdir, mock_image, mock_reader_class):
+        """Test successful image extraction."""
+        # Mock PDF reader
+        mock_reader = Mock()
+        mock_page = MagicMock()
+
+        # Mock XObject with image
+        mock_obj = MagicMock()
+        mock_obj.__getitem__.side_effect = lambda k: {
+            '/Subtype': '/Image',
+            '/Width': 100,
+            '/Height': 100,
+            '/Filter': '/DCTDecode'
+        }[k]
+        mock_obj.get_data.return_value = b'image_data'
+
+        mock_xobjects = MagicMock()
+        mock_xobjects.__iter__.return_value = ['img1']
+        mock_xobjects.__getitem__.return_value = mock_obj
+
+        mock_resources = MagicMock()
+        mock_resources.get_object.return_value = mock_xobjects
+        mock_page.__getitem__.side_effect = lambda k: {
+            '/Resources': {'/XObject': mock_resources}
+        }[k]
+
+        mock_reader.pages = [mock_page]
+        mock_reader_class.return_value = mock_reader
+
+>       result = dc.extract_images_from_pdf('input.pdf', './output', verbose=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'document_converter' has no attribute 'extract_images_from_pdf'
+
+tests/test_document_converter.py:194: AttributeError
+____________________________________________________________________________ TestImageExtraction.test_extract_images_no_dependencies ____________________________________________________________________________
+
+self = <test_document_converter.TestImageExtraction object at 0x75a41f1b5a90>
+
+    def test_extract_images_no_dependencies(self):
+        """Test image extraction without required dependencies."""
+        with patch.dict('sys.modules', {'pypdf': None}):
+>           result = dc.extract_images_from_pdf('input.pdf', './output')
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           AttributeError: module 'document_converter' has no attribute 'extract_images_from_pdf'
+
+tests/test_document_converter.py:201: AttributeError
+_____________________________________________________________________________ TestMarkdownConversion.test_convert_markdown_success ______________________________________________________________________________
+
+self = <test_document_converter.TestMarkdownConversion object at 0x75a41f1b5cd0>, mock_unlink = <MagicMock name='unlink' id='129347751929344'>, mock_run = <MagicMock name='run' id='129347751933520'>
+mock_open = <MagicMock name='open' id='129347752298064'>, mock_markdown = <MagicMock name='markdown' id='129347752000832'>
+
+    @patch('markdown.markdown')
+    @patch('builtins.open', create=True)
+    @patch('subprocess.run')
+    @patch('pathlib.Path.unlink')
+    def test_convert_markdown_success(self, mock_unlink, mock_run, mock_open, mock_markdown):
+        """Test successful Markdown to PDF conversion."""
+        mock_markdown.return_value = '<h1>Test</h1>'
+
+        # Mock file reading and writing
+        mock_file = MagicMock()
+        mock_file.__enter__.return_value.read.return_value = '# Test'
+        mock_open.return_value = mock_file
+
+>       result = dc.convert_markdown_to_pdf('input.md', 'output.pdf', verbose=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'document_converter' has no attribute 'convert_markdown_to_pdf'
+
+tests/test_document_converter.py:221: AttributeError
+__________________________________________________________________________ TestMarkdownConversion.test_convert_markdown_no_wkhtmltopdf __________________________________________________________________________
+
+self = <test_document_converter.TestMarkdownConversion object at 0x75a41f1b5f40>, mock_run = <MagicMock name='run' id='129347750783952'>, mock_open = <MagicMock name='open' id='129347750788464'>
+mock_markdown = <MagicMock name='markdown' id='129347750956160'>
+
+    @patch('markdown.markdown')
+    @patch('builtins.open', create=True)
+    @patch('subprocess.run')
+    def test_convert_markdown_no_wkhtmltopdf(self, mock_run, mock_open, mock_markdown):
+        """Test Markdown conversion without wkhtmltopdf."""
+        mock_markdown.return_value = '<h1>Test</h1>'
+
+        mock_file = MagicMock()
+        mock_file.__enter__.return_value.read.return_value = '# Test'
+        mock_open.return_value = mock_file
+
+        mock_run.side_effect = FileNotFoundError()
+
+>       result = dc.convert_markdown_to_pdf('input.md', 'output.pdf', verbose=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'document_converter' has no attribute 'convert_markdown_to_pdf'
+
+tests/test_document_converter.py:239: AttributeError
+_________________________________________________________________________ TestMarkdownConversion.test_convert_markdown_no_markdown_lib __________________________________________________________________________
+
+self = <test_document_converter.TestMarkdownConversion object at 0x75a41f1b5e50>
+
+    def test_convert_markdown_no_markdown_lib(self):
+        """Test Markdown conversion without markdown library."""
+        with patch.dict('sys.modules', {'markdown': None}):
+>           result = dc.convert_markdown_to_pdf('input.md', 'output.pdf')
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           AttributeError: module 'document_converter' has no attribute 'convert_markdown_to_pdf'
+
+tests/test_document_converter.py:246: AttributeError
+_________________________________________________________________________________ TestHTMLConversion.test_convert_html_success __________________________________________________________________________________
+
+self = <test_document_converter.TestHTMLConversion object at 0x75a41f1b5a30>, mock_run = <MagicMock name='run' id='129347750653552'>
+
+    @patch('subprocess.run')
+    def test_convert_html_success(self, mock_run):
+        """Test successful HTML to PDF conversion."""
+>       result = dc.convert_html_to_pdf('input.html', 'output.pdf', verbose=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'document_converter' has no attribute 'convert_html_to_pdf'
+
+tests/test_document_converter.py:256: AttributeError
+______________________________________________________________________________ TestHTMLConversion.test_convert_html_no_wkhtmltopdf ______________________________________________________________________________
+
+self = <test_document_converter.TestHTMLConversion object at 0x75a41f1b5700>, mock_run = <MagicMock name='run' id='129347752300032'>
+
+    @patch('subprocess.run')
+    def test_convert_html_no_wkhtmltopdf(self, mock_run):
+        """Test HTML conversion without wkhtmltopdf."""
+        mock_run.side_effect = FileNotFoundError()
+
+>       result = dc.convert_html_to_pdf('input.html', 'output.pdf', verbose=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'document_converter' has no attribute 'convert_html_to_pdf'
+
+tests/test_document_converter.py:266: AttributeError
+______________________________________________________________________________ TestIntegration.test_check_dependencies_integration ______________________________________________________________________________
+
+args = (<test_document_converter.TestIntegration object at 0x75a41f1b4e60>,), keywargs = {}
+
+    @wraps(func)
+    def patched(*args, **keywargs):
+>       with self.decoration_helper(patched,
+                                    args,
+                                    keywargs) as (newargs, newkeywargs):
+
+/usr/lib/python3.12/unittest/mock.py:1387:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+/usr/lib/python3.12/contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+/usr/lib/python3.12/unittest/mock.py:1369: in decoration_helper
+    arg = exit_stack.enter_context(patching)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.12/contextlib.py:526: in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+/usr/lib/python3.12/unittest/mock.py:1458: in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <unittest.mock._patch object at 0x75a41f187a10>
+
+    def get_original(self):
+        target = self.getter()
+        name = self.attribute
+
+        original = DEFAULT
+        local = False
+
+        try:
+            original = target.__dict__[name]
+        except (AttributeError, KeyError):
+            original = getattr(target, name, DEFAULT)
+        else:
+            local = True
+
+        if name in _builtins and isinstance(target, ModuleType):
+            self.create = True
+
+        if not self.create and original is DEFAULT:
+>           raise AttributeError(
+                "%s does not have the attribute %r" % (target, name)
+            )
+E           AttributeError: <module 'document_converter' from '/mnt/c/Projects/Lighthouse/.claude/skills/ai-multimodal/scripts/document_converter.py'> does not have the attribute 'check_dependencies'
+
+/usr/lib/python3.12/unittest/mock.py:1431: AttributeError
+================================================================================================ tests coverage =================================================================================================
+________________________________________________________________________________ coverage: platform linux, python 3.12.3-final-0 ________________________________________________________________________________
+
+Name                                 Stmts   Miss  Cover   Missing
+------------------------------------------------------------------
+document_converter.py                  170    151    11%   29-32, 36-37, 50-86, 91-98, 103-126, 131-155, 168-230, 243-314, 318-384, 395
+gemini_batch_process.py                227     83    63%   26-29, 33-34, 62-65, 73, 81, 128, 142, 148, 151, 173, 207, 235-244, 251, 263-266, 301-319, 324, 340-341, 345, 357-365, 395-476, 480
+media_optimizer.py                     262    120    54%   24-25, 139-144, 156, 163, 177-178, 186-192, 196-198, 216-217, 220-222, 235, 242-245, 249-251, 273-275, 283, 296-299, 303-305, 321, 328, 347, 352-353, 359-502, 506
+tests/test_document_converter.py       164     30    82%   25, 44-46, 52-54, 90-91, 113-114, 120, 148-149, 155, 196, 202, 223-224, 241, 247, 258-259, 268, 285-295, 299
+tests/test_gemini_batch_process.py     174      1    99%   362
+tests/test_media_optimizer.py          182      1    99%   373
+------------------------------------------------------------------
+TOTAL                                 1179    386    67%
+============================================================================================ short test summary info ============================================================================================
+FAILED tests/test_document_converter.py::TestEnvLoading::test_load_env_files_success - AttributeError: module 'document_converter' has no attribute 'load_env_files'
+FAILED tests/test_document_converter.py::TestEnvLoading::test_load_env_files_no_dotenv - AttributeError: module 'document_converter' has no attribute 'load_env_files'
+FAILED tests/test_document_converter.py::TestDependencyCheck::test_check_all_dependencies_available - AttributeError: module 'document_converter' has no attribute 'check_dependencies'
+FAILED tests/test_document_converter.py::TestPDFPageExtraction::test_extract_single_page - AttributeError: module 'document_converter' has no attribute 'extract_pdf_pages'
+FAILED tests/test_document_converter.py::TestPDFPageExtraction::test_extract_page_range - AttributeError: module 'document_converter' has no attribute 'extract_pdf_pages'
+FAILED tests/test_document_converter.py::TestPDFPageExtraction::test_extract_pages_no_pypdf - AttributeError: module 'document_converter' has no attribute 'extract_pdf_pages'
+FAILED tests/test_document_converter.py::TestPDFOptimization::test_optimize_pdf_success - AttributeError: module 'document_converter' has no attribute 'optimize_pdf'
+FAILED tests/test_document_converter.py::TestPDFOptimization::test_optimize_pdf_no_pypdf - AttributeError: module 'document_converter' has no attribute 'optimize_pdf'
+FAILED tests/test_document_converter.py::TestImageExtraction::test_extract_images_success - AttributeError: module 'document_converter' has no attribute 'extract_images_from_pdf'
+FAILED tests/test_document_converter.py::TestImageExtraction::test_extract_images_no_dependencies - AttributeError: module 'document_converter' has no attribute 'extract_images_from_pdf'
+FAILED tests/test_document_converter.py::TestMarkdownConversion::test_convert_markdown_success - AttributeError: module 'document_converter' has no attribute 'convert_markdown_to_pdf'
+FAILED tests/test_document_converter.py::TestMarkdownConversion::test_convert_markdown_no_wkhtmltopdf - AttributeError: module 'document_converter' has no attribute 'convert_markdown_to_pdf'
+FAILED tests/test_document_converter.py::TestMarkdownConversion::test_convert_markdown_no_markdown_lib - AttributeError: module 'document_converter' has no attribute 'convert_markdown_to_pdf'
+FAILED tests/test_document_converter.py::TestHTMLConversion::test_convert_html_success - AttributeError: module 'document_converter' has no attribute 'convert_html_to_pdf'
+FAILED tests/test_document_converter.py::TestHTMLConversion::test_convert_html_no_wkhtmltopdf - AttributeError: module 'document_converter' has no attribute 'convert_html_to_pdf'
+FAILED tests/test_document_converter.py::TestIntegration::test_check_dependencies_integration - AttributeError: <module 'document_converter' from '/mnt/c/Projects/Lighthouse/.claude/skills/ai-multimodal/scripts/document_converter.py'> does not have the attribute 'check_dependencies'
+======================================================================================== 16 failed, 45 passed in 10.01s =========================================================================================
+(.venv) darragh@UltimatePowerV6:/mnt/c/Projects/Lighthouse/.claude/skills/ai-multimodal/scripts$
