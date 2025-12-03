@@ -65,13 +65,16 @@
 - [x] QA: Added SLA compliance tracking across all ops commands
 - [x] QA: Added GDPR compliance note to re-engage sequence
 
-### Phase 3: Marketing Templates & Checklists
-- [ ] Daily social media checklist
-- [ ] Weekly SEO checklist
-- [ ] Monthly analytics review template
-- [ ] Campaign launch checklist
-- [ ] Content approval workflow
-- [ ] A/B testing framework
+### Phase 3: Marketing Templates & Checklists ✅ COMPLETE + QA VERIFIED
+- [x] `/checklist/social-daily` - Daily social media checklist (morning/midday/EOD routines)
+- [x] `/checklist/seo-weekly` - Weekly SEO checklist (Mon-Fri structured tasks)
+- [x] `/checklist/analytics-monthly` - Monthly analytics review (7-section analysis)
+- [x] `/checklist/campaign-launch` - Campaign launch checklist (T-14 to T+7 timeline)
+- [x] `/checklist/content-approval` - Content approval workflow (6-stage process)
+- [x] `/checklist/ab-testing` - A/B testing framework (ICE prioritization, stats)
+- [x] QA: Added workflow references (crm-workflow.md, sales-workflow.md) to all checklists
+- [x] QA: Fixed lead response SLAs to unified thresholds (Hot <5 min, Warm <1 hr, Cool <24 hr)
+- [x] QA: Verified consistent Agent Delegation tables across all checklists
 
 ### Phase 4: Skill Enhancements
 - [ ] Add lead nurturing workflows to email-marketing skill
