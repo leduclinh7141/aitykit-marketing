@@ -25,7 +25,7 @@
 - Prioritize functionality and readability over strict style enforcement and code formatting
 - Use reasonable code quality standards that enhance developer productivity
 - Use try catch error handling & cover security standards
-- Use `code-reviewer` agent to review code after every implementation
+- Use `copywriter` agent to review content quality and brand consistency
 
 ## Pre-commit/Push Rules
 - Run linting before commit

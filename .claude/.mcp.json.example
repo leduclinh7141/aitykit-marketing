@@ -4,20 +4,79 @@
       "command": "npx",
       "args": ["-y", "@upstash/context7-mcp", "--api-key", "YOUR_API_KEY"]
     },
-    "human-mcp": {
-      "command": "npx",
-      "args": ["@goonnguyen/human-mcp"],
-      "env": {
-        "GOOGLE_GEMINI_API_KEY": "your_gemini_api_key_here"
-      }
-    },
-    "chrome-devtools": {
-      "command": "npx",
-      "args": ["-y", "chrome-devtools-mcp@latest"]
-    },
     "sequential-thinking": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+    },
+    "meta-ads": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-meta-ads"],
+      "env": { "META_ACCESS_TOKEN": "YOUR_TOKEN" }
+    },
+    "google-ads": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-google-ads"],
+      "env": { "GOOGLE_ADS_DEVELOPER_TOKEN": "YOUR_TOKEN" }
+    },
+    "google-analytics": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-ga4"],
+      "env": { "GA_PROPERTY_ID": "YOUR_PROPERTY_ID" }
+    },
+    "search-console": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-gsc"],
+      "env": { "GSC_SITE_URL": "YOUR_SITE_URL" }
+    },
+    "discord": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-discord"],
+      "env": { "DISCORD_BOT_TOKEN": "YOUR_TOKEN" }
+    },
+    "slack": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-slack"],
+      "env": { "SLACK_BOT_TOKEN": "YOUR_TOKEN" }
+    },
+    "stripe": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-stripe"],
+      "env": { "STRIPE_SECRET_KEY": "YOUR_KEY" }
+    },
+    "tiktok": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-tiktok"],
+      "env": { "TIKTOK_ACCESS_TOKEN": "YOUR_TOKEN" }
+    },
+    "linkedin": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-linkedin"],
+      "env": { "LINKEDIN_ACCESS_TOKEN": "YOUR_TOKEN" }
+    },
+    "twitter": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-twitter"],
+      "env": { "TWITTER_BEARER_TOKEN": "YOUR_TOKEN" }
+    },
+    "hubspot": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-hubspot"],
+      "env": { "HUBSPOT_ACCESS_TOKEN": "YOUR_TOKEN" }
+    },
+    "mailchimp": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-mailchimp"],
+      "env": { "MAILCHIMP_API_KEY": "YOUR_KEY" }
+    },
+    "semrush": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-semrush"],
+      "env": { "SEMRUSH_API_KEY": "YOUR_KEY" }
+    },
+    "ahrefs": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-ahrefs"],
+      "env": { "AHREFS_API_KEY": "YOUR_KEY" }
     }
   }
 }

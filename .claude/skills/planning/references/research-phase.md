@@ -35,10 +35,10 @@ repomix --remote <github-repo-url>
 repomix --remote https://github.com/mrgoonie/human-mcp
 ```
 
-### Debugger Delegation
-- Delegate to `debugger` agent for root cause analysis
-- Use when investigating complex issues or bugs
-- Debugger agent specializes in diagnostic tasks
+### Issue Analysis
+- Use `researcher` agents to investigate root causes
+- Analyze data and patterns to identify issues
+- Document findings for resolution planning
 
 ## Best Practices
 

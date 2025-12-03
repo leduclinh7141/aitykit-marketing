@@ -197,7 +197,7 @@ Hooks are configured in `.claude/settings.local.json`:
 **Configuration Options:**
 
 - `"Stop"`: Triggers when main Claude Code session ends
-- `"SubagentStop"`: Triggers when specialized subagents complete (planner, tester, etc.)
+- `"SubagentStop"`: Triggers when specialized subagents complete (planner, researcher, etc.)
 - `${CLAUDE_PROJECT_DIR}`: Environment variable for project directory path
 
 ### 5. Make Script Executable
@@ -277,12 +277,12 @@ Files Modified:
 **Triggered when:** Specialized subagent completes its task
 
 **Subagent Types:**
-- `planner` - Implementation planning
-- `tester` - Test execution and analysis
-- `debugger` - Log collection and debugging
-- `code-reviewer` - Code quality review
+- `planner` - Campaign planning
+- `researcher` - Market research and analysis
+- `copywriter` - Content creation
+- `attraction-specialist` - Lead generation and SEO
 - `docs-manager` - Documentation updates
-- `git-manager` - Git operations
+- `email-wizard` - Email campaigns
 - `project-manager` - Progress tracking
 
 **Example notification:**
@@ -357,16 +357,16 @@ Files Modified:
 
 ### Subagent Completion
 ```
-🤖 DevPocket Subagent Completed
+🤖 Marketing Kit Subagent Completed
 
 📅 Time: 2025-10-22 11:20:15
-📁 Project: microservice
-🔧 Agent Type: tester
+📁 Project: marketing-campaign
+🔧 Agent Type: copywriter
 🆔 Session: i9j0k1l2...
 
 Specialized agent completed its task.
 
-📍 Location: `/Users/user/projects/microservice`
+📍 Location: `/Users/user/projects/marketing-campaign`
 ```
 
 ## Troubleshooting
