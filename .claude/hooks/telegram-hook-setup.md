@@ -225,7 +225,7 @@ echo '{
 
 **Expected output:**
 ```
-Telegram notification sent for Stop event in project claudekit-engineer
+Telegram notification sent for Stop event in project aitykit-marketing
 ```
 
 Check your Telegram chat for the test notification.
@@ -249,7 +249,7 @@ Check your Telegram chat for the test notification.
 🚀 DevPocket Task Completed
 
 📅 Time: 2025-10-22 14:30:45
-📁 Project: claudekit-engineer
+📁 Project: aitykit-marketing
 🔧 Total Operations: 15
 🆔 Session: abc12345...
 
@@ -269,7 +269,7 @@ Files Modified:
 • src/utils/validation.ts
 • tests/auth.test.ts
 
-📍 Location: `/Users/user/projects/claudekit-engineer`
+📍 Location: `/Users/user/projects/aitykit-marketing`
 ```
 
 ### SubagentStop Event
@@ -290,13 +290,13 @@ Files Modified:
 🤖 DevPocket Subagent Completed
 
 📅 Time: 2025-10-22 14:35:20
-📁 Project: claudekit-engineer
+📁 Project: aitykit-marketing
 🔧 Agent Type: planner
 🆔 Session: abc12345...
 
 Specialized agent completed its task.
 
-📍 Location: `/Users/user/projects/claudekit-engineer`
+📍 Location: `/Users/user/projects/aitykit-marketing`
 ```
 
 ## Notification Examples

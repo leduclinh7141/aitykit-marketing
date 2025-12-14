@@ -14,7 +14,7 @@ Checklist for optimizing individual pages for search.
 `Primary Keyword - Secondary Keyword | Brand Name`
 
 **Examples**
-- "Email Marketing Guide: 15 Tips to Boost Open Rates | ClaudeKit"
+- "Email Marketing Guide: 15 Tips to Boost Open Rates | AityKit"
 - "Best CRM Software 2024: Top 10 Compared | Reviews"
 
 ## Meta Description

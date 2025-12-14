@@ -2,16 +2,16 @@
 
 **Last Updated**: 2025-11-05
 **Version**: 1.10.5
-**Repository**: [claudekit/claudekit-engineer](https://github.com/claudekit/claudekit-engineer)
+**Repository**: [aitykit/aitykit-marketing](https://github.com/leduclinh7141/aitykit-marketing)
 
 ## Overview
 
-ClaudeKit Engineer is a comprehensive boilerplate template for building professional software projects with CLI Coding Agents (Claude Code and Open Code). It provides a complete development environment with AI-powered agent orchestration, automated workflows, and intelligent project management.
+AityKit Marketing is a comprehensive boilerplate template for building professional software projects with CLI Coding Agents (Claude Code and Open Code). It provides a complete development environment with AI-powered agent orchestration, automated workflows, and intelligent project management.
 
 ## Project Structure
 
 ```
-claudekit-engineer/
+aitykit-marketing/
 ├── .claude/               # Claude Code configuration
 │   ├── agents/           # Specialized agent definitions (14 agents)
 │   ├── commands/         # Slash command implementations (50+ commands)
@@ -305,37 +305,37 @@ Features: Automated releases, changelog generation
 ## Critical Files
 
 ### Configuration
-- `/mnt/d/www/claudekit/claudekit-engineer/package.json` - Node.js config
-- `/mnt/d/www/claudekit/claudekit-engineer/.releaserc.json` - Release config
-- `/mnt/d/www/claudekit/claudekit-engineer/.commitlintrc.json` - Commit linting
-- `/mnt/d/www/claudekit/claudekit-engineer/.gitignore` - Git exclusions
-- `/mnt/d/www/claudekit/claudekit-engineer/.repomixignore` - Repomix exclusions
+- `/mnt/d/www/aitykit/aitykit-marketing/package.json` - Node.js config
+- `/mnt/d/www/aitykit/aitykit-marketing/.releaserc.json` - Release config
+- `/mnt/d/www/aitykit/aitykit-marketing/.commitlintrc.json` - Commit linting
+- `/mnt/d/www/aitykit/aitykit-marketing/.gitignore` - Git exclusions
+- `/mnt/d/www/aitykit/aitykit-marketing/.repomixignore` - Repomix exclusions
 
 ### Documentation
-- `/mnt/d/www/claudekit/claudekit-engineer/README.md` - Main project docs
-- `/mnt/d/www/claudekit/claudekit-engineer/CLAUDE.md` - Agent instructions
-- `/mnt/d/www/claudekit/claudekit-engineer/CHANGELOG.md` - Version history
-- `/mnt/d/www/claudekit/claudekit-engineer/guide/COMMANDS.md` - Command reference
+- `/mnt/d/www/aitykit/aitykit-marketing/README.md` - Main project docs
+- `/mnt/d/www/aitykit/aitykit-marketing/CLAUDE.md` - Agent instructions
+- `/mnt/d/www/aitykit/aitykit-marketing/CHANGELOG.md` - Version history
+- `/mnt/d/www/aitykit/aitykit-marketing/guide/COMMANDS.md` - Command reference
 
 ### Workflows
-- `/mnt/d/www/claudekit/claudekit-engineer/.claude/workflows/primary-workflow.md`
-- `/mnt/d/www/claudekit/claudekit-engineer/.claude/workflows/development-rules.md`
-- `/mnt/d/www/claudekit/claudekit-engineer/.claude/workflows/orchestration-protocol.md`
-- `/mnt/d/www/claudekit/claudekit-engineer/.claude/workflows/documentation-management.md`
+- `/mnt/d/www/aitykit/aitykit-marketing/.claude/workflows/primary-workflow.md`
+- `/mnt/d/www/aitykit/aitykit-marketing/.claude/workflows/development-rules.md`
+- `/mnt/d/www/aitykit/aitykit-marketing/.claude/workflows/orchestration-protocol.md`
+- `/mnt/d/www/aitykit/aitykit-marketing/.claude/workflows/documentation-management.md`
 
 ## Related Projects
 
-- **claudekit** - ClaudeKit website (`../claudekit`)
-- **claudekit-marketing** - Marketing Kit (`../claudekit-marketing`)
-- **claudekit-cli** - CLI setup tool (`../claudekit-cli`)
-- **claudekit-docs** - Public docs (`../claudekit-docs`)
+- **aitykit** - AityKit website (`../aitykit`)
+- **aitykit-marketing** - Marketing Kit (`../aitykit-marketing`)
+- **aitykit-cli** - CLI setup tool (`../aitykit-cli`)
+- **aitykit-docs** - Public docs (`../aitykit-docs`)
 
 ## Version History
 
 **Current**: v1.8.0
 **License**: MIT
 **Author**: Duy Nguyen
-**Repository**: https://github.com/claudekit/claudekit-engineer
+**Repository**: https://github.com/leduclinh7141/aitykit-marketing
 
 ## Unresolved Questions
 

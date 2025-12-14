@@ -16,18 +16,18 @@ A comprehensive boilerplate template for building professional software projects
 
 ## Related Projects & Directories
 
-- `claudekit` - Website of ClaudeKit
-  - Directory: `../claudekit`
-  - Repo: https://github.com/claudekit/claudekit
-- `claudekit-marketing` - Marketing Kit repository
-  - Directory: `../claudekit-marketing`
-  - Repo: https://github.com/claudekit/claudekit-marketing
-- `claudekit-cli` - CLI tool for quick project setup
-  - Directory: `../claudekit-cli`
-  - Repo: https://github.com/mrgoonie/claudekit-cli
-- `claudekit-docs` - Public documentation repository: https://docs.claudekit.cc
-  - Directory: `../claudekit-docs`
-  - Repo: https://github.com/claudekit/claudekit-docs
+- `aitykit` - Website of AityKit
+  - Directory: `../aitykit`
+  - Repo: https://github.com/leduclinh7141/aitykit
+- `aitykit-marketing` - Marketing Kit repository
+  - Directory: `../aitykit-marketing`
+  - Repo: https://github.com/leduclinh7141/aitykit-marketing
+- `aitykit-cli` - CLI tool for quick project setup
+  - Directory: `../aitykit-cli`
+  - Repo: https://github.com/mrgoonie/aitykit-cli
+- `aitykit-docs` - Public documentation repository: https://docs.aitykit.cc
+  - Directory: `../aitykit-docs`
+  - Repo: https://github.com/leduclinh7141/aitykit-docs
 
 ## Key Benefits
 
@@ -73,14 +73,14 @@ A comprehensive boilerplate template for building professional software projects
 - Operating Systems: macOS 10.15+, Ubuntu 20.04+/Debian 10+, or Windows 10+ (with WSL 1, WSL 2, or Git for Windows)
 - Hardware: 4GB+ RAM
 
-### Setup your new project with ClaudeKit
+### Setup your new project with AityKit
 
-1. **Install ClaudeKit CLI**:
+1. **Install AityKit CLI**:
    ```bash
-   npm install -g claudekit-cli
+   npm install -g aitykit-cli
    ```
 
-2. **Create your new project with ClaudeKit framework**:
+2. **Create your new project with AityKit framework**:
    ```bash
    ck new --dir my-project --kit engineer
    ```
@@ -103,7 +103,7 @@ A comprehensive boilerplate template for building professional software projects
    /cook "add database integration"
    ```
 
-📖 **Learn more from our docs:** [https://docs.claudekit.cc](https://docs.claudekit.cc)
+📖 **Learn more from our docs:** [https://docs.aitykit.cc](https://docs.aitykit.cc)
 
 ## Project Structure
 
@@ -396,7 +396,7 @@ claude "What objects are in this image: photo.jpg"
 
 ### Pre-requisites
 
-In ClaudeKit, you need to setup the MCP servers in `.claude/.mcp.json` file.
+In AityKit, you need to setup the MCP servers in `.claude/.mcp.json` file.
 
 Copy the example file:
 ```bash

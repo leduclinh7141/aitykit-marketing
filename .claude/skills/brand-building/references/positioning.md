@@ -12,7 +12,7 @@ because [reason to believe].
 
 ### Example
 "For growth-stage startups who need scalable marketing,
-ClaudeKit Marketing is the AI marketing automation platform
+AityKit Marketing is the AI marketing automation platform
 that delivers enterprise-level campaigns with startup agility
 because our specialized agents handle complexity while you focus on strategy."
 

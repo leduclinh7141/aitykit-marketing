@@ -1,14 +1,14 @@
 # Project Overview & Product Development Requirements (PDR)
 
-**Project Name**: ClaudeKit Engineer
+**Project Name**: AityKit Marketing
 **Version**: 1.8.0
 **Last Updated**: 2025-10-26
 **Status**: Active Development
-**Repository**: https://github.com/claudekit/claudekit-engineer
+**Repository**: https://github.com/leduclinh7141/aitykit-marketing
 
 ## Executive Summary
 
-ClaudeKit Engineer is a comprehensive boilerplate template that revolutionizes software development by integrating AI-powered CLI coding agents (Claude Code and Open Code) into the development workflow. It provides a complete orchestration framework where specialized AI agents collaborate to handle planning, implementation, testing, code review, documentation, and project management.
+AityKit Marketing is a comprehensive boilerplate template that revolutionizes software development by integrating AI-powered CLI coding agents (Claude Code and Open Code) into the development workflow. It provides a complete orchestration framework where specialized AI agents collaborate to handle planning, implementation, testing, code review, documentation, and project management.
 
 ## Project Purpose
 
@@ -593,9 +593,9 @@ Provide a production-ready template that:
 - [Keep a Changelog](https://keepachangelog.com/)
 
 ### Support & Community
-- GitHub Issues: https://github.com/claudekit/claudekit-engineer/issues
-- Discussions: https://github.com/claudekit/claudekit-engineer/discussions
-- Repository: https://github.com/claudekit/claudekit-engineer
+- GitHub Issues: https://github.com/leduclinh7141/aitykit-marketing/issues
+- Discussions: https://github.com/leduclinh7141/aitykit-marketing/discussions
+- Repository: https://github.com/leduclinh7141/aitykit-marketing
 
 ## Unresolved Questions
 

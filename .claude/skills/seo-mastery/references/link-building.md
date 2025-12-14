@@ -51,7 +51,7 @@ Strategies for acquiring quality backlinks.
 
 | Type | Usage | Example |
 |------|-------|---------|
-| Branded | 30-40% | "ClaudeKit" |
+| Branded | 30-40% | "AityKit" |
 | Natural | 20-30% | "click here", "this article" |
 | Partial match | 15-20% | "marketing automation tool" |
 | Exact match | 5-10% | "email marketing software" |

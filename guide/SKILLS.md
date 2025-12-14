@@ -1,6 +1,6 @@
 # Skills Guide
 
-This guide documents all available skills in the ClaudeKit Engineer project. Skills extend Claude's capabilities with specialized knowledge, workflows, and tool integrations.
+This guide documents all available skills in the AityKit Marketing project. Skills extend Claude's capabilities with specialized knowledge, workflows, and tool integrations.
 
 ## Table of Contents
 
