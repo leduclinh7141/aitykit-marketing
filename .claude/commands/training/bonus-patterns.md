@@ -1,4 +1,4 @@
-# /bonus-patterns - Pattern Library Templates
+# /training:bonus-patterns - Marketing Pattern Library
 
 ## Language & Quality Standards
 
@@ -8,37 +8,47 @@
 
 ## Instructions for Claude
 
-Secret bonus command for pattern library creation.
+Bonus command for building a marketing pattern library - the secret weapon of 10x marketers.
 
 ### Create Pattern Library
 
 ---
 
-🎁 **BONUS: Pattern Library System**
+**BONUS: Marketing Pattern Library System**
 
-Let me help you set up your personal pattern library - the secret weapon of 10x marketers.
+Let me help you set up your personal pattern library - a living document that captures what works and compounds your marketing effectiveness.
 
 ---
 
-```
-Create a comprehensive pattern library:
+## What is a Pattern Library?
 
-exercises/markit/analytics/PATTERN-LIBRARY.md
+A pattern library documents:
+- **Winning patterns** - What worked and why
+- **Failing patterns** - What didn't work and why
+- **Persona-specific patterns** - What resonates with each audience
+- **Channel-specific patterns** - What works on each platform
+- **Seasonal patterns** - What works at different times
 
+## Pattern Library Template
+
+```markdown
 # Marketing Pattern Library
 
-## How to Use This Document
-After each campaign, add winning patterns here. Before each campaign, review this document. Your future self will thank you.
+## How to Use
+- Review before each campaign
+- Update after each campaign
+- Track performance metrics
+- Note context for each pattern
 
 ---
 
 ## Headline Patterns
 
-### High-Performers (2x+ average CTR)
-| Pattern | Example | Performance | Notes |
-|---------|---------|-------------|-------|
-| How [Persona] can [Benefit] | "How remote managers can save 10 hours/week" | 2.3x CTR | Works best for Manager Mark |
-| [Number] ways to [Outcome] | "7 ways to coordinate team focus time" | 2.1x CTR | Odd numbers outperform even |
+### High-Performers (2x+ average)
+| Pattern | Example | Performance | Context |
+|---------|---------|-------------|---------|
+| How [Persona] can [Benefit] | "How remote managers save 10 hrs/week" | 2.3x CTR | Works best for Manager Mark |
+| [Number] ways to [Outcome] | "7 ways to coordinate team focus" | 2.1x CTR | Odd numbers outperform even |
 | The [Adjective] guide to [Topic] | "The complete guide to remote productivity" | 1.8x CTR | Best for pillar content |
 
 ### Underperformers (Avoid)
@@ -54,7 +64,7 @@ After each campaign, add winning patterns here. Before each campaign, review thi
 ### Subject Lines
 | Pattern | Open Rate | Notes |
 |---------|-----------|-------|
-| [First Name], [short question]? | +34% | Personalization + curiosity |
+| [First Name], [question]? | +34% | Personalization + curiosity |
 | [Number] inside | +28% | Creates anticipation |
 | Quick [benefit] | +22% | Respects time |
 
@@ -68,7 +78,7 @@ After each campaign, add winning patterns here. Before each campaign, review thi
 |-----|------|-------------|
 | Tuesday | 10:00 AM | Best overall |
 | Thursday | 2:00 PM | Second best |
-| Avoid | Monday AM, Friday PM | -40% engagement |
+| Monday AM | - | -40% engagement |
 
 ---
 
@@ -81,8 +91,8 @@ After each campaign, add winning patterns here. Before each campaign, review thi
 | Single image | 1.8x | Announcements |
 | Text-only | 1.0x | Thought leadership |
 
-#### Winning Post Structure
-1. Hook (line 1) - controversy or bold claim
+**Winning Post Structure:**
+1. Hook (line 1) - Bold claim or controversy
 2. Problem (lines 2-4)
 3. Solution (lines 5-10)
 4. Proof (lines 11-13)
@@ -91,7 +101,7 @@ After each campaign, add winning patterns here. Before each campaign, review thi
 ### Twitter/X
 | Format | Engagement |
 |--------|------------|
-| Thread (7-10 tweets) | 4x single tweet |
+| Thread (7-10 tweets) | 4x single |
 | Image + short text | 2.5x |
 | Question tweets | 2x |
 
@@ -109,50 +119,38 @@ After each campaign, add winning patterns here. Before each campaign, review thi
 ### Meta Ads
 | Angle | CTR | CPA |
 |-------|-----|-----|
-| Problem-focused | 1.8% | $24 |
-| Social proof | 2.1% | $21 |
-| Urgency | 1.5% | $28 |
+| Problem-focused | 1.8% | Higher |
+| Social proof | 2.1% | Lower |
+| Urgency | 1.5% | Variable |
 
 ---
 
 ## Persona-Specific Patterns
 
-### Manager Mark
-- Responds to: ROI, efficiency, team metrics
+### Manager Mark (B2B Technical)
+- Responds to: ROI, efficiency, metrics
 - Avoid: Fluffy language, vague benefits
 - Best channels: LinkedIn, Email
 - Best times: Tuesday-Thursday, business hours
 
-### Founder Fiona
-- Responds to: Growth, scale, culture
+### Startup Sam (Founder)
+- Responds to: Growth, scale, speed
 - Avoid: Enterprise jargon
 - Best channels: Twitter, Product Hunt
 - Best times: Evenings, weekends
 
-### Director Dana
-- Responds to: Case studies, competitor comparisons
-- Avoid: Overly casual tone
-- Best channels: LinkedIn, Webinars
-- Best times: Mid-week mornings
-
----
-
-## Seasonal Patterns
-
-| Month | What Works | What Doesn't |
-|-------|------------|--------------|
-| January | Goal-setting, fresh start | Holiday themes |
-| Q1 end | Budget spending, planning | Long-form content |
-| Summer | Quick tips, mobile-first | Dense content |
-| Q4 | Year-end, planning ahead | New product launches |
+### Solo Steve (Solopreneur)
+- Responds to: Time savings, DIY, affordability
+- Avoid: Team-focused messaging
+- Best channels: Twitter, Email
+- Best times: Early morning, evening
 
 ---
 
 ## Pattern Capture Template
 
-When you discover a new pattern, add it:
+When you discover a new pattern:
 
-\`\`\`
 ### [Pattern Name]
 - **What:** [Description]
 - **Performance:** [Metrics]
@@ -160,22 +158,34 @@ When you discover a new pattern, add it:
 - **When to avoid:** [Context]
 - **Date discovered:** [Date]
 - **Campaign:** [Reference]
-\`\`\`
+```
 
 ---
 
-**Remember:** Review this before every campaign. Update after every campaign.
+## Using Commands to Build Patterns
+
+After each campaign, use:
+
+```
+/analytics:report "campaign name" "all metrics"
 ```
 
-### Prompt the Next Step
+Then document:
+1. What content performed best?
+2. What headlines got highest CTR?
+3. What CTAs drove most conversions?
+4. What times/days worked best?
 
-Ask if they want to:
-1. Start filling in their actual patterns
-2. Create persona-specific pattern docs
-3. Set up pattern capture automation
+## Pattern Library Best Practices
 
-## Key Teaching Points
-- Patterns are discovered, not invented
-- Document everything that works AND fails
-- Review before campaigns, update after
-- Persona-specific patterns are most valuable
+1. **Review before campaigns** - Check what worked before
+2. **Update after campaigns** - Add new learnings
+3. **Include failures** - Know what to avoid
+4. **Add context** - Why it worked matters
+5. **Track metrics** - Quantify performance
+
+---
+
+**Remember:** Patterns compound. Each campaign makes the next one better.
+
+---

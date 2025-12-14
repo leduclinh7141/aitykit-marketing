@@ -1,4 +1,4 @@
-# /start-2-5 - Competitive Analysis
+# /training:start-2-5 - Competitive Analysis
 
 ## Language & Quality Standards
 
@@ -22,173 +22,165 @@ Understanding your competitive landscape is crucial for positioning and messagin
 
 ---
 
-### Step 1: Competitor Profiles
+### Step 1: Deep Competitor Analysis
+
+Use the competitor command:
 
 ```
-Create detailed competitor profiles for Planerio's main competitors:
+/competitor:deep "RescueTime - personal time tracking and productivity software"
+```
 
-Analyze: RescueTime, Freedom, Focus@Will
-
-For each competitor:
-
-COMPANY OVERVIEW:
-- Company size, funding, history
+Review analysis:
+- Company overview
 - Target market
-- Business model and pricing
+- Product features
+- Pricing model
+- Strengths/weaknesses
+- Market opportunities
 
-PRODUCT ANALYSIS:
-- Core features
-- Unique selling propositions
-- Strengths and weaknesses
+### Step 2: Multiple Competitors
 
-MARKETING ANALYSIS:
-- Brand positioning
-- Key marketing channels
+Analyze additional competitors:
+
+```
+/competitor:deep "Freedom - website and app blocker for focus"
+```
+
+```
+/competitor:deep "Focus@Will - music for productivity and focus"
+```
+
+### Step 3: SEO Competitive Analysis
+
+Use SEO competitor command:
+
+```
+/seo:competitor "rescuetime.com"
+```
+
+```
+/seo:competitor "freedom.to"
+```
+
+Review:
+- Keywords they rank for
 - Content strategy
-- Messaging approach
+- Backlink profile
+- Technical SEO
 
-VS PLANERIO:
-- What they do better
-- What we do better
-- Market segments they underserve
+### Step 4: Create Battlecards
 
-Save each as exercises/markit/research/competitors/[name]-profile.md
-```
-
-### Step 2: Positioning Matrix
+Use sales battlecard command:
 
 ```
-Create a competitive positioning matrix:
-
-POSITIONING AXES:
-- X-axis: Individual vs Team focus
-- Y-axis: Passive tracking vs Active intervention
-
-Plot all competitors and Planerio on this matrix.
-
-Identify:
-- Where each competitor sits
-- White space Planerio can own
-- Positioning statement for Planerio
-
-Include visual description (for creating actual chart).
-
-Save as exercises/markit/research/positioning-matrix.md
+/sales:battlecard "RescueTime"
 ```
 
-### Step 3: Messaging Analysis
-
 ```
-Analyze competitor messaging across channels:
-
-For each competitor, review:
-- Homepage headline and value prop
-- Key benefits emphasized
-- Target audience signals
-- Social proof used
-- CTAs and offers
-
-ANALYSIS:
-- Common patterns
-- Unique approaches
-- Messaging gaps we can exploit
-
-Save as exercises/markit/research/competitor-messaging.md
+/sales:battlecard "Freedom"
 ```
 
-### Step 4: Feature Comparison
+Review battlecard content:
+- Quick comparison
+- Win scenarios
+- Objection handling
+- Proof points
+
+### Step 5: Positioning Matrix
+
+Create competitive positioning:
 
 ```
-Create feature comparison matrix:
+Create a competitive positioning matrix for Planerio:
 
-Compare Planerio vs 3 competitors across:
-- Time tracking
-- Focus sessions
-- Distraction blocking
-- Team coordination (our advantage!)
-- Analytics
-- Integrations
-- Pricing
-- Free trial
+AXES:
+- X: Individual vs Team focus
+- Y: Passive tracking vs Active coordination
 
-Format as table with checkmarks and notes.
-Highlight where Planerio wins.
+PLOT:
+- RescueTime: Individual, Passive tracking
+- Freedom: Individual, Active blocking
+- Planerio: Team, Active coordination
 
-Save as exercises/markit/research/feature-comparison.md
+POSITIONING STATEMENT:
+"For remote teams who need to coordinate focus time, Planerio is the team productivity platform that enables synchronized deep work, unlike individual tools that only track personal time."
 ```
 
-### Step 5: Competitive Content Strategy
+### Step 6: Market Research
+
+Use research commands:
 
 ```
-Analyze competitor content:
-
-For each competitor:
-- Blog frequency and topics
-- Social media presence
-- Email marketing approach
-- SEO keywords they target
-- Content gaps we can fill
-
-Identify opportunities:
-- Topics they're not covering
-- Formats they don't use
-- Keywords they're missing
-
-Save as exercises/markit/research/competitive-content-analysis.md
+/research:market "team productivity software - remote work tools 2024-2025"
 ```
 
-### Step 6: Win/Loss Framework
-
 ```
-Create a win/loss analysis template:
-
-## When We Win Deals
-- Features that made the difference
-- Pricing advantages
-- Brand perception factors
-
-## When We Lose Deals
-- Features we lacked
-- Pricing concerns
-- Trust/credibility issues
-
-## Competitive Weaknesses to Exploit
-(Based on review sites, customer complaints)
-
-## Our Key Differentiators
-1. Team-wide coordination (vs individual tools)
-2. [Other advantages]
-
-Save as exercises/markit/research/win-loss-framework.md
+/research:trend "remote work coordination - async vs sync - team productivity"
 ```
 
-### Step 7: Competitive Response Playbook
+### Step 7: Feature Comparison
+
+Create feature comparison:
 
 ```
-Create playbook for competitive situations:
+Create a feature comparison table:
 
-SCENARIO 1: Competitor launches similar feature
-- Immediate response
-- Messaging to customers
-- Sales talking points
+| Feature | Planerio | RescueTime | Freedom |
+|---------|----------|------------|---------|
+| Team coordination | ✓ Core | ✗ | ✗ |
+| Focus scheduling | ✓ | ✗ | ✓ |
+| Time tracking | ✓ | ✓ Core | ✗ |
+| App blocking | ✓ | ✗ | ✓ Core |
+| Team analytics | ✓ | Limited | ✗ |
+| Integrations | Slack, Zoom, GCal | Limited | Limited |
+| Pricing | $12/user/mo | $12/mo | $8.99/mo |
 
-SCENARIO 2: Competitor drops pricing
-- How to respond
-- Value-based messaging
-- When to match vs differentiate
+HIGHLIGHT: Where Planerio wins
+```
+
+### Step 8: Competitive Response Playbook
+
+Create response scenarios:
+
+```
+Create competitive response playbook:
+
+SCENARIO 1: RescueTime launches team feature
+- Immediate: Acknowledge, differentiate depth
+- Message: "We've built for teams from day one"
+- Proof: Feature comparison, customer testimonials
+
+SCENARIO 2: Competitor undercuts pricing
+- Response: Value-based positioning
+- Message: "ROI of team coordination vs tracking"
+- Action: Case study with ROI data
 
 SCENARIO 3: New competitor enters market
-- Assessment criteria
-- Response priority
-- Intelligence gathering
-
-Save as exercises/markit/campaigns/competitive-playbook.md
+- Assessment: Feature overlap analysis
+- Response: Strengthen differentiators
+- Action: Update battlecards
 ```
 
-### Step 8: Differentiation Summary
+### Step 9: Sales Qualification
+
+Use sales qualification:
 
 ```
-Create a one-page differentiation summary for the sales team:
+/sales:qualify "enterprise prospect considering RescueTime vs Planerio"
+```
+
+Understand:
+- Decision criteria
+- Stakeholders
+- Timeline
+- Budget signals
+
+### Step 10: Differentiation Summary
+
+Create one-page summary:
+
+```
+Create a differentiation summary for sales team:
 
 # Why Planerio Wins
 
@@ -196,17 +188,18 @@ Create a one-page differentiation summary for the sales team:
 [One sentence positioning]
 
 ## Top 3 Differentiators
-1. [With proof points]
-2. [With proof points]
-3. [With proof points]
+1. Team-first coordination (proof points)
+2. Real-time sync with calendar tools (proof points)
+3. Team analytics dashboard (proof points)
 
 ## Common Objections + Responses
-[5 objections with rebuttals]
+1. "RescueTime is cheaper" → [Response]
+2. "We already use Freedom" → [Response]
+3. "We don't need another tool" → [Response]
 
 ## Competitor Quick Reference
-[One-line summary of each competitor's weakness]
-
-Save as exercises/markit/research/differentiation-summary.md
+- RescueTime: Individual tracking, no team coordination
+- Freedom: Blocking only, no team features
 ```
 
 ### What's Next
@@ -214,12 +207,12 @@ Save as exercises/markit/research/differentiation-summary.md
 Tell them:
 - They have comprehensive competitive intelligence
 - Ready to position and message effectively
-- **Final lesson:** `/start-2-6` - SEO Optimization
+- **Final lesson:** `/training:start-2-6` - SEO Optimization
 - Master search engine optimization
 
 ## Key Teaching Points
-- Competitive analysis reveals positioning opportunities
-- Feature comparison highlights advantages
-- Messaging analysis shows differentiation gaps
-- Win/loss tracking guides strategy
+- `/competitor:deep` provides full analysis
+- `/seo:competitor` reveals SEO strategy
+- `/sales:battlecard` enables sales team
+- Positioning matrix shows differentiation
 - Response playbooks prepare for scenarios

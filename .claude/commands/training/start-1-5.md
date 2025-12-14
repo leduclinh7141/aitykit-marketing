@@ -1,4 +1,4 @@
-# /start-1-5 - Custom Marketing Sub-Agents
+# /training:start-1-5 - Reviewer Agents Deep Dive
 
 ## Language & Quality Standards
 
@@ -8,143 +8,164 @@
 
 ## Instructions for Claude
 
-Teach students to create reusable specialized reviewer personas.
+Teach students to leverage reviewer agents for quality assurance and multi-perspective feedback.
 
 ### Lesson Overview
 
 ---
 
-**Module 1.5: Custom Marketing Sub-Agents**
+**Module 1.5: Reviewer Agents Deep Dive**
 
-Sub-agents are specialized AI personas you create to review and improve your work. Think of them as expert consultants on-demand.
+The marketing kit includes 6 specialized reviewer agents. These provide expert-level feedback from different perspectives to ensure content quality.
 
 **Duration:** ~30 minutes
 
 ---
 
-### Step 1: Why Custom Sub-Agents?
+### Step 1: Why Reviewer Agents?
 
 Every piece of marketing should be reviewed from multiple angles:
 - Brand consistency
 - SEO optimization
 - Conversion potential
-- Clarity and engagement
-- Target persona fit
+- Persona fit
+- Practical implementation
 
-Custom sub-agents give you on-demand experts for each area.
+Reviewer agents give you on-demand experts for each area.
 
-### Step 2: Create Brand Voice Guardian
+### Step 2: The Expert Reviewers
 
-```
-Create a custom reviewer persona called "Brand Voice Guardian".
-Save as exercises/markit/brand/reviewers/brand-voice-guardian.md
+Explain the three expert reviewers:
 
-This reviewer should:
-- Know our brand voice guidelines
-- Understand our target personas
-- Check tone, language, and messaging consistency
-- Flag off-brand phrases
-- Suggest improvements to align with brand
+**`brand-voice-guardian`:**
+- Ensures brand voice consistency
+- Checks tone and messaging
+- Validates against brand guidelines
+- Flags off-brand content
 
-Include:
-1. Reviewer persona description
-2. What they look for
-3. Common issues they catch
-4. How they provide feedback
-5. Example review format
-```
+**`seo-specialist`:**
+- Evaluates keyword usage
+- Checks on-page SEO elements
+- Reviews content structure
+- Identifies optimization opportunities
 
-### Step 3: Create SEO Specialist
+**`conversion-optimizer`:**
+- Assesses CTA effectiveness
+- Reviews persuasion elements
+- Identifies friction points
+- Suggests conversion improvements
 
-```
-Create an SEO Specialist reviewer.
-Save as exercises/markit/brand/reviewers/seo-specialist.md
+### Step 3: The Persona Reviewers
 
-This reviewer evaluates:
-- Keyword usage and optimization
-- Meta descriptions and titles
-- Content structure (H1, H2, etc.)
-- Internal linking opportunities
-- Readability and scannability
-- Search intent alignment
-```
+Explain the three persona reviewers:
 
-### Step 4: Create Conversion Expert
+**`manager-maria` (Marketing Manager, 38yo):**
+- B2B mid-size company perspective
+- Evaluates team implementation fit
+- Considers resource constraints
+- Reviews campaign feasibility
 
-```
-Create a Conversion Expert reviewer.
-Save as exercises/markit/brand/reviewers/conversion-expert.md
+**`solo-steve` (Solopreneur, 32yo):**
+- One-person business perspective
+- Assesses time efficiency
+- Reviews self-service ease
+- Considers budget sensitivity
 
-This reviewer focuses on:
-- CTA clarity and placement
-- Value proposition strength
-- Objection handling
-- Social proof usage
-- Urgency and scarcity
-- Friction points in the funnel
-```
+**`startup-sam` (Startup Founder, 28yo):**
+- Early-stage startup perspective
+- Evaluates growth potential
+- Reviews virality factors
+- Assesses speed to market
 
-### Step 5: Create Persona Reviewer
+### Step 4: Use Expert Reviewers
+
+Practice with expert reviewers:
 
 ```
-Create a "Manager Mark" Reviewer.
-Save as exercises/markit/brand/reviewers/persona-mark-reviewer.md
+Review our Planerio blog post with expert reviewers:
 
-This reviewer asks: "Would this resonate with Manager Mark?"
-- Checks if pain points match his frustrations
-- Evaluates if language suits his level
-- Verifies examples are relevant to his world
-- Assesses if CTA fits his decision process
-```
+1. `brand-voice-guardian`: Evaluate brand consistency
+2. `seo-specialist`: Evaluate SEO optimization
+3. `conversion-optimizer`: Evaluate conversion potential
 
-### Step 6: Use the Review Board
-
-Now use all reviewers together:
-
-```
-I have a blog post at exercises/markit/content/blog/post-1-draft.md
-
-Have these reviewers evaluate it:
-1. Brand Voice Guardian
-2. SEO Specialist  
-3. Conversion Expert
-4. Manager Mark Reviewer
-
-Each should provide:
-- Score (1-10)
+Each should score (1-10) and provide:
 - Top 3 strengths
 - Top 3 improvements needed
-- Specific edits
+- Specific recommended edits
+```
 
-Save combined review as exercises/markit/content/blog/post-1-review.md
+### Step 5: Use Persona Reviewers
+
+Practice with persona reviewers:
+
+```
+Review our Planerio email sequence from persona perspectives:
+
+1. `manager-maria`: Would a B2B marketing manager find this valuable?
+2. `solo-steve`: Would a solopreneur implement this?
+3. `startup-sam`: Would this drive growth for a startup?
+
+Each should evaluate:
+- Resonance with their needs
+- Implementation feasibility
+- Value perception
+```
+
+### Step 6: Combined Review Board
+
+Use all reviewers together for comprehensive feedback:
+
+```
+Run a full review board on the Planerio landing page copy:
+
+Expert Reviews:
+- Brand consistency (brand-voice-guardian)
+- SEO optimization (seo-specialist)
+- Conversion potential (conversion-optimizer)
+
+Persona Reviews:
+- B2B fit (manager-maria)
+- Self-service potential (solo-steve)
+- Growth potential (startup-sam)
+
+Synthesize: What changes would satisfy all reviewers?
 ```
 
 ### Step 7: Iterative Improvement
 
-```
-Based on the review feedback, improve the blog post.
-Address the top issues from each reviewer.
-Save the improved version as exercises/markit/content/blog/post-1-v2.md
-```
-
-Then have reviewers check again:
+Show the review-improve cycle:
 
 ```
-Have all 4 reviewers do a quick final check of the v2 post.
-If all score 8+, mark as ready for publishing.
+1. Create content
+2. Get multi-reviewer feedback
+3. Implement top priority changes
+4. Re-review changed content
+5. Repeat until all reviewers score 8+
 ```
+
+### Step 8: When to Use Which Reviewer
+
+Provide guidance:
+
+| Content Type | Primary Reviewers |
+|-------------|-------------------|
+| Blog posts | seo-specialist, brand-voice-guardian |
+| Landing pages | conversion-optimizer, manager-maria |
+| Email sequences | email-wizard, startup-sam |
+| Social content | brand-voice-guardian, solo-steve |
+| Sales collateral | sales-enabler, manager-maria |
 
 ### What's Next
 
 Tell them:
-- They now have a reusable review team
-- These reviewers can be used on any future content
-- **Next:** `/start-1-6` - Project Memory (CLAUDE.md)
+- They now have a reusable review system
+- These reviewers ensure consistent quality
+- **Next:** `/training:start-1-6` - Project Memory (CLAUDE.md)
 - They'll learn how to maintain persistent context
 
 ## Key Teaching Points
-- Custom sub-agents provide expert review on-demand
-- Create reviewers for brand, SEO, conversion, personas
+- 6 reviewer agents: 3 expert, 3 persona
+- Expert reviewers check quality dimensions
+- Persona reviewers check audience fit
 - Use multiple reviewers for comprehensive feedback
-- Iterate content through rounds of review
-- Reviewers ensure consistency across all marketing
+- Iterate content through review cycles

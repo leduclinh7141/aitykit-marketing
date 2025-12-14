@@ -1,4 +1,4 @@
-# /start-2-6 - SEO Optimization
+# /training:start-2-6 - SEO Optimization
 
 ## Language & Quality Standards
 
@@ -8,7 +8,7 @@
 
 ## Instructions for Claude
 
-Final lesson - teach comprehensive SEO strategy and execution.
+Final lesson - teach comprehensive SEO strategy and execution using SEO commands.
 
 ### Lesson Overview
 
@@ -24,214 +24,184 @@ SEO drives sustainable, long-term growth. Let's master keyword research, content
 
 ### Step 1: Keyword Research
 
-```
-Conduct keyword research for Planerio:
-
-SEED KEYWORDS:
-- remote team productivity
-- team focus time
-- team coordination software
-
-Generate 30+ related keywords including:
-- Long-tail variations
-- Question keywords
-- Comparison keywords
-
-For each, estimate:
-- Search intent (informational/transactional)
-- Competition level
-- Business value
-
-Group into topic clusters.
-
-Save as exercises/markit/research/seo-keywords.md
-```
-
-### Step 2: Content Optimization Checklist
+Use keyword research command:
 
 ```
-Create an SEO optimization checklist:
-
-## On-Page SEO Checklist
-
-TITLE TAG:
-- [ ] Under 60 characters
-- [ ] Includes target keyword
-- [ ] Compelling and click-worthy
-
-META DESCRIPTION:
-- [ ] 150-160 characters
-- [ ] Includes keyword
-- [ ] Has CTA
-
-CONTENT:
-- [ ] Keyword in first 100 words
-- [ ] Natural keyword usage (1-2% density)
-- [ ] H1, H2, H3 structure
-- [ ] Internal links
-- [ ] External links to authority sources
-- [ ] Images with alt text
-- [ ] Readable (short paragraphs, bullets)
-
-Save as exercises/markit/templates/seo-checklist.md
+/seo:keywords "remote team productivity"
 ```
 
-### Step 3: Optimize Existing Content
-
-Take a blog post we created and optimize it:
-
 ```
-Read exercises/markit/content/blog/post-1-draft.md
-
-Optimize it for SEO:
-1. Improve the title tag
-2. Write meta description
-3. Add target keyword in first 100 words
-4. Improve heading structure
-5. Add internal link suggestions
-6. Suggest image alt text
-7. Improve readability
-
-Save optimized version as post-1-seo.md
-Create optimization report showing changes.
+/seo:keywords "team focus time software"
 ```
 
-### Step 4: Pillar Page Strategy
+```
+/seo:keywords "coordination tools for remote teams"
+```
+
+Review keyword opportunities:
+- Search volume estimates
+- Competition levels
+- Intent classification
+- Keyword clusters
+
+### Step 2: Competitor SEO Analysis
+
+Analyze competitor SEO:
 
 ```
-Create detailed pillar page plan:
+/seo:competitor "rescuetime.com"
+```
 
-PILLAR: "The Complete Guide to Remote Team Productivity"
+```
+/seo:competitor "freedom.to"
+```
 
-STRUCTURE:
-- Introduction (what, why, who)
-- 8-10 main sections (500-800 words each)
-- FAQ section
-- Resources section
+Identify:
+- Keywords they rank for
+- Content gaps
+- Backlink opportunities
+- Technical strengths/weaknesses
 
-CLUSTER CONTENT (10 supporting posts):
-List specific titles, each targeting long-tail keyword.
+### Step 3: SEO Audit
+
+Run comprehensive audit:
+
+```
+/seo:audit "planerio.com"
+```
+
+Review audit areas:
+- Technical SEO (crawlability, speed, mobile)
+- On-page SEO (titles, meta, headers)
+- Content quality (depth, relevance)
+- Backlink profile
+
+### Step 4: Content Optimization
+
+Optimize existing content:
+
+```
+/seo:optimize "blog post about team productivity" "remote team productivity"
+```
+
+Optimization includes:
+- Title tag improvement
+- Meta description
+- Header structure (H1, H2, H3)
+- Keyword placement
+- Internal linking suggestions
+- Image alt text
+
+### Step 5: Create SEO Content
+
+Use blog command with SEO focus:
+
+```
+/content:blog "The Complete Guide to Remote Team Productivity" "remote team productivity"
+```
+
+Then optimize:
+
+```
+/seo:optimize "the blog post" "remote team productivity"
+```
+
+### Step 6: Featured Snippet Strategy
+
+Optimize for featured snippets:
+
+```
+Create content optimized for featured snippets:
+
+Target query: "How to improve remote team productivity"
+
+PARAGRAPH SNIPPET (40-60 words):
+Direct answer format
+
+LIST SNIPPET (numbered steps):
+Step-by-step format
+
+TABLE SNIPPET:
+Comparison format
+```
+
+### Step 7: Technical SEO Checklist
+
+Use SEO checklist:
+
+```
+/checklist:seo-weekly "planerio.com"
+```
+
+Weekly SEO tasks:
+- Crawl error check
+- Page speed monitoring
+- Mobile usability
+- Index status
+- Keyword tracking
+
+### Step 8: Pillar-Cluster Strategy
+
+Create pillar content plan:
+
+```
+Create pillar-cluster SEO strategy:
+
+PILLAR PAGE: "The Complete Guide to Remote Team Productivity"
+- 3000-5000 words, comprehensive
+
+CLUSTER CONTENT (10 posts):
+1. "How to Schedule Team Focus Time" → team focus time
+2. "Reducing Meetings Without Losing Alignment" → reduce meetings remote
+3. "Async Communication Best Practices" → async communication
+4. "Deep Work for Remote Teams" → deep work teams
+5. "Team Productivity Metrics That Matter" → productivity metrics
+...
 
 INTERNAL LINKING:
-- How pillar links to cluster posts
-- How cluster posts link back
-- Cross-links between related posts
-
-Save as exercises/markit/research/pillar-page-plan.md
+- Each cluster links to pillar
+- Pillar links to all clusters
+- Cross-links between related clusters
 ```
 
-### Step 5: Featured Snippet Optimization
+### Step 9: Content Calendar with SEO
+
+Create SEO-focused calendar:
 
 ```
-Optimize content for featured snippets:
-
-Target: "How to improve remote team productivity"
-
-Create content formatted for:
-1. Paragraph snippet (40-60 word direct answer)
-2. List snippet (numbered steps)
-3. Table snippet (comparison)
-
-Show each format.
-
-Save as exercises/markit/research/featured-snippet-strategy.md
+/campaign:calendar "12 weeks - SEO content strategy - target keywords: remote team productivity, team focus time, coordination software"
 ```
-
-### Step 6: Technical SEO Checklist
-
-```
-Create technical SEO audit checklist:
-
-## Technical SEO Checklist
-
-CRAWLABILITY:
-- [ ] XML sitemap exists
-- [ ] Robots.txt configured
-- [ ] No orphaned pages
-
-PAGE SPEED:
-- [ ] Core Web Vitals pass
-- [ ] Images optimized
-- [ ] Code minified
-
-MOBILE:
-- [ ] Responsive design
-- [ ] Mobile-friendly test pass
-
-INDEXATION:
-- [ ] Pages indexed
-- [ ] No duplicate content
-- [ ] Canonical tags correct
-
-STRUCTURED DATA:
-- [ ] Schema markup implemented
-- [ ] Rich snippets eligible
-
-Save as exercises/markit/templates/technical-seo-checklist.md
-```
-
-### Step 7: SEO Content Calendar
-
-```
-Create SEO-focused content calendar:
 
 Map content to keywords:
+- Week 1: [Keyword] - [Title] - [Type]
+- Week 2: [Keyword] - [Title] - [Type]
+...
 
-MONTH 1:
-- Week 1: [Keyword] - [Content Title] - [Type: Pillar/Cluster]
-- Week 2: ...
+### Step 10: SEO Measurement
 
-Include:
-- Target keyword for each piece
-- Search volume estimate
-- Internal linking plan
-- Promotion strategy
-
-Save as exercises/markit/campaigns/seo-content-calendar.md
-```
-
-### Step 8: SEO Measurement Framework
+Track SEO performance:
 
 ```
-Create SEO tracking framework:
+/analytics:report "SEO performance" "organic traffic, keyword rankings, conversions"
+```
 
-## SEO KPIs
-
-RANKINGS:
-- Target keywords positions
-- Week-over-week changes
-- Competitor rankings
-
-TRAFFIC:
-- Organic sessions
-- Landing page performance
-- Geographic distribution
-
-CONVERSIONS:
+Key metrics:
+- Organic traffic trend
+- Keyword position changes
 - Organic conversion rate
-- Revenue from organic
-- Assisted conversions
-
-## Monthly SEO Report Template
-[Structure for ongoing tracking]
-
-Save as exercises/markit/analytics/seo-measurement-framework.md
-```
+- Page performance
 
 ### Course Complete!
 
 ---
 
-🎉 **CONGRATULATIONS!**
-
-**You've completed Claude Code for Marketers!**
+**Congratulations! You've completed AityKit Marketing Mastery!**
 
 You now know how to:
-- ✅ Use Claude Code for file operations
-- ✅ Run parallel agents for complex workflows
-- ✅ Create custom sub-agent reviewers
-- ✅ Maintain project memory with CLAUDE.md
-- ✅ Write comprehensive campaign briefs
+- ✅ Use 18 specialized marketing agents
+- ✅ Execute 76 slash commands
+- ✅ Follow 3 core workflows (Marketing, Sales, CRM)
+- ✅ Create comprehensive campaign briefs
 - ✅ Build content strategies
 - ✅ Generate marketing copy at scale
 - ✅ Analyze data and create reports
@@ -245,15 +215,16 @@ You now know how to:
 ### What's Next
 
 Tell them:
-- Use the `/cm:` and `/cf:` plugin commands for ongoing work
-- Reference the website (cc4.marketing) for documentation
+- Use all commands for ongoing work
+- Reference `docs/usage-guide.md` for documentation
+- Check out bonus content: `/training:bonus-patterns`, `/training:bonus-secret`
 - Keep building on what they've learned
 - Each campaign makes the next one easier (Compounding Effect)
 
 ## Key Teaching Points
-- SEO drives sustainable growth
+- `/seo:*` commands handle all SEO tasks
 - Keyword research is the foundation
 - Pillar + cluster builds authority
-- Featured snippets = visibility
 - Technical SEO ensures discoverability
+- Featured snippets = visibility
 - Consistent tracking enables optimization

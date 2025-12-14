@@ -1,4 +1,4 @@
-# /start-2-3 - Generate Marketing Copy
+# /training:start-2-3 - Generate Marketing Copy
 
 ## Language & Quality Standards
 
@@ -24,156 +24,170 @@ Learn to create professional marketing copy at scale: emails, ads, social, landi
 
 ### Step 1: Email Welcome Sequence
 
+Use the sequence command:
+
 ```
-Create a 5-email welcome sequence for Planerio trial users:
+/sequence:welcome "Planerio" "trial users - remote team managers"
+```
 
-Email 1 (Day 0): Welcome + Quick Start
-Email 2 (Day 2): Feature Highlight (team coordination)
-Email 3 (Day 5): Social Proof + Tips
-Email 4 (Day 9): Value Reinforcement
-Email 5 (Day 13): Trial Ending + Upgrade CTA
+Review the generated sequence:
+- Email 1 (Day 0): Welcome + Quick Start
+- Email 2 (Day 2): Feature Highlight
+- Email 3 (Day 5): Social Proof + Tips
+- Email 4 (Day 9): Value Reinforcement
+- Email 5 (Day 13): Trial Ending + Upgrade
 
-For each email include:
-- 3 subject line variations (for A/B testing)
+Each email includes:
+- Subject line variations for A/B testing
 - Preview text
-- Body copy (150-250 words)
+- Body copy
 - Clear CTA
-
-Save in exercises/markit/content/email/welcome-sequence/
-```
 
 ### Step 2: Social Media Content
 
+Use content commands for social:
+
+**LinkedIn:**
 ```
-Create LinkedIn content for Planerio:
-
-10 posts mixing:
-- 3x Thought leadership (industry insights)
-- 3x Product tips (how-to)
-- 2x Customer stories (case studies)
-- 2x Data/research posts
-
-Each post:
-- Hook (stops scrolling)
-- Body (value/story)
-- CTA
-- Hashtags (3-5)
-
-Save in exercises/markit/content/social/linkedin/
+/content:social "Team coordination tips for remote managers - Planerio launch" "linkedin"
 ```
 
-### Step 3: Twitter Threads
+**Twitter:**
+```
+/content:social "5 ways remote teams waste time coordinating - thread" "twitter"
+```
+
+### Step 3: Blog Content
+
+Use blog command with SEO focus:
 
 ```
-Create 3 Twitter threads:
+/content:blog "How Remote Teams Can Coordinate Focus Time Without Endless Meetings" "remote team focus time"
+```
 
-Thread 1: "5 ways remote teams waste time coordinating (and how to fix each)"
-Thread 2: "The science of team focus time"
-Thread 3: "Why individual productivity apps fail for teams"
-
-Each thread: 7-10 tweets, hook first, ends with CTA
-
-Save in exercises/markit/content/social/twitter/
+Then optimize:
+```
+/seo:optimize "the blog post" "remote team focus time"
 ```
 
 ### Step 4: Paid Ad Copy
 
+Use ad copy commands:
+
+**Google Ads:**
 ```
-Create Google Ads campaign for "remote team productivity":
-
-3 Ad Groups:
-1. Remote team management
-2. Team productivity tools
-3. Focus time software
-
-For each, create:
-- 10 headlines (30 chars max)
-- 4 descriptions (90 chars max)
-
-Mix benefit-driven, feature-driven, and question-based.
-
-Save as exercises/markit/content/ads/google-ads.md
+/content:ads "google" "team productivity software - drive signups"
 ```
 
+**Meta Ads:**
 ```
-Create Meta (Facebook/Instagram) ads:
+/content:ads "meta" "remote team coordination - awareness campaign"
+```
 
-5 ad variations testing different angles:
-1. Problem-focused
-2. Solution-focused
-3. Social proof
-4. Urgency/scarcity
-5. Curiosity
-
-Each with primary text, headline, description, CTA.
-
-Save as exercises/markit/content/ads/meta-ads.md
+**LinkedIn Ads:**
+```
+/content:ads "linkedin" "B2B productivity tool - lead generation"
 ```
 
 ### Step 5: Landing Page Copy
 
-```
-Write complete landing page copy for Planerio:
-
-Sections:
-1. Hero (headline, subhead, CTA, trust indicators)
-2. Problem (pain points)
-3. Solution (how Planerio helps)
-4. Features (3-4 key features)
-5. Social Proof (testimonials, logos)
-6. Pricing (tiers, comparison)
-7. FAQ (8-10 questions)
-8. Final CTA
-
-Save as exercises/markit/content/landing-pages/homepage-copy.md
-```
-
-### Step 6: A/B Test Variations
+Use landing page command:
 
 ```
-Create A/B test variations:
+/content:landing "14-day free trial of Planerio" "remote team managers at tech companies"
+```
 
-EMAIL SUBJECT LINES (5 approaches):
-1. Benefit-driven
-2. Curiosity
-3. Question
-4. Urgency
-5. Social proof
+This generates:
+- Hero section (headline, subhead, CTA)
+- Problem section
+- Solution section
+- Features with benefits
+- Social proof section
+- Pricing overview
+- FAQ section
+- Final CTA
 
-LANDING PAGE HEADLINES (5 angles):
+### Step 6: Fast vs Good Content
+
+Explain the two content modes:
+
+**Fast Content (`/content:fast`):**
+- Quick turnaround
+- Good for ideation
+- First drafts
+- High volume needs
+
+```
+/content:fast "Quick LinkedIn post about team focus time benefits"
+```
+
+**Good Content (`/content:good`):**
+- Thorough research
+- Multiple variations
+- Publication-ready
+- Strategic pieces
+
+```
+/content:good "Detailed blog post about the science of team focus time with research citations"
+```
+
+### Step 7: Content Enhancement
+
+Use enhancement commands:
+
+```
+/content:enhance "make the copy more conversational and add urgency"
+```
+
+```
+/content:cro "optimize for higher conversion rate"
+```
+
+### Step 8: A/B Test Variations
+
+Create test variations:
+
+```
+Create A/B test variations for the landing page:
+
+Headlines (5 angles):
 1. Outcome-focused
 2. Problem-focused
-3. How-to
-4. Comparison
-5. Emotional
+3. Question
+4. How-to
+5. Social proof
 
-CTA BUTTONS (5 variations):
-Different action-oriented options
-
-Save as exercises/markit/analytics/ab-test-variations.md
+CTAs (3 variations):
+1. Start Free Trial
+2. Try It Free
+3. Get Started Now
 ```
 
-### Step 7: Personalization
+### Step 9: Personalization by Persona
+
+Create persona-specific variations:
+
+**For Manager Mark:**
+```
+/content:email "product announcement" "technical team managers - efficiency focus"
+```
+
+**For Startup Sam:**
+```
+/content:email "product announcement" "startup founders - growth and scale focus"
+```
+
+### Step 10: Quality Review
+
+Review all content with specialists:
 
 ```
-Create personalized email variations for each persona:
+Review all content we created with:
+1. brand-voice-guardian - brand consistency
+2. conversion-optimizer - conversion potential
+3. seo-specialist - SEO optimization
 
-For Manager Mark:
-- Technical language
-- Efficiency metrics focus
-- Developer team examples
-
-For Founder Fiona:
-- Growth and scaling focus
-- Culture building
-- Cost-conscious messaging
-
-For Director Dana:
-- Campaign execution focus
-- Team collaboration
-- Enterprise considerations
-
-Save in exercises/markit/content/email/personalized/
+Score each piece and identify top improvements needed.
 ```
 
 ### What's Next
@@ -181,12 +195,13 @@ Save in exercises/markit/content/email/personalized/
 Tell them:
 - They generated a complete copy library in one session
 - Normally weeks of work
-- **Next:** `/start-2-4` - Analyze Campaign Data
+- **Next:** `/training:start-2-4` - Analyze Campaign Data
 - Turn data into actionable insights
 
 ## Key Teaching Points
-- Effective copy speaks to specific pain points
-- Different channels need different approaches
-- A/B testing reveals what works
-- Personalization improves conversion
-- Generate volume, then refine quality
+- `/content:*` commands handle all content types
+- `/sequence:*` creates email automation
+- Use fast mode for drafts, good mode for final
+- `/content:cro` optimizes for conversion
+- Personalize by persona for higher relevance
+- Always review with specialist agents

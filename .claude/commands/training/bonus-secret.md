@@ -1,4 +1,4 @@
-# /bonus-secret - The 10x Marketer Framework
+# /training:bonus-secret - The 10x Marketer Framework
 
 ## Language & Quality Standards
 
@@ -8,209 +8,212 @@
 
 ## Instructions for Claude
 
-This is a SECRET BONUS lesson only revealed to students who complete the course or receive it via email. It contains the advanced "10x Marketer Framework" that ties everything together.
+This is a SECRET BONUS lesson that reveals the advanced "10x Marketer Framework" - the system that separates good marketers from exceptional ones.
 
 ### Welcome to the Secret Lesson
 
 ---
 
-🎁 **BONUS LESSON: The 10x Marketer Framework**
+**BONUS LESSON: The 10x Marketer Framework**
 
-*Congratulations on finding this secret lesson! This framework is what separates good marketers from exceptional ones.*
+*Congratulations on finding this secret lesson! This framework transforms how you use the marketing kit.*
 
 ---
 
-### The 10x Marketer Framework
+## The 10x Marketer Mindset
 
-Most marketers work linearly - each campaign requires the same effort. **10x Marketers** work exponentially - each campaign makes the next one faster.
+Most marketers work **linearly** - each campaign requires the same effort.
 
-Here's the secret framework:
+**10x Marketers** work **exponentially** - each campaign makes the next one faster and better.
+
+The secret: **Systematic compounding**
+
+---
 
 ## The Four Pillars
 
-### Pillar 1: Systematic Templates
-Not just any templates - **living templates** that evolve:
+### Pillar 1: Command Mastery
 
+Know which commands to chain together:
+
+**Campaign Launch Workflow:**
 ```
-Create a "living template" system:
-
-1. Start with a base template
-2. After each campaign, update the template with:
-   - What worked well (add to template)
-   - What failed (add warnings)
-   - New patterns discovered
-3. Version your templates (v1, v2, v3...)
-
-Save template evolution in exercises/markit/templates/TEMPLATE-EVOLUTION.md
-```
-
-### Pillar 2: Compounding Knowledge Base
-
-Your CLAUDE.md should grow with every project:
-
-```
-Add a "Learnings" section to your CLAUDE.md:
-
-## Campaign Learnings
-
-### Q1 Launch (January 2025)
-- Subject lines with numbers performed 2x better
-- LinkedIn posts under 150 words got 3x engagement
-- Manager Mark responds best to ROI-focused messaging
-
-### Q2 Growth (April 2025)
-- Video content outperformed static 4:1
-- [Add your learnings...]
-
-Each campaign adds to this knowledge base.
+1. /research:market → Understand market
+2. /research:persona → Define audience
+3. /campaign:plan → Strategic plan
+4. /campaign:brief → Creative direction
+5. /campaign:calendar → Content schedule
+6. /seo:keywords → SEO foundation
+7. /content:blog → Pillar content
+8. /content:social → Distribution content
+9. /sequence:welcome → Lead nurture
+10. /analytics:funnel → Measurement
 ```
 
-### Pillar 3: Custom AI Team
-
-Build your own AI review team that knows YOUR brand:
-
+**Content Production Workflow:**
 ```
-Create your permanent review board in exercises/markit/brand/reviewers/:
+1. /seo:keywords → Find opportunities
+2. /content:blog → Create content
+3. /seo:optimize → Optimize for search
+4. /content:social → Repurpose for social
+5. Review with agents → Quality check
+```
 
-1. YOUR Brand Voice Guardian (trained on YOUR successful content)
-2. YOUR Persona Validators (one per persona, deeply customized)
-3. YOUR Industry Expert (knows your specific market)
-4. YOUR Competitor Watcher (tracks specific competitors)
+### Pillar 2: Agent Orchestration
 
-These aren't generic reviewers - they're trained on YOUR data.
+Use agents strategically:
+
+**For Research Phase:**
+- `researcher` → Market understanding
+- `attraction-specialist` → Competitive intel
+
+**For Creation Phase:**
+- `brainstormer` → Campaign concepts
+- `copywriter` → Content creation
+- `planner` → Strategic structure
+
+**For Review Phase:**
+- `brand-voice-guardian` → Voice check
+- `conversion-optimizer` → CRO review
+- `seo-specialist` → SEO validation
+- Persona reviewers → Audience fit
+
+**For Optimization Phase:**
+- `lead-qualifier` → Lead quality
+- `email-wizard` → Sequence optimization
+- `continuity-specialist` → Retention
+
+### Pillar 3: Documentation Leverage
+
+Use documentation to compound knowledge:
+
+**Before each campaign:**
+```
+1. Read docs/campaign-playbooks.md
+2. Read docs/content-style-guide.md
+3. Read docs/channel-strategies.md
+4. Review your pattern library
+```
+
+**After each campaign:**
+```
+1. Update pattern library with learnings
+2. Document winning approaches
+3. Note what to avoid
+4. Track performance trends
 ```
 
 ### Pillar 4: The Compound Loop
 
-The secret sauce - everything feeds back:
-
 ```
 ┌─────────────────────────────────────────────────┐
 │                                                 │
-│  Campaign → Results → Learnings → Templates    │
+│  Campaign → Results → Learnings → Patterns      │
 │      ↑                                    ↓     │
 │      └────── Better Next Campaign ←──────┘     │
 │                                                 │
 └─────────────────────────────────────────────────┘
 ```
 
+---
+
 ## The 10x Execution System
 
-### Daily: 15-Minute Compound Check
+### Daily: Quick Wins (15 min)
 ```
-Every day, ask Claude:
-
-"Review what I created today. What patterns should I:
-1. Add to our templates?
-2. Add to CLAUDE.md learnings?
-3. Use to update our reviewers?
-4. Remember for future campaigns?"
-
-Save insights immediately.
+/ops:daily "focus area"
 ```
+- Check metrics
+- Create 1 piece of content
+- Update pattern library
 
-### Weekly: Template Evolution
+### Weekly: Strategic Review (1 hour)
 ```
-Every week:
-
-"Review all content created this week. 
-Update our templates with:
-- New winning patterns
-- Warnings about what failed
-- Efficiency improvements
-- New sections that should be standard"
+/ops:weekly "current week"
 ```
+- Review campaign performance
+- Plan next week's content
+- Update sequences based on data
 
-### Monthly: Knowledge Synthesis
+### Monthly: Deep Analysis (2 hours)
 ```
-Every month:
-
-"Synthesize all learnings from the past month into:
-1. Updated CLAUDE.md (comprehensive)
-2. Updated reviewer criteria
-3. New template versions
-4. Predictions for next month"
+/ops:monthly "current month"
+/analytics:report "all campaigns" "full analysis"
 ```
+- Comprehensive performance review
+- Update documentation
+- Refine strategies
 
-## The Secret Weapon: Pattern Recognition
+---
 
+## Power User Command Chains
+
+### Complete Campaign in 1 Hour
 ```
-Create a Pattern Recognition document:
-
-exercises/markit/analytics/PATTERN-LIBRARY.md
-
-## Winning Patterns
-
-### Headlines
-- "How [PERSONA] can [BENEFIT] in [TIMEFRAME]" → 2.3x CTR
-- Questions outperform statements for Manager Mark
-- Numbers in headlines increase opens 34%
-
-### Email
-- P.S. lines increase clicks 22%
-- Tuesday 10am sends outperform all others
-- First name personalization: diminishing returns after 2x use
-
-### Social
-- LinkedIn: carousel > single image > text-only
-- Thread hooks that start with controversy get 4x engagement
-- [Add YOUR patterns...]
-
-This becomes your unfair advantage.
+/campaign:plan "campaign objective"
+/campaign:brief "campaign name"
+/campaign:calendar "timeframe"
+/leads:score "context"
+/sequence:welcome "product" "audience"
+/sequence:nurture "product" "segment"
 ```
 
-## The Ultimate Test
-
-You know you've achieved 10x status when:
-
-1. **Campaign 1** took 40 hours
-2. **Campaign 5** takes 15 hours (same quality)
-3. **Campaign 10** takes 10 hours (BETTER quality)
-4. **Campaign 20** takes 5 hours (EXCEPTIONAL quality)
-
-The work compounds. The knowledge compounds. The results compound.
-
-## Your Final Assignment
-
+### Content Sprint (30 min)
 ```
-Create your personal 10x Marketer System:
+/seo:keywords "topic"
+/content:blog "title" "keyword"
+/seo:optimize "blog" "keyword"
+/content:social "topic" "linkedin"
+/content:social "topic" "twitter"
+```
 
-1. Set up your compound loop
-2. Create your pattern library
-3. Build your custom AI review team
-4. Schedule your daily/weekly/monthly rituals
-5. Track your time per campaign
-
-In 6 months, measure:
-- Time per campaign (should decrease 50%+)
-- Quality scores (should increase)
-- Output volume (should 3-5x)
-
-Save your system as exercises/markit/MY-10X-SYSTEM.md
+### Competitive Response (45 min)
+```
+/competitor:deep "competitor"
+/seo:competitor "competitor.com"
+/sales:battlecard "competitor"
+/content:social "differentiation angle" "linkedin"
 ```
 
 ---
 
-### Congratulations! 🏆
+## The Ultimate Measure
 
-You now have the complete framework. The difference between a good marketer and a 10x marketer isn't talent - it's systems.
+You've achieved 10x status when:
+
+| Campaign | Time | Quality |
+|----------|------|---------|
+| 1st | 40 hours | Good |
+| 5th | 15 hours | Good |
+| 10th | 10 hours | Better |
+| 20th | 5 hours | Excellent |
+
+The work compounds. The knowledge compounds. The results compound.
+
+---
+
+## Your Action Plan
+
+1. **Master the command chains** - Practice the workflows
+2. **Use agents strategically** - Right agent for right task
+3. **Document everything** - Build your pattern library
+4. **Review regularly** - Daily, weekly, monthly rituals
+5. **Track your speed** - Measure time per campaign
+
+---
+
+## Secret Commands Unlocked
+
+Now that you've completed the course:
+
+- `/training:bonus-patterns` - Build your pattern library
+- Use `/brainstorm` for creative sessions
+- Chain commands for maximum efficiency
+
+---
+
+**The 10x framework isn't about working harder. It's about building systems that compound.**
 
 **Go compound.**
 
 ---
-
-### Secret Commands Unlocked
-
-Now that you've found this lesson, you have access to:
-- `/bonus-patterns` - Pattern library templates
-- `/bonus-audit` - Audit your compound loop
-- `/bonus-predict` - AI predictions for your next campaign
-
-*These commands are Easter eggs for completing the course.*
-
-## Key Teaching Points
-- The 10x framework is about compounding, not working harder
-- Four pillars: Templates, Knowledge Base, AI Team, Compound Loop
-- Daily/weekly/monthly rituals maintain the system
-- Pattern recognition is the ultimate competitive advantage
-- Track time per campaign to prove the system works

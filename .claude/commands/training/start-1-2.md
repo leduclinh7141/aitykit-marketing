@@ -1,4 +1,4 @@
-# /start-1-2 - Working with Marketing Files
+# /training:start-1-2 - Working with Marketing Files
 
 ## Language & Quality Standards
 
@@ -8,7 +8,7 @@
 
 ## Instructions for Claude
 
-Teach file organization, creation, and management for marketing projects.
+Teach file organization, command usage, and documentation reference for marketing projects.
 
 ### Lesson Overview
 
@@ -16,99 +16,127 @@ Teach file organization, creation, and management for marketing projects.
 
 **Module 1.2: Working with Marketing Files**
 
-As a marketer, you work with many file types: campaign briefs, content drafts, research docs, analytics reports. Let's master organizing and managing them efficiently.
+As a marketer, you work with many asset types: campaign briefs, content drafts, research docs, analytics reports. Let's master organizing and managing them efficiently.
 
 **Duration:** ~25 minutes
 
 ---
 
-### Step 1: Review Current Structure
+### Step 1: Review Documentation Structure
+
+Show them the docs folder:
 
 ```
-Show me everything in exercises/markit/ with full structure
+List all files in docs/
 ```
 
-Explain the organizational logic:
-- Group by function (campaigns, content, brand, research)
-- Subfolders for content types (blog, email, social)
-- Clear naming conventions
+Explain each documentation file:
+- `brand-guidelines.md` - Brand standards template
+- `content-style-guide.md` - Writing standards, CTAs, formatting
+- `campaign-playbooks.md` - Proven campaign templates
+- `channel-strategies.md` - Platform-specific tactics
+- `analytics-setup.md` - Tracking and attribution
+- `usage-guide.md` - Complete system reference
 
-### Step 2: Create Content Templates
+### Step 2: Explore Campaign Playbooks
 
-Guide them to create reusable templates:
-
-```
-Create these templates in exercises/markit/templates/:
-
-1. blog-post-template.md - Structure for blog posts with SEO checklist
-2. email-template.md - Framework for marketing emails
-3. social-post-template.md - Format for social media posts
-4. campaign-brief-template.md - Complete campaign brief structure
-
-Include placeholder text and instructions in each.
-```
-
-### Step 3: Organize a Campaign Folder
+Read the campaign playbooks:
 
 ```
-Create a complete folder structure for Q2 campaign in exercises/markit/campaigns/q2-growth/:
-
-- brief.md (campaign overview)
-- timeline.md (project schedule)  
-- budget.md (budget breakdown)
-- assets-list.md (creative requirements)
-- metrics.md (KPIs and tracking)
+Read docs/campaign-playbooks.md
 ```
 
-### Step 4: Practice File Finding
+Explain the playbook types:
+- Product Launch Playbook
+- Lead Generation Playbook
+- Brand Awareness Playbook
+- Retention Playbook
+- Event Promotion Playbook
 
-Teach search techniques:
+### Step 3: Practice Content Commands
 
-```
-Find all files that mention "Manager Mark"
-```
+Guide them through content creation commands:
 
+**Blog Post:**
 ```
-Show me all markdown files in the brand folder
-```
-
-```
-Search for files containing "trial signup"
-```
-
-### Step 5: Batch Operations
-
-Demonstrate batch updates:
-
-```
-Review all files in exercises/markit/brand/ and create a summary document listing what each file contains.
-Save as exercises/markit/brand/README.md
+/content:blog "5 Ways Remote Teams Can Improve Coordination" "remote team productivity"
 ```
 
-### Step 6: Cross-Reference Content
+**Social Content:**
+```
+/content:social "Team coordination tips for remote managers" "linkedin"
+```
 
-Show the power of working with multiple files:
+**Email Copy:**
+```
+/content:email "welcome" "trial users for Planerio"
+```
+
+### Step 4: Practice Search Commands
+
+Teach search techniques using grep/find or asking Claude:
 
 ```
-Read the brand voice guide and Manager Mark persona.
-Then write a short LinkedIn post for Planerio that:
-- Matches the brand voice
-- Speaks to Mark's pain points
-- Includes a clear CTA
-
-Save to exercises/markit/content/social/linkedin-post-1.md
+Find all files that mention "lead scoring"
 ```
+
+```
+Search for files containing "conversion rate"
+```
+
+### Step 5: Batch Content Creation
+
+Demonstrate creating multiple assets at once:
+
+```
+Create multi-channel content for Planerio launch:
+1. LinkedIn announcement post
+2. Twitter thread (5 tweets)
+3. Email subject lines (5 A/B variations)
+4. Google Ads headlines (5 variations, max 30 chars)
+```
+
+### Step 6: Cross-Reference with Style Guide
+
+Show how to use the content style guide:
+
+```
+Read docs/content-style-guide.md
+```
+
+Point out:
+- Headline formulas (4-U Framework)
+- CTA patterns
+- Readability standards
+- SEO writing guidelines
+
+### Step 7: Quick Reference Commands
+
+Share essential command patterns:
+
+**Campaign Commands:**
+- `/campaign:plan` - Create campaign plan
+- `/campaign:brief` - Generate creative brief
+- `/campaign:analyze` - Analyze performance
+- `/campaign:calendar` - Content calendar
+
+**Content Commands:**
+- `/content:blog` - SEO blog post
+- `/content:social` - Platform-specific social
+- `/content:email` - Email copy
+- `/content:landing` - Landing page copy
+- `/content:ads` - Ad copy
 
 ### What's Next
 
 Tell them:
-- They now know how to organize marketing projects like a pro
-- Templates save hours of repeated work
-- **Next:** `/start-1-3` - First Marketing Tasks (content generation, analysis)
+- They now know how to navigate the marketing kit documentation
+- Commands are organized by marketing function
+- **Next:** `/training:start-1-3` - First Marketing Tasks (content generation, analysis)
 
 ## Key Teaching Points
-- Good organization makes everything faster
-- Templates ensure consistency
-- Claude can search and work across multiple files
+- Good documentation organization makes everything faster
+- Six key docs cover brand, content, campaigns, channels, analytics, usage
+- Commands are organized by function (campaign, content, seo, etc.)
+- Cross-reference docs for consistency
 - Batch operations save massive time
-- Always maintain clear folder structure

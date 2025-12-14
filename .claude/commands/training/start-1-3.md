@@ -1,4 +1,4 @@
-# /start-1-3 - First Marketing Tasks
+# /training:start-1-3 - First Marketing Tasks
 
 ## Language & Quality Standards
 
@@ -8,7 +8,7 @@
 
 ## Instructions for Claude
 
-Guide students through real marketing tasks: multi-channel copy, competitive analysis, and content planning.
+Guide students through real marketing tasks: multi-channel copy, competitive analysis, and content planning using actual system commands.
 
 ### Lesson Overview
 
@@ -24,109 +24,114 @@ Now let's do real marketing work. You'll complete three common tasks that every 
 
 ### Task 1: Multi-Channel Copy Generation
 
-Generate copy for multiple channels at once:
+Generate copy for multiple channels using content commands:
 
+**LinkedIn Post:**
 ```
-Create launch announcement copy for Planerio across these channels:
+/content:social "Planerio launch announcement - team productivity coordination for remote teams" "linkedin"
+```
 
-1. LinkedIn post (professional, ~200 words)
-2. Twitter thread (5 tweets)
-3. Email subject line (5 A/B variations)
-4. Google Ads headlines (5 variations, max 30 chars each)
+**Blog Post:**
+```
+/content:blog "How Remote Teams Can Coordinate Focus Time Without Endless Meetings" "remote team coordination"
+```
 
-Use our brand voice guidelines. Emphasize team coordination.
-Save each in exercises/markit/content/ in appropriate subfolders.
+**Email:**
+```
+/content:email "product announcement" "existing subscribers"
 ```
 
 Review the outputs together. Show iteration:
 
 ```
-The LinkedIn post feels too salesy. Rewrite it to be more educational - focus on the problem of coordinating deep work time in remote teams.
+Make the LinkedIn post more educational - focus on the problem of coordinating deep work time
 ```
 
 ### Task 2: Competitive Analysis
 
-```
-Create a competitive analysis comparing Planerio to:
-- RescueTime
-- Freedom
-- Focus@Will
+Use the competitive analysis command:
 
-For each competitor, analyze:
+```
+/competitor:deep "RescueTime - personal time tracking and productivity software"
+```
+
+Explain what the `researcher` agent analyzes:
 - Target audience
-- Key features  
+- Key features and positioning
 - Pricing model
-- Unique positioning
-- Strengths vs Planerio
-- Weaknesses we can exploit
+- Strengths and weaknesses
+- Market opportunities
 
-Save as exercises/markit/research/competitors/competitive-analysis.md
+Ask follow-up:
 ```
-
-Ask follow-up questions:
-
-```
-Based on this analysis, what's our biggest competitive advantage?
+Based on this analysis, what's Planerio's biggest competitive advantage?
 ```
 
 ### Task 3: Content Calendar
 
-```
-Create a 30-day content calendar for Planerio's launch.
+Use the campaign calendar command:
 
-Include:
-- 4 blog post topics with SEO keywords
-- Daily social media themes (LinkedIn, Twitter)
-- 1 email per week (4 total)
+```
+/campaign:calendar "4 weeks - Planerio product launch - focus on remote work productivity, team collaboration, deep work"
+```
+
+Review the generated calendar:
+- Blog post topics with SEO keywords
+- Social media themes by platform
+- Email newsletter schedule
 - Content goals for each piece
-
-Focus on: remote work productivity, team collaboration, deep work
-
-Save as exercises/markit/campaigns/q1-launch/content-calendar.md
-```
 
 ### Step 4: Expand One Piece
 
-Take a blog topic and expand it:
+Take a topic and expand it using content commands:
 
 ```
-Take the first blog post topic from the calendar. Create a full outline with:
-- Working title
-- Target keyword
-- Meta description
-- H2 section headings
-- Key points for each section
-- CTA
-
-Save as exercises/markit/content/blog/post-1-outline.md
+/content:blog "The Complete Guide to Team Focus Time: How Remote Teams Can Coordinate Deep Work" "team focus time"
 ```
 
-### Step 5: Write the Full Post
+### Step 5: SEO Optimization
+
+Use SEO commands to optimize:
 
 ```
-Write the full blog post based on the outline.
-Aim for 1500 words, SEO-optimized but natural.
-Include actionable tips and examples.
-Save as exercises/markit/content/blog/post-1-draft.md
+/seo:keywords "remote team productivity"
+```
+
+Then:
+```
+/seo:optimize "the blog post we just created" "team focus time"
+```
+
+### Step 6: Review with Specialists
+
+Use reviewer agents (explain these will be covered in detail later):
+
+```
+Review the blog post from three perspectives:
+1. Brand Voice Guardian - does it match our voice?
+2. SEO Specialist - is it optimized for search?
+3. Conversion Optimizer - will it drive action?
 ```
 
 ### Celebrate
 
 Point out what they just accomplished:
-- Multi-channel copy in minutes (normally hours)
-- Competitive analysis document
-- 30-day content calendar
-- Full blog post draft
+- Multi-channel copy generation using `/content:*` commands
+- Competitive analysis using `/competitor:deep`
+- Content calendar using `/campaign:calendar`
+- SEO keyword research using `/seo:keywords`
+- Full blog post with SEO optimization
 
 ### What's Next
 
 Tell them:
-- **Next:** `/start-1-4` - Using Agents for Marketing
-- They'll learn to run parallel workflows and get multi-perspective feedback
+- **Next:** `/training:start-1-4` - Using Agents for Marketing
+- They'll learn about the 18 specialized agents and how to leverage them
 
 ## Key Teaching Points
-- Claude handles multiple tasks in sequence
+- Real commands handle real marketing tasks
+- `/content:*` commands create platform-specific content
+- `/competitor:deep` provides competitive intelligence
+- `/campaign:calendar` creates content calendars
+- `/seo:*` commands handle search optimization
 - Always provide context (brand, audience, goals)
-- Iterate to improve outputs
-- Use Claude for brainstorming and ideation
-- Reference brand guidelines for consistency

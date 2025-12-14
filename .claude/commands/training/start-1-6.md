@@ -1,4 +1,4 @@
-# /start-1-6 - Project Memory (CLAUDE.md)
+# /training:start-1-6 - Project Memory (CLAUDE.md)
 
 ## Language & Quality Standards
 
@@ -24,29 +24,63 @@ CLAUDE.md is like giving Claude a persistent briefing document. Every time you w
 
 ### Step 1: Show Current CLAUDE.md
 
+Read the project's CLAUDE.md:
+
 ```
 Read the CLAUDE.md file in this project
 ```
 
 Walk through each section:
-- Slash commands
-- Project context
-- Brand voice
-- Personas
-- Teaching guidelines
+- Role & Responsibilities
+- Workflows (Marketing, Sales, CRM)
+- Marketing Agents
+- Skills Catalog
+- Command Categories
+- Documentation Management
 
 ### Step 2: Explain How It Works
 
 When CLAUDE.md exists, Claude automatically:
-- Applies brand voice to all content
-- References target personas
-- Follows content guidelines
-- Uses approved messaging
-- Avoids flagged terms
+- Knows which agents are available
+- Understands the workflow structure
+- References appropriate commands
+- Follows marketing rules
+- Uses the right skills
 
 You don't need to remind Claude each time - it's automatic!
 
-### Step 3: Test It
+### Step 3: Key CLAUDE.md Sections
+
+Explain critical sections:
+
+**Workflows:**
+```markdown
+### Core Workflows
+- **Marketing:** `./.claude/workflows/primary-workflow.md`
+- **Sales:** `./.claude/workflows/sales-workflow.md`
+- **CRM:** `./.claude/workflows/crm-workflow.md`
+```
+
+**Agent Mapping:**
+```markdown
+### Core Marketing Agents
+- `attraction-specialist` - TOFU (SEO, landing pages)
+- `lead-qualifier` - Intent detection, scoring
+- `email-wizard` - Sequences, automation
+...
+```
+
+**Command Categories:**
+```markdown
+### Campaign Management
+- `/campaign:plan`, `/campaign:brief`, `/campaign:analyze`
+
+### Content Creation
+- `/content:blog`, `/content:social`, `/content:email`
+...
+```
+
+### Step 4: Test Context Awareness
 
 Without mentioning brand guidelines, ask:
 
@@ -55,79 +89,65 @@ Write a short LinkedIn post about remote team productivity
 ```
 
 Point out how the output automatically matches:
-- Planerio's brand voice
+- Brand voice from guidelines
 - Target persona language
-- Key messaging
+- Key messaging framework
 
-### Step 4: Create Project-Specific CLAUDE.md
+### Step 5: Understand Workflow References
 
-Have them create one for Markit:
-
-```
-Create a CLAUDE.md file specifically for the Markit project.
-Save as exercises/markit/CLAUDE.md
-
-Include:
-- Project overview (Markit agency, Planerio client)
-- Brand voice summary
-- Target personas overview
-- Content preferences (lengths, CTAs, etc.)
-- SEO keywords to target
-- Words to use and avoid
-- Current campaign context (Q1 launch)
-```
-
-### Step 5: Add Campaign Context
-
-Show how to add temporal context:
+Show how workflows are referenced:
 
 ```
-Add a "Current Focus" section to the Markit CLAUDE.md:
-
-## Current Focus: Q1 Product Launch
-- Campaign dates: [dates]
-- Primary goal: 1000 trial signups
-- Key message: Team-wide focus time coordination
-- Main CTA: Start free trial
-- Urgency: Launch pricing ends [date]
+Read .claude/workflows/primary-workflow.md
 ```
 
-### Step 6: Review Reminders
+Explain:
+- Marketing pipeline stages
+- Agent responsibilities at each stage
+- Quality gates and checkpoints
 
-Add quality checklist:
+### Step 6: The Marketing Rules
+
+Show the marketing rules:
 
 ```
-Add a "Quality Checklist" section:
-
-## Before Finalizing Any Content
-- [ ] Matches brand voice
-- [ ] Targets specific persona
-- [ ] Includes clear CTA
-- [ ] Has SEO keywords
-- [ ] No prohibited terms
-- [ ] Reviewed by at least 2 sub-agents
+Read .claude/workflows/marketing-rules.md
 ```
 
-### Step 7: Maintenance Tips
+Explain key rules:
+- Token efficiency
+- Multi-language support
+- Quality standards
+- Skill activation
+
+### Step 7: Project Context Benefits
+
+Summarize benefits:
+- Consistent brand voice automatically
+- Correct agent selection
+- Proper command usage
+- Workflow compliance
+- Quality standards enforcement
+
+### Step 8: Maintenance Tips
 
 Explain ongoing maintenance:
-- Update monthly with new learnings
-- Add successful phrases to "Always Use"
-- Add failed phrases to "Never Use"
-- Update personas based on customer research
-- Keep changelog at bottom
+- Update as new campaigns launch
+- Add learnings from successful content
+- Reference new documentation
+- Keep agent list current
 
 ### What's Next
 
 Tell them:
 - CLAUDE.md ensures consistency without repetition
 - **Module 1 almost complete!**
-- **Next:** `/start-1-7` - Navigation & Search
+- **Next:** `/training:start-1-7` - Navigation & Search
 - Final skills before advanced applications
 
 ## Key Teaching Points
 - CLAUDE.md gives Claude persistent context
-- Include brand voice, personas, guidelines
+- Includes workflows, agents, commands, rules
 - Claude automatically applies to all work
-- Update regularly to keep current
-- Saves repeating context every time
+- Workflows define marketing processes
+- Marketing rules ensure quality standards
