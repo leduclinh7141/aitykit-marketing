@@ -1,5 +1,11 @@
 # /start-1-5 - Custom Marketing Sub-Agents
 
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+---
+
 ## Instructions for Claude
 
 Teach students to create reusable specialized reviewer personas.

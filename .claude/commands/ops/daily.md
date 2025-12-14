@@ -3,7 +3,15 @@ description: Daily marketing tasks checklist and review
 argument-hint: [focus-area]
 ---
 
-Activate `marketing-fundamentals`, `social-media`, `sales-workflow.md`, `crm-workflow.md` skills.
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+**Standards**: Token efficiency, sacrifice grammar for concision, list unresolved questions at end.
+
+**Skills**: Activate `marketing-fundamentals`, `social-media`, `sales-workflow.md`, `crm-workflow.md` skills.
+
+---
 
 ## Mission
 Generate daily marketing checklist and review:

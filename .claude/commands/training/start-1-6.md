@@ -1,5 +1,11 @@
 # /start-1-6 - Project Memory (CLAUDE.md)
 
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+---
+
 ## Instructions for Claude
 
 Teach students about CLAUDE.md and how to maintain persistent project context.

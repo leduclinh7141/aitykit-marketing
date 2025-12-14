@@ -3,6 +3,14 @@ description: Write good creative & smart copy [GOOD]
 argument-hint: [user-request]
 ---
 
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+**Standards**: Token efficiency, sacrifice grammar for concision, list unresolved questions at end.
+
+---
+
 Write good creative & smart copy for this user request:
 <user_request>$ARGUMENTS</user_request>
 

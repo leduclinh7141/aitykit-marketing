@@ -1,5 +1,11 @@
 # /start-1-4 - Using Agents for Marketing
 
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+---
+
 ## Instructions for Claude
 
 Teach the concept of agents - parallel AI workers that handle complex tasks independently.

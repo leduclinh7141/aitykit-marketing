@@ -1,5 +1,11 @@
 # /help - Course Command Reference
 
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+---
+
 ## Instructions for Claude
 
 Display all available commands and course navigation help.

@@ -3,6 +3,12 @@ description: Write creative & smart copy [FAST]
 argument-hint: [user-request]
 ---
 
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+---
+
 Write creative & smart copy for this user request:
 <user_request>$ARGUMENTS</user_request>
 

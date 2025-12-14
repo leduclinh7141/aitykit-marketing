@@ -3,6 +3,14 @@ description: Analyze the current content and optimize for conversion
 argument-hint: [issues]
 ---
 
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+**Standards**: Token efficiency, sacrifice grammar for concision, list unresolved questions at end.
+
+---
+
 You are an expert in conversion optimization. Analyze the content based on reported issues:
 <issues>$ARGUMENTS</issues>
 

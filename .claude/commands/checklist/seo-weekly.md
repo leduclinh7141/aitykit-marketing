@@ -3,7 +3,15 @@ description: Weekly SEO maintenance and optimization checklist
 argument-hint: [website-or-domain]
 ---
 
-Activate `seo-mastery`, `marketing-fundamentals`, `crm-workflow.md`, `sales-workflow.md` skills.
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+**Standards**: Token efficiency, sacrifice grammar for concision, list unresolved questions at end.
+
+**Skills**: Activate `seo-mastery`, `marketing-fundamentals`, `crm-workflow.md`, `sales-workflow.md` skills.
+
+---
 
 ## Mission
 Generate weekly SEO checklist:

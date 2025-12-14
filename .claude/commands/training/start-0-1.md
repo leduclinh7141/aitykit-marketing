@@ -1,5 +1,11 @@
 # /start-0-1 - Installation & Setup
 
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+---
+
 ## Instructions for Claude
 
 Guide the student through verifying their Claude Code installation and course setup.

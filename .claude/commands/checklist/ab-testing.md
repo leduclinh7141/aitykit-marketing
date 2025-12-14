@@ -3,7 +3,15 @@ description: A/B testing framework for marketing optimization
 argument-hint: [test-type] [element-to-test]
 ---
 
-Activate `analytics-attribution`, `marketing-fundamentals`, `crm-workflow.md`, `sales-workflow.md` skills.
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+**Standards**: Token efficiency, sacrifice grammar for concision, list unresolved questions at end.
+
+**Skills**: Activate `analytics-attribution`, `marketing-fundamentals`, `crm-workflow.md`, `sales-workflow.md` skills.
+
+---
 
 ## Mission
 Generate A/B testing plan:

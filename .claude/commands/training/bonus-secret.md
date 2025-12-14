@@ -1,5 +1,11 @@
 # /bonus-secret - The 10x Marketer Framework
 
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+---
+
 ## Instructions for Claude
 
 This is a SECRET BONUS lesson only revealed to students who complete the course or receive it via email. It contains the advanced "10x Marketer Framework" that ties everything together.

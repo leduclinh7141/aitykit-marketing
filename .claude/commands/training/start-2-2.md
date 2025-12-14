@@ -1,5 +1,11 @@
 # /start-2-2 - Develop Content Strategy
 
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+---
+
 ## Instructions for Claude
 
 Teach comprehensive content strategy development: research, planning, calendars, and measurement.

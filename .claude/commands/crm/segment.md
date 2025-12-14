@@ -3,7 +3,15 @@ description: Create or analyze customer segment
 argument-hint: [segment-criteria-or-name]
 ---
 
-Activate `crm-workflow.md` skill.
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+**Standards**: Token efficiency, sacrifice grammar for concision, list unresolved questions at end.
+
+**Skills**: Activate `crm-workflow.md` skill.
+
+---
 
 ## Mission
 Create or analyze customer segment:

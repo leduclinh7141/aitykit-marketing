@@ -1,5 +1,11 @@
 # /start-1-3 - First Marketing Tasks
 
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+---
+
 ## Instructions for Claude
 
 Guide students through real marketing tasks: multi-channel copy, competitive analysis, and content planning.

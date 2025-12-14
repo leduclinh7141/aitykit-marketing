@@ -1,5 +1,11 @@
 # /start-1-1 - Welcome to Markit
 
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+---
+
 ## Instructions for Claude
 
 Begin Module 1 - Core Concepts. This lesson introduces the Markit agency project and first real marketing workflows for client Planerio.

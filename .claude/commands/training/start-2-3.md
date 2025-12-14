@@ -1,5 +1,11 @@
 # /start-2-3 - Generate Marketing Copy
 
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+---
+
 ## Instructions for Claude
 
 Teach high-volume copy generation across channels while maintaining quality.
