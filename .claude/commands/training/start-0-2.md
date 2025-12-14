@@ -1,8 +1,14 @@
-# /start-0-2 - Your First Marketing Task
+# /training:start-0-2 - Your First Marketing Task
+
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+---
 
 ## Instructions for Claude
 
-Guide the student through their first real marketing task - creating brand guidelines.
+Guide the student through their first real marketing task - creating brand guidelines using our commands.
 
 ### Lesson Overview
 
@@ -10,7 +16,7 @@ Guide the student through their first real marketing task - creating brand guide
 
 **Module 0.2: Your First Marketing Task**
 
-Now let's do some real marketing work. We'll create brand guidelines for Planerio - a document that ensures all our content has a consistent voice.
+Now let's do some real marketing work. We'll create brand guidelines for Planerio using the `/brand:voice` command.
 
 ---
 
@@ -22,83 +28,91 @@ Explain why brand guidelines matter:
 - Documents key messages and terminology
 - Prevents off-brand content
 
-### Step 2: Create Brand Guidelines Together
+### Step 2: Use the Brand Voice Command
 
-Guide them to create comprehensive brand guidelines:
+Guide them to use the actual system command:
 
 ```
-Create brand guidelines for Planerio in exercises/markit/brand/voice-guide.md
-
-Include:
-- Brand personality (professional but approachable)
-- Tone of voice guidelines
-- Key messaging pillars
-- Words to use and avoid
-- Writing style rules
-- Example good vs bad copy
+/brand:voice "Planerio - B2B team productivity coordination tool for remote teams"
 ```
 
-Let Claude generate this, then review it with the student.
+Let Claude generate comprehensive brand guidelines, then review with the student.
 
 ### Step 3: Create Customer Personas
 
-Now create the target personas:
+Now use the research command for personas:
 
 ```
-Create 3 customer persona documents in exercises/markit/brand/personas/
-
-1. manager-mark.md - Remote team manager, 35-45, manages 10-15 developers
-2. founder-fiona.md - Startup founder, 28-35, juggling many roles
-3. director-dana.md - Marketing director, 40-50, mid-size company
-
-For each, include:
-- Demographics and role
-- Pain points and frustrations
-- Goals and motivations
-- Current tools they use
-- How Planerio helps them
-- Information sources they trust
+/research:persona "Remote team managers at tech companies using Planerio"
 ```
 
-### Step 4: Review What We Created
+Explain:
+- The `researcher` agent handles market research
+- Personas help target content to specific audiences
+- We'll use these personas throughout the course
+
+### Step 4: Review What Was Created
+
+Review the outputs together:
 
 ```
-Show me all files in exercises/markit/brand/
+Show me what the brand:voice command created
 ```
 
-Then read one of the personas:
-
-```
-Read the Manager Mark persona
-```
+Point out:
+- Voice attributes and tone spectrum
+- Messaging framework
+- Words to use and avoid
+- Integration with other agents
 
 ### Step 5: The Power of Context
 
 Explain:
-- These files now exist in the project
-- In future tasks, Claude can reference them
+- These guidelines now exist in project context
+- In future tasks, agents can reference them
 - This is "context awareness" - one of Claude's superpowers
-- We'll use these personas throughout the course
+- We'll use these throughout the course
 
-### Quick Exercise
+### Quick Exercise: Test Content Generation
 
-Have them try:
+Have them try using brand context:
 
 ```
-Based on the Manager Mark persona, write a one-paragraph pitch for Planerio that would resonate with him.
+/content:social "Remote team productivity tips" "linkedin"
 ```
 
-Show how Claude uses the persona context automatically.
+Show how Claude uses the brand context automatically in content creation.
+
+### Step 6: Explore Other Key Commands
+
+Briefly demonstrate other commands they'll master:
+
+**Campaign Planning:**
+```
+/campaign:plan "Q1 Product Launch"
+```
+
+**SEO Research:**
+```
+/seo:keywords "remote team productivity"
+```
+
+**Email Sequences:**
+```
+/sequence:welcome "Planerio" "trial users"
+```
 
 ### What's Next
 
 Tell them:
 - **Congratulations!** Module 0 complete!
-- They've created brand guidelines, personas, and contextual content
-- **Next:** `/start-1-1` - Welcome to Markit (Core Concepts begin)
+- They've used real marketing commands and seen the system in action
+- **Next:** `/training:start-1-1` - Welcome to Markit (Core Concepts begin)
+- They'll dive deep into agents, workflows, and advanced commands
 
 ## Key Teaching Points
 - Brand guidelines ensure consistency
-- Personas make content more targeted
-- Context awareness is a Claude superpower
-- Files created now are used in future lessons
+- Use `/brand:voice` to create voice guidelines
+- Use `/research:persona` for customer personas
+- Context awareness means agents reference existing work
+- Real commands (`/campaign:*`, `/content:*`, `/seo:*`) are what they'll master

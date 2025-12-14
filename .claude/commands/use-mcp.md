@@ -2,6 +2,15 @@
 description: Utilize tools of Model Context Protocol (MCP) servers
 argument-hint: [task]
 ---
+
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+**Standards**: Token efficiency, sacrifice grammar for concision, list unresolved questions at end.
+
+---
+
 Execute MCP operations via **Gemini CLI** to preserve context budget.
 
 ## Execution Steps

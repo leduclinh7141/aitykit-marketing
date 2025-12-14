@@ -3,7 +3,15 @@ description: Content approval workflow for team collaboration
 argument-hint: [content-type] [approvers]
 ---
 
-Activate `content-strategy`, `marketing-fundamentals`, `crm-workflow.md`, `sales-workflow.md` skills.
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+**Standards**: Token efficiency, sacrifice grammar for concision, list unresolved questions at end.
+
+**Skills**: Activate `content-strategy`, `marketing-fundamentals`, `crm-workflow.md`, `sales-workflow.md` skills.
+
+---
 
 ## Mission
 Generate content approval workflow:

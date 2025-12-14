@@ -4,6 +4,16 @@ description: "Comprehensive spreadsheet creation, editing, and analysis with sup
 license: Proprietary. LICENSE.txt has complete terms
 ---
 
+# XLSX Spreadsheet Processing
+
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+**Standards**: Token efficiency, sacrifice grammar for concision, list unresolved questions at end.
+
+---
+
 # Requirements for Outputs
 
 ## All Excel files

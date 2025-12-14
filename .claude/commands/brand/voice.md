@@ -3,6 +3,14 @@ description: Create brand voice guidelines
 argument-hint: [brand-context]
 ---
 
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+**Standards**: Token efficiency, sacrifice grammar for concision, list unresolved questions at end.
+
+---
+
 # Brand Voice Guidelines
 
 ## Objective

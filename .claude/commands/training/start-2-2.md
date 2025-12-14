@@ -1,4 +1,10 @@
-# /start-2-2 - Develop Content Strategy
+# /training:start-2-2 - Develop Content Strategy
+
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+---
 
 ## Instructions for Claude
 
@@ -18,145 +24,158 @@ A content strategy transforms random content creation into a systematic growth e
 
 ### Step 1: Research Foundation
 
-```
-Create content strategy research for Planerio:
-
-PHASE 1 - Audience Research
-- What topics do our 3 personas care about?
-- What questions are they asking?
-- Where do they seek information?
-
-PHASE 2 - Keyword Research
-- 20 keywords related to remote team productivity
-- Group by topic clusters
-- Identify high-value, low-competition opportunities
-
-PHASE 3 - Competitive Content Audit
-- What content are competitors publishing?
-- What gaps can we fill?
-
-Save as exercises/markit/research/content-strategy-foundation.md
-```
-
-### Step 2: Define Content Pillars
+Start with market and audience research:
 
 ```
-Based on the research, define our content pillars.
-
-Create a Content Strategy document with:
-
-## Content Pillars (4-5 main topics we'll own)
-1. Remote team coordination
-2. Deep work practices
-3. Productivity measurement
-4. Team culture in remote work
-
-For each pillar:
-- Why it matters to our personas
-- Key subtopics to cover
-- SEO keywords to target
-
-Save as exercises/markit/campaigns/content-strategy.md
+/research:market "B2B team productivity software - remote work tools market"
 ```
 
-### Step 3: Create Content Calendar
-
 ```
-Create a 30-day content calendar:
-
-For each week, include:
-- Blog posts (2-3 per week with titles, keywords, personas)
-- Email newsletter theme
-- Daily social media topics
-- One premium content piece (guide, template, tool)
-
-Format as a table for easy reference.
-Save as exercises/markit/campaigns/q2-growth/content-calendar.md
+/research:persona "Remote team managers at technology companies - 50-500 employees"
 ```
 
-### Step 4: Pillar Page Planning
-
 ```
-Design a pillar content strategy:
-
-Pillar Page: "The Complete Guide to Remote Team Productivity"
-- 3000-5000 words, comprehensive resource
-
-Supporting Cluster Content (10 posts):
-- List 10 specific blog post titles
-- Each targets a long-tail keyword
-- All link back to the pillar page
-
-Save as exercises/markit/content/blog/pillar-strategy.md
+/research:trend "Remote work productivity - team coordination - async work"
 ```
 
-### Step 5: Content Production Workflow
+### Step 2: SEO Keyword Research
+
+Use SEO commands for keyword foundation:
 
 ```
-Design our content production workflow:
-
-STAGES:
-1. Research - Topic validation, source gathering
-2. Outline - Structure, SEO optimization
-3. Draft - First version
-4. Review - Sub-agent feedback
-5. Polish - Final edits
-6. Publish - CMS upload, promotion
-
-For each stage, define:
-- What happens
-- Who's responsible
-- Quality checks
-- Timeline
-
-Save as exercises/markit/templates/content-production-workflow.md
+/seo:keywords "remote team productivity"
 ```
 
-### Step 6: Multi-Channel Distribution
-
 ```
-Create a content repurposing plan:
-
-For each blog post, automatically create:
-1. LinkedIn article (shortened)
-2. Twitter thread (key points)
-3. Email newsletter feature
-4. Social media snippets (5 posts)
-5. Slide deck outline
-
-Create example for one blog post topic.
-Save as exercises/markit/templates/content-repurposing-guide.md
+/seo:keywords "team coordination software"
 ```
 
-### Step 7: Measurement Framework
+```
+/seo:keywords "deep work for teams"
+```
+
+Group keywords into topic clusters:
+- Cluster 1: Remote team productivity
+- Cluster 2: Team focus time
+- Cluster 3: Coordination without meetings
+
+### Step 3: Competitive Content Analysis
+
+Analyze competitor content:
 
 ```
-Create content measurement framework:
-
-## KPIs by Content Type
-- Blog posts: traffic, time on page, conversions
-- Email: open rate, click rate, conversions
-- Social: engagement, reach, clicks
-
-## Reporting Template
-- Weekly metrics summary
-- Monthly deep dive
-- Quarterly strategy review
-
-Save as exercises/markit/analytics/content-metrics-framework.md
+/seo:competitor "rescuetime.com"
 ```
+
+Identify:
+- What topics they cover
+- Content gaps we can fill
+- Keywords they're ranking for
+
+### Step 4: Create Content Calendar
+
+Use campaign calendar for content planning:
+
+```
+/campaign:calendar "12 weeks - Planerio content strategy - focus on SEO, thought leadership, lead generation - topics: remote productivity, team coordination, deep work, meeting reduction"
+```
+
+### Step 5: Define Content Types
+
+Plan content by funnel stage:
+
+**TOFU (Awareness):**
+- Blog posts (SEO-focused)
+- Social media content
+- Thought leadership
+
+**MOFU (Consideration):**
+- Comparison guides
+- How-to content
+- Case studies
+
+**BOFU (Decision):**
+- Product demos
+- ROI calculators
+- Customer testimonials
+
+### Step 6: Create Pillar Content Strategy
+
+Plan a pillar page strategy:
+
+```
+/content:blog "The Complete Guide to Remote Team Productivity: How to Coordinate Focus Time Across Time Zones" "remote team productivity"
+```
+
+Cluster content (link to pillar):
+1. How to schedule team focus time
+2. Reducing meetings without losing alignment
+3. Async communication best practices
+4. Deep work in remote teams
+5. Productivity tracking for teams
+
+### Step 7: Content Production Workflow
+
+Use the content commands for each piece:
+
+**Blog Post Production:**
+```
+1. /seo:keywords "topic" - Research keywords
+2. /content:blog "title" "keyword" - Create post
+3. /seo:optimize "post" "keyword" - Optimize
+4. Review with seo-specialist agent
+5. Review with brand-voice-guardian agent
+```
+
+**Social Content Production:**
+```
+1. /content:social "topic" "linkedin" - LinkedIn post
+2. /content:social "topic" "twitter" - Twitter thread
+3. Review with conversion-optimizer agent
+```
+
+### Step 8: Email Integration
+
+Create email sequences to nurture content consumers:
+
+```
+/sequence:nurture "Planerio" "blog readers who downloaded guide"
+```
+
+### Step 9: Content Distribution Plan
+
+Use social commands for distribution:
+
+```
+/social:schedule "linkedin,twitter" "4 weeks - Planerio content distribution"
+```
+
+### Step 10: Measurement Framework
+
+Set up content analytics:
+
+```
+/analytics:report "content performance" "organic traffic, engagement, conversions"
+```
+
+Key metrics to track:
+- Organic traffic by content piece
+- Time on page
+- Conversion rate per content
+- Lead quality from content
 
 ### What's Next
 
 Tell them:
 - They have a complete content strategy
 - From random posting to systematic growth
-- **Next:** `/start-2-3` - Generate Marketing Copy
+- **Next:** `/training:start-2-3` - Generate Marketing Copy
 - Scale copy production while maintaining quality
 
 ## Key Teaching Points
 - Strategy transforms content from random to systematic
-- Research foundation is critical
+- `/research:*` commands build foundation
+- `/seo:keywords` identifies opportunities
 - Pillar + cluster = SEO powerhouse
-- Multi-channel repurposing maximizes ROI
+- Content production follows repeatable workflow
 - Measurement ensures accountability

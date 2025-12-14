@@ -3,7 +3,15 @@ description: Comprehensive marketing audit across all channels
 argument-hint: [brand-or-website]
 ---
 
-Activate `marketing-fundamentals`, `seo-mastery`, `analytics-attribution` skills.
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+**Standards**: Token efficiency, sacrifice grammar for concision, list unresolved questions at end.
+
+**Skills**: Activate `marketing-fundamentals`, `seo-mastery`, `analytics-attribution` skills.
+
+---
 
 ## Mission
 Conduct full marketing audit:

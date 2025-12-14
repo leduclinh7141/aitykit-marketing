@@ -3,7 +3,15 @@ description: Generate personalized outreach sequence
 argument-hint: [prospect-info] [sequence-type]
 ---
 
-Activate `sales-workflow.md` and `email-marketing` skill.
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+**Standards**: Token efficiency, sacrifice grammar for concision, list unresolved questions at end.
+
+**Skills**: Activate `sales-workflow.md` and `email-marketing` skill.
+
+---
 
 ## Mission
 Create a personalized outreach sequence for:

@@ -1,8 +1,14 @@
-# /start-0-1 - Installation & Setup
+# /training:start-0-1 - Installation & Setup
+
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+---
 
 ## Instructions for Claude
 
-Guide the student through verifying their Claude Code installation and course setup.
+Guide the student through verifying their Claude Code installation and marketing kit setup.
 
 ### Lesson Overview
 
@@ -27,7 +33,7 @@ If they're not sure, explain:
 - It can read, write, and edit files directly
 - It's different from claude.ai web chat
 
-### Step 2: Check Course Files
+### Step 2: Check Marketing Kit Files
 
 Run these checks WITH the student (actually execute them):
 
@@ -36,59 +42,75 @@ Show me the contents of this directory
 ```
 
 They should see:
-- `.claude/` folder with commands
-- `exercises/` folder with markit project
-- `CLAUDE.md` file
-- `plugins/` folder (if bundled)
+- `.claude/` folder with agents, commands, skills, workflows
+- `docs/` folder with documentation
+- `CLAUDE.md` file (the project memory)
+- `README.md` file
 
-### Step 3: Explore Markit Structure
+### Step 3: Explore System Structure
 
-Show them the practice project:
-
-```
-List all folders in exercises/markit/
-```
-
-Explain each folder:
-- `campaigns/` - Campaign briefs and plans
-- `content/` - Blog posts, emails, social, ads
-- `brand/` - Brand guidelines and personas
-- `research/` - Competitive analysis
-- `analytics/` - Performance data
-- `templates/` - Reusable templates
-
-### Step 4: Test File Creation
-
-Have them create their first file together:
+Show them the marketing kit structure:
 
 ```
-Create a file called exercises/markit/README.md with a brief description of Markit agency and our client Planerio.
+List all folders in .claude/
 ```
 
-**Planerio details to include:**
-- B2B team productivity coordination tool
-- Helps remote teams coordinate focus time
-- $12/user/month, 14-day free trial
-- Integrates with Slack, Zoom, Google Workspace
-- Target: Remote team managers at tech companies
+Explain each component:
+- `agents/` - 18 specialized marketing agents
+- `commands/` - 76 slash commands organized by function
+- `skills/` - Marketing domain knowledge
+- `workflows/` - Core marketing, sales, and CRM workflows
 
-### Step 5: Verify It Worked
+### Step 4: Explore Available Commands
+
+Show them command categories:
 
 ```
-Read the file we just created
+List all folders in .claude/commands/
 ```
 
-Celebrate their first file creation!
+Explain key command groups:
+- `campaign/` - `/campaign:plan`, `/campaign:brief`, `/campaign:analyze`
+- `content/` - `/content:blog`, `/content:social`, `/content:email`, `/content:landing`
+- `seo/` - `/seo:keywords`, `/seo:audit`, `/seo:optimize`
+- `analytics/` - `/analytics:roi`, `/analytics:funnel`, `/analytics:report`
+- `sales/` - `/sales:pitch`, `/sales:outreach`, `/sales:battlecard`
+
+### Step 5: Test Your First Command
+
+Have them try a real command:
+
+```
+/brainstorm "What are the best marketing channels for a B2B SaaS product?"
+```
+
+Celebrate their first command execution!
+
+### Step 6: Review Documentation
+
+Show them key docs:
+
+```
+Read docs/usage-guide.md (first 50 lines)
+```
+
+Explain:
+- `docs/usage-guide.md` - Complete system reference
+- `docs/brand-guidelines.md` - Brand standards template
+- `docs/content-style-guide.md` - Writing standards
+- `docs/campaign-playbooks.md` - Campaign templates
+- `docs/channel-strategies.md` - Platform tactics
+- `docs/analytics-setup.md` - Tracking configuration
 
 ### What's Next
 
 Tell them:
-- **Next lesson:** `/start-0-2` - Your First Marketing Task
-- They just created their first marketing file with Claude Code!
+- **Next lesson:** `/training:start-0-2` - Your First Marketing Task
+- They just verified their setup and ran their first command!
 - This is exactly how the rest of the course works
 
 ## Key Teaching Points
 - Claude Code works directly with files
-- The Markit project is their sandbox
-- Every lesson involves hands-on file creation
+- The marketing kit has 18 agents, 76 commands, and comprehensive documentation
+- Every lesson involves hands-on command execution
 - Verify things actually worked (read back files)

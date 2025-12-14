@@ -3,7 +3,15 @@ description: Calculate lead score with demographic and behavioral factors
 argument-hint: [lead-data]
 ---
 
-Activate `crm-workflow.md` and `marketing-fundamentals` skill.
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+**Standards**: Token efficiency, sacrifice grammar for concision, list unresolved questions at end.
+
+**Skills**: Activate `crm-workflow.md` and `marketing-fundamentals` skill.
+
+---
 
 ## Mission
 Calculate comprehensive lead score for:

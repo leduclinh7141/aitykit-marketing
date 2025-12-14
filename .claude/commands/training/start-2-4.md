@@ -1,8 +1,14 @@
-# /start-2-4 - Analyze Campaign Data
+# /training:start-2-4 - Analyze Campaign Data
+
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+---
 
 ## Instructions for Claude
 
-Teach data analysis, insight extraction, and executive reporting.
+Teach data analysis, insight extraction, and executive reporting using analytics commands.
 
 ### Lesson Overview
 
@@ -16,171 +22,150 @@ Data analysis is often time-consuming. Let's master turning data into actionable
 
 ---
 
-### Step 1: Create Sample Data
+### Step 1: ROI Analysis
 
-First, generate realistic campaign data to analyze:
-
-```
-Create a sample campaign performance dataset:
-
-File: exercises/markit/analytics/q1-campaign-data.csv
-
-Include 30 days of data with columns:
-- Date
-- Channel (LinkedIn, Google, Email, Organic)
-- Campaign
-- Spend
-- Impressions
-- Clicks
-- Conversions
-- Revenue
-
-Make it realistic with:
-- Different performance by channel
-- Some clear winners and losers
-- Weekly patterns
-- Overall positive trend
-```
-
-### Step 2: Campaign Performance Analysis
+Use analytics commands:
 
 ```
-Analyze the Q1 campaign data and create a report:
+/analytics:roi "Q1 campaign - $50K spend across LinkedIn, Google, Email"
+```
 
-OVERALL PERFORMANCE:
-- Total spend, conversions, revenue
-- ROI and ROAS
+Review ROI calculation:
+- Total spend by channel
+- Revenue attributed
+- ROAS by channel
 - Cost per acquisition
+
+### Step 2: Funnel Analysis
+
+Analyze conversion funnel:
+
+```
+/analytics:funnel "trial signup - visitor to trial to paid conversion"
+```
+
+Review funnel metrics:
+- Traffic by source
+- Conversion rates at each stage
+- Drop-off points
+- Optimization opportunities
+
+### Step 3: Performance Reporting
+
+Generate performance reports:
+
+**Weekly Report:**
+```
+/report:weekly "Planerio" "current week"
+```
+
+**Monthly Report:**
+```
+/report:monthly "Planerio" "current month"
+```
+
+### Step 4: Channel Performance
+
+Analyze by channel:
+
+```
+/analytics:report "channel performance" "LinkedIn, Google, Email, Organic"
+```
+
+Create channel comparison:
+- Traffic contribution
+- Lead quality
+- Conversion rates
+- Cost efficiency
+
+### Step 5: Content Performance
+
+Analyze content effectiveness:
+
+```
+/analytics:report "content performance" "blog posts, landing pages, email sequences"
+```
+
+Key metrics:
+- Traffic by content piece
+- Engagement (time, scroll, shares)
 - Conversion rate
+- Lead quality
 
-BY CHANNEL:
-- Performance breakdown
-- Best and worst performers
-- Efficiency metrics (CPA, ROAS)
+### Step 6: Lead Quality Analysis
 
-BY CAMPAIGN:
-- Top 5 performing campaigns
-- Bottom 5 (candidates for optimization)
-
-TRENDS:
-- Week-over-week patterns
-- Day-of-week analysis
-- Performance trajectory
-
-RECOMMENDATIONS:
-- Where to increase spend
-- What to pause
-- Quick wins
-
-Save as exercises/markit/analytics/q1-performance-analysis.md
-```
-
-### Step 3: Content Performance Analysis
+Use lead scoring to analyze:
 
 ```
-Create sample content metrics:
-
-File: exercises/markit/analytics/content-performance.csv
-
-Include data for 20 blog posts:
-- Title
-- Publish date
-- Views
-- Avg time on page
-- Bounce rate
-- Conversions
-- Traffic source
-
-Then analyze:
-- Top performers by traffic
-- Top performers by conversion
-- Common patterns in winners
-- Underperformers to improve
-- Content gaps to fill
-
-Save as exercises/markit/analytics/content-analysis.md
+/crm:score "analyze lead quality by source and campaign"
 ```
 
-### Step 4: Executive Summary
+Review:
+- MQL rate by source
+- SQL conversion by campaign
+- Average lead score trends
+
+### Step 7: Executive Summary
+
+Create executive-ready summary:
 
 ```
-Create executive summary report:
+Create an executive summary of Q1 marketing performance:
 
-# Q1 Marketing Performance - Executive Summary
+STRUCTURE:
+1. Headline metrics (vs targets)
+2. Top 3 wins with data
+3. Top 3 challenges with impact
+4. Channel performance snapshot (table)
+5. Key learnings (3 insights)
+6. Q2 recommendations (prioritized)
+7. Budget request with justification
 
-## Headline Metrics (vs targets)
-- Revenue
-- New customers
-- ROI
-- CAC
-
-## Key Wins (top 3 with data)
-
-## Key Challenges (top 3 with impact)
-
-## Channel Performance Snapshot (table)
-
-## Key Learnings (3 insights)
-
-## Q2 Recommendations (prioritized)
-
-## Budget Request (with justification)
-
-Keep it to ONE PAGE.
-Save as exercises/markit/analytics/q1-executive-summary.md
+Keep it to ONE PAGE maximum.
 ```
 
-### Step 5: Multi-Channel Attribution
+### Step 8: Data-to-Action Framework
+
+Teach the insight framework:
 
 ```
-Create attribution analysis:
-
-Describe customer journey patterns:
-- Common paths to conversion
-- Which channels start journeys (awareness)
-- Which channels close deals (conversion)
-- Average touchpoints to conversion
-- Undervalued channels
-
-Include recommendations for budget reallocation.
-
-Save as exercises/markit/analytics/attribution-analysis.md
-```
-
-### Step 6: Data-to-Action Framework
-
-Teach the framework:
-
-```
-For each insight, document:
+For each finding, document:
 
 1. OBSERVATION: What does the data show?
 2. INSIGHT: Why is this happening?
-3. IMPLICATION: What does it mean for us?
+3. IMPLICATION: What does it mean?
 4. RECOMMENDATION: What should we do?
 5. EXPECTED IMPACT: What will change?
-6. RESOURCES NEEDED: What's required?
-
-Apply this to the top 3 findings from our analysis.
-Save as exercises/markit/analytics/insights-to-action.md
 ```
 
-### Step 7: Reporting Template
+### Step 9: Operational Checklists
+
+Use analytics checklists:
 
 ```
-Create a reusable monthly reporting template:
+/checklist:analytics-monthly "current month" "Planerio"
+```
 
-## Monthly Marketing Report Template
+Review monthly analytics tasks:
+- Data quality checks
+- Platform verification
+- Reporting accuracy
+- Attribution validation
 
-### Section 1: Executive Summary (1 page)
-### Section 2: Channel Performance (2 pages)
-### Section 3: Campaign Deep Dives (3 pages)
-### Section 4: Content Performance (2 pages)
-### Section 5: Conversion Funnel (1 page)
-### Section 6: Recommendations (1 page)
+### Step 10: Reporting Templates
 
-Include data requirements for each section.
-Save as exercises/markit/templates/monthly-report-template.md
+Explain reusable reporting:
+
+```
+Weekly Report Workflow:
+1. /analytics:roi "campaign" - Calculate ROI
+2. /analytics:funnel "funnel" - Analyze funnel
+3. /report:weekly "client" "week" - Generate report
+
+Monthly Report Workflow:
+1. /analytics:report "all channels" - Full analysis
+2. /crm:score "lead quality" - Lead analysis
+3. /report:monthly "client" "month" - Generate report
 ```
 
 ### What's Next
@@ -188,12 +173,12 @@ Save as exercises/markit/templates/monthly-report-template.md
 Tell them:
 - They can now turn data into decisions
 - Reports that executives actually read
-- **Next:** `/start-2-5` - Competitive Analysis
+- **Next:** `/training:start-2-5` - Competitive Analysis
 - Research competitors and find advantages
 
 ## Key Teaching Points
-- Good analysis turns data into insights
-- Executive reports must be concise
-- Attribution reveals true channel value
+- `/analytics:*` commands analyze performance
+- `/report:*` commands generate reports
+- ROI and funnel analysis are foundational
+- Executive summaries must be concise
 - Data-to-action framework ensures accountability
-- Templates save time on recurring reports

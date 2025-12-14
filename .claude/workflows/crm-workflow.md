@@ -2,6 +2,14 @@
 
 Customer relationship management automation and lifecycle marketing.
 
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+**Standards**: Token efficiency, sacrifice grammar for concision, list unresolved questions at end.
+
+---
+
 **Activate:** `marketing-fundamentals`, `email-marketing` skills
 
 ## Contact Lifecycle Stages

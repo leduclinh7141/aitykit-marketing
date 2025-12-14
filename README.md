@@ -2,9 +2,14 @@
 
 **AI-Powered Marketing Automation Framework for Claude Code**
 
-A comprehensive marketing kit that brings systematic, efficient marketing workflows to Claude Code. Plan campaigns, generate content, analyze competitors, and automate marketing operations—all powered by specialized AI agents and the Compounding Marketing philosophy.
+A comprehensive marketing kit that brings systematic, efficient marketing workflows to Claude Code. Plan campaigns, generate content, analyze competitors, and automate marketing operations—all powered by 18 specialized AI agents, 76 slash commands, and the Compounding Marketing philosophy.
 
-**✨ New:** Now includes interactive training modules and plugin architecture from [cc4.marketing](https://github.com/cc4-marketing/cc4.marketing)!
+**System Overview:**
+- **18 Marketing Agents** - Core, Supporting, and Reviewer agents
+- **76 Slash Commands** - Organized by category (campaign, content, SEO, analytics, etc.)
+- **9 Marketing Skills** - Domain expertise modules
+- **3 Core Workflows** - Marketing Pipeline, Sales Pipeline, CRM Lifecycle
+- **19 Training Lessons** - Interactive hands-on learning
 
 ## What is Claude Code?
 
@@ -35,38 +40,38 @@ A comprehensive marketing kit that brings systematic, efficient marketing workfl
 
 ## Key Benefits
 
-### 🚀 Accelerated Development
-- **AI-Powered Planning**: Automated technical planning and architecture design
-- **Intelligent Code Generation**: Context-aware code creation and modification
-- **Automated Testing**: Comprehensive test generation and execution
-- **Smart Documentation**: Synchronized docs that evolve with your code
+### 🚀 Accelerated Marketing
+- **AI-Powered Campaign Planning**: Automated campaign strategy and content calendars
+- **Intelligent Content Generation**: Context-aware copy creation and optimization
+- **Automated SEO**: Comprehensive keyword research and on-page optimization
+- **Multi-Channel Orchestration**: Coordinated campaigns across email, social, ads
 
-### 🎯 Enhanced Quality
-- **Multi-Agent Code Review**: Specialized agents for security, performance, and standards
-- **Automated Quality Assurance**: Continuous testing and validation
-- **Best Practices Enforcement**: Built-in adherence to coding standards
-- **Security-First Development**: Proactive security analysis and recommendations
+### 🎯 Enhanced Performance
+- **Multi-Perspective Review**: Specialized reviewers for brand, SEO, conversion, personas
+- **Data-Driven Optimization**: Continuous testing and performance tracking
+- **Best Practices Enforcement**: Built-in adherence to marketing frameworks
+- **Conversion-First Approach**: Every asset optimized for leads and revenue
 
 ### 🏗️ Structured Workflow
-- **Agent Orchestration**: Coordinated AI agents working in parallel and sequential workflows
-- **Task Management**: Automated project tracking and progress monitoring
-- **Documentation Sync**: Always up-to-date technical documentation
-- **Clean Git Workflow**: Professional commit messages and branch management
+- **Agent Orchestration**: Coordinated AI agents for research, planning, execution
+- **Campaign Management**: Automated progress tracking and deliverable monitoring
+- **Documentation Sync**: Always up-to-date brand guidelines and playbooks
+- **Quality Assurance**: Multi-stage review before content publication
 
 ## Documentation
 
 ### 📚 Core Documentation
-- **[Project Overview & PDR](./docs/project-overview-pdr.md)** - Comprehensive project overview, goals, features, and product development requirements
-- **[Codebase Summary](./docs/codebase-summary.md)** - High-level overview of project structure, technologies, and components
-- **[Code Standards](./docs/code-standards.md)** - Coding standards, naming conventions, and best practices
-- **[System Architecture](./docs/system-architecture.md)** - Detailed architecture documentation, component interactions, and data flow
-- **[Commands Reference](./guide/COMMANDS.md)** - Complete guide to all available slash commands
+- **[Usage Guide](./docs/usage-guide.md)** - Complete command reference and workflows
+- **[Project Overview & PDR](./docs/project-overview-pdr.md)** - Project goals, features, and requirements
+- **[Project Roadmap](./docs/project-roadmap.md)** - Development timeline and milestones
+- **[Training Guide](./training/README.md)** - Interactive learning path
+- **[Plugin Guide](./plugins/README.md)** - Plugin system overview
 
 ### 📖 Additional Resources
-- **[CLAUDE.md](./CLAUDE.md)** - Development instructions and workflows for AI agents
+- **[CLAUDE.md](./CLAUDE.md)** - Marketing workflows and agent instructions
 - **[CHANGELOG.md](./CHANGELOG.md)** - Version history and release notes
-- **[Windows Statusline Support](./docs/statusline-windows-support.md)** - Windows compatibility guide for Claude Code statusline
-- **[Statusline Architecture](./docs/statusline-architecture.md)** - Technical documentation for statusline implementation
+- **[Reviewer Agents](./docs/reviewer-agents-update.md)** - Persona reviewers documentation
+- **[Agent Organization](./docs/agent-organization-update.md)** - Agent structure documentation
 
 ## Quick Start
 
@@ -133,512 +138,407 @@ claude
 
 ## What's New 🎉
 
-### CC4.Marketing Integration (2025-12-14)
+### Enterprise-Grade Marketing System (December 2024)
 
-✅ **Interactive Training Modules**
-- 19 hands-on lessons (`/training:*` commands)
-- Practice project: Markit agency → Planerio client
-- Learn by doing real marketing work
+✅ **18 Specialized Marketing Agents**
+- 6 Core agents (Attraction, Lead Qualifier, Email Wizard, Sales Enabler, Continuity, Upsell)
+- 6 Supporting agents (Researcher, Brainstormer, Planner, Copywriter, Project Manager, Docs Manager)
+- 6 Reviewer agents (Brand Voice, CRO, SEO, Manager Maria, Solo Steve, Startup Sam)
 
-✅ **Plugin Architecture**
-- Content Factory: High-volume content generation
-- Campaign Manager: Systematic campaign planning
-- Modular, specialized workflows
+✅ **76 Slash Commands**
+- Campaign management (`/campaign:*`)
+- Content creation (`/content:*`)
+- SEO optimization (`/seo:*`)
+- Analytics & reporting (`/analytics:*`, `/report:*`)
+- Sales & leads (`/sales:*`, `/leads:*`)
+- Email sequences (`/sequence:*`)
+- And more...
 
-✅ **Persona Reviewers**
-- 6 specialized review agents (Brand, SEO, Conversion, Startup Founder, Marketing Manager, Solopreneur)
-- Multi-perspective content validation
+✅ **3 Core Workflows**
+- Marketing Pipeline: TOFU → MOFU → BOFU → Retention
+- Sales Pipeline: Lead → MQL → SQL → Opportunity → Customer
+- CRM Lifecycle: Contact management and automation
 
-✅ **Enhanced Documentation**
-- Complete usage guide (`./docs/usage-guide.md`)
-- Plugin system overview (`./plugins/README.md`)
-- Training guide (`./training/README.md`)
+✅ **19 Interactive Training Lessons**
+- Module 0: Getting Started (3 lessons)
+- Module 1: Core Concepts (7 lessons)
+- Module 2: Advanced Applications (6 lessons)
+- Bonus content: Pattern Library, 10x Marketer Framework
 
-**See:** `./docs/cc4-integration-summary.md` for complete details
+✅ **Multi-Language Support**
+- All agents and commands respond in user's language
+- Enterprise-grade quality standards
 
 ## Project Structure
 
 ```
 ├── .claude/                 # Claude Code configuration
 │   ├── agents/             # Marketing agents + persona reviewers
-│   ├── commands/           # Slash commands + training lessons
-│   ├── hooks/              # Claude Code hooks
+│   │   ├── reviewers/      # Quality assurance persona agents
+│   │   └── *.md           # Core marketing agents
+│   ├── commands/           # Slash commands (76 marketing commands)
+│   │   ├── training/       # Interactive training lessons
+│   │   └── */             # Organized by category (campaign, content, seo, etc.)
+│   ├── hooks/              # Discord/Telegram notification hooks
 │   ├── skills/             # Marketing domain skills
-│   ├── workflows/          # Core workflows and protocols
-│   ├── CLAUDE.md           # Global development instructions
-│   └── send-discord.sh     # Notification script
-├── plugins/                # Plugin extensions (NEW)
-│   ├── content-factory/    # Batch content generation
+│   │   ├── marketing-fundamentals/
+│   │   ├── seo-mastery/
+│   │   ├── social-media/
+│   │   ├── email-marketing/
+│   │   ├── paid-advertising/
+│   │   ├── content-strategy/
+│   │   ├── analytics-attribution/
+│   │   ├── brand-building/
+│   │   └── document-skills/
+│   └── workflows/          # Core marketing workflows
+├── plugins/                # Plugin extensions
+│   ├── content-factory/    # High-volume content generation
 │   └── campaign-manager/   # Campaign planning & review
-├── training/               # Interactive training (NEW)
-│   ├── exercises/markit/   # Practice project
+├── training/               # Interactive training modules
+│   ├── exercises/markit/   # Practice agency project (Planerio client)
 │   └── README.md          # Training guide
-├── docs/                   # Documentation
-│   ├── usage-guide.md     # Complete usage reference (NEW)
-│   └── cc4-integration-summary.md  # Integration details (NEW)
-├── .opencode/              # Open Code CLI agent definitions
-│   ├── agent/              # Specialized agent configurations
-│   │   ├── planner.md      # Technical planning agent
-│   │   ├── researcher.md   # Research and analysis agent
-│   │   ├── tester.md       # Testing and validation agent
-│   │   ├── debugger.md     # Issue analysis agent
-│   │   ├── code-reviewer.md# Code quality agent
-│   │   ├── docs-manager.md # Documentation agent
-│   │   ├── git-manager.md  # Version control agent
-│   │   └── project-manager.md # Progress tracking agent
-│   └── command/            # Custom command definitions
-├── docs/                   # Project documentation
-│   ├── codebase-summary.md # Auto-generated codebase overview
-│   ├── code-standards.md   # Development standards
-│   ├── project-overview-pdr.md # Product requirements
-│   └── development-roadmap.md  # Project roadmap
-├── plans/                  # Implementation plans and reports
-│   ├── templates/          # Plan templates
-│   └── reports/            # Agent-to-agent communication
-├── CLAUDE.md              # Project-specific Claude instructions
-├── AGENTS.md              # Agent coordination guidelines
+├── docs/                   # Marketing documentation
+│   ├── usage-guide.md      # Complete command reference
+│   ├── project-overview-pdr.md
+│   ├── project-roadmap.md
+│   └── *.md               # Various guides and updates
+├── CLAUDE.md              # Marketing workflows and agent instructions
 └── README.md              # This file
 ```
 
-## The AI Agent Team
+## The AI Marketing Team
 
-This boilerplate includes specialized AI agents that work together to deliver high-quality software:
+Specialized AI agents that work together to deliver high-performance marketing campaigns:
 
-### 🎯 Core Development Agents
+### 🎯 Core Marketing Agents
 
-#### **Planner Agent**
-- Researches technical approaches and best practices
-- Creates comprehensive implementation plans
-- Analyzes architectural trade-offs
-- Spawns multiple researcher agents for parallel investigation
+#### **Attraction Specialist**
+- Lead generation and TOFU strategy (SEO, landing pages, competitor intel)
+- Keyword research and content gap analysis
+- Programmatic SEO and organic traffic growth
+- Landing page optimization and A/B testing
 
-#### **Researcher Agent**
-- Investigates specific technologies and frameworks
-- Analyzes existing solutions and patterns
-- Provides technical recommendations
-- Supports the planner with detailed findings
+#### **Lead Qualifier**
+- Intent detection and behavioral analysis
+- Lead scoring model design
+- Audience segmentation and persona development
+- Sales readiness prediction
 
-#### **Tester Agent**
-- Generates comprehensive test suites
-- Validates functionality and performance
-- Ensures cross-platform compatibility
-- Reports on test coverage and quality metrics
+#### **Email Wizard**
+- Email sequence design and automation
+- Deliverability optimization
+- Personalization and dynamic content
+- A/B testing and performance analysis
 
-### 🔍 Quality Assurance Agents
+#### **Sales Enabler**
+- Sales collateral and case studies
+- Competitive battlecards
+- Pitch deck creation
+- Objection handling scripts
 
-#### **Code Reviewer Agent**
-- Performs automated code quality analysis
-- Enforces coding standards and conventions
-- Identifies security vulnerabilities
-- Provides improvement recommendations
+#### **Continuity Specialist**
+- Customer retention and re-engagement
+- NPS automation and feedback loops
+- Lifecycle marketing campaigns
+- Customer success content
 
-#### **Debugger Agent**
-- Analyzes application logs and error reports
-- Diagnoses performance bottlenecks
-- Investigates CI/CD pipeline issues
-- Provides root cause analysis
+#### **Upsell Maximizer**
+- Revenue expansion strategies
+- Cross-sell and upsell campaigns
+- Usage-based triggers
+- Feature adoption tracking
 
-### 📚 Documentation & Management Agents
+### 🔍 Supporting Agents
 
-#### **Docs Manager Agent**
-- Maintains synchronized technical documentation
-- Updates API documentation automatically
-- Ensures documentation accuracy
-- Manages codebase summaries
+#### **Researcher**
+- Market research and competitive analysis
+- Audience insights and trend analysis
+- Industry best practices
+- Data-driven recommendations
 
-#### **Git Manager Agent**
-- Creates clean, conventional commit messages
-- Manages branching and merge strategies
-- Handles version control workflows
-- Ensures professional git history
+#### **Brainstormer**
+- Campaign ideation and creative concepts
+- Strategy workshops and planning sessions
+- Multi-approach evaluation
+- Creative problem-solving
 
-#### **Project Manager Agent**
-- Tracks development progress and milestones
-- Updates project roadmaps and timelines
-- Manages task completion verification
-- Maintains project health metrics
+#### **Planner**
+- Campaign planning and content calendars
+- Budget allocation and resource planning
+- Timeline and milestone management
+- Channel mix strategy
 
-## Agent Orchestration Patterns
+#### **Copywriter**
+- High-converting copy creation
+- Brand voice consistency
+- Messaging frameworks
+- Content optimization
 
-### Sequential Chaining
-Use when tasks have dependencies:
+#### **Project Manager**
+- Campaign coordination and tracking
+- Deadline management
+- Status reporting
+- Cross-functional alignment
+
+#### **Docs Manager**
+- Brand guidelines management
+- Marketing documentation
+- Playbook creation
+- Knowledge base maintenance
+
+### ⭐ Reviewer Agents (Quality Assurance)
+
+#### **Brand Voice Guardian**
+- Brand consistency validation
+- Voice and tone review
+- Messaging alignment
+- Emotional impact assessment
+
+#### **Conversion Optimizer**
+- CRO best practices application
+- Persuasion psychology review
+- Friction analysis
+- CTA optimization
+
+#### **SEO Specialist**
+- On-page SEO optimization
+- Keyword usage validation
+- Technical SEO review
+- SERP feature potential
+
+#### **Manager Maria** (Marketing Manager Persona)
+- Team execution feasibility
+- ROI and budget alignment
+- Enterprise/mid-market fit
+- Resource requirements
+
+#### **Solo Steve** (Solopreneur Persona)
+- Self-service ease
+- Time efficiency
+- Budget sensitivity
+- DIY implementation
+
+#### **Startup Sam** (Startup Founder Persona)
+- Growth potential and virality
+- Speed to market
+- Scrappy execution
+- Founder-market fit
+
+## Marketing Workflow Examples
+
+### 1. Campaign Launch
 ```bash
-# Planning → Implementation → Testing → Review
-/plan "implement user dashboard"
-# Wait for plan completion, then:
-/cook "follow the implementation plan"
-# After implementation:
-/test "validate dashboard functionality"
-# Finally:
-/review "ensure code quality standards"
+# Start with research and planning
+/research:market "SaaS productivity tools"
+/competitor:deep "competitor-url.com"
+
+# Create campaign plan
+/campaign:plan "Q1 Product Launch"
+
+# Generate content assets
+/content:landing "new feature" "target audience"
+/content:email "product launch" "trial users"
+/content:social "product announcement" "linkedin"
+
+# SEO optimization
+/seo:keywords "product category"
+/seo:optimize "landing-page.md" "target keyword"
+
+# Review with personas
+# Brand voice guardian reviews messaging
+# Conversion optimizer reviews CTAs
+# SEO specialist reviews optimization
+
+# Schedule and track
+/social:schedule "linkedin, twitter" "2 weeks"
+/ops:weekly "2024-01-15"
 ```
 
-### Parallel Execution
-Use for independent tasks:
+### 2. Content Creation Pipeline
 ```bash
-# Multiple researchers exploring different approaches
-planner agent spawns:
-- researcher (database options)
-- researcher (authentication methods)
-- researcher (UI frameworks)
-# All report back to planner simultaneously
+# Research and ideation
+/research:persona "target customer segment"
+/brainstorm "content ideas for blog"
+
+# Create content
+/content:blog "topic" "target keyword"
+
+# Optimize for conversion
+/content:cro "blog-post.md"
+
+# Multi-channel repurposing
+/content:social "blog summary" "twitter"
+/content:email "blog announcement" "newsletter"
+
+# Quality review
+# Brand voice validation
+# SEO optimization check
 ```
 
-### Context Management
-- Agents communicate through file system reports
-- Context is preserved between agent handoffs
-- Fresh context prevents conversation degradation
-- Essential information is documented in markdown
-
-## Development Workflow
-
-### 1. Feature Development
+### 3. Lead Nurture Campaign
 ```bash
-# Start with planning
-/plan "add real-time notifications"
+# Design lead scoring
+/leads:score "SaaS B2B product"
 
-# Research phase (automatic)
-# Multiple researcher agents investigate approaches
+# Create nurture sequence
+/sequence:nurture "product" "MQL segment"
 
-# Implementation
-/cook "implement notification system"
+# Build email automation
+/crm:sequence "lead nurture" "30-day drip"
 
-# Quality assurance
-/test
-/review
+# Sales enablement
+/sales:battlecard "main competitor"
+/sales:pitch "enterprise prospect" "use case"
 
-# Documentation update
-/docs
-
-# Project tracking
-/watzup  # Check project status
+# Track and optimize
+/analytics:funnel "lead-to-customer"
+/analytics:roi "nurture campaign"
 ```
 
-### 2. Bug Fixing
+### 4. SEO Content Strategy
 ```bash
-# Analyze the issue
-/debug "investigate login failures"
+# Keyword research
+/seo:keywords "industry topic"
 
-# Create fix plan
-/plan "resolve authentication bug"
+# Competitor analysis
+/seo:competitor "competitor-blog.com"
 
-# Implement solution
-/fix "authentication issue"
+# Content creation
+/content:blog "target keyword topic" "primary keyword"
 
-# Validate fix
-/test
-```
+# On-page optimization
+/seo:optimize "blog-post.md" "primary keyword"
 
-### 3. Documentation Management
-```bash
-# Update documentation
-/docs
+# Technical audit
+/seo:audit "website-url.com"
 
-# Generate codebase summary
-repomix  # Creates ./docs/codebase-summary.md
-
-# Review project status
-/watzup
+# Performance tracking
+/analytics:report "organic traffic" "monthly"
 ```
 
 ## Configuration Files
 
 ### CLAUDE.md
-Project-specific instructions for Claude Code. Customize this file to define:
-- Project architecture guidelines
-- Development standards and conventions
+Marketing-specific instructions for Claude Code. Defines:
+- Marketing workflows and campaign lifecycle
 - Agent coordination protocols
-- Specific workflows for your project
+- Brand guidelines and messaging standards
+- Marketing automation workflows
 
-### .opencode/agent/*.md
-Individual agent configurations defining:
-- Agent expertise and responsibilities
-- Interaction patterns
-- Output formats
-- Quality standards
+### .claude/agents/*.md
+Individual marketing agent configurations defining:
+- Agent expertise (SEO, email, content, etc.)
+- Interaction patterns with other agents
+- Output formats (campaigns, copy, reports)
+- Quality standards and review criteria
 
-### plans/templates/*.md
-Reusable templates for:
-- Feature implementation plans
-- Bug fix procedures
-- Refactoring strategies
-- Architecture decisions
-
-## Gemini Skills Configuration
-
-This project includes several Gemini-powered skills that require a Google Gemini API key:
-
-- **gemini-audio** - Audio analysis and speech generation
-- **gemini-video-understanding** - Video analysis and understanding
-- **gemini-document-processing** - PDF document processing
-- **gemini-image-gen** - AI image generation
-- **gemini-vision** - Image analysis and vision capabilities
-
-### API Key Setup
-
-The Gemini skills check for `GEMINI_API_KEY` in the following order (priority from highest to lowest):
-
-1. **Environment Variable** (Recommended for development)
-   ```bash
-   export GEMINI_API_KEY='your-api-key-here'
-   ```
-
-2. **Project Root `.env`** (Recommended for project-specific keys)
-   ```bash
-   # Create .env in project root
-   echo 'GEMINI_API_KEY=your-api-key-here' > .env
-   ```
-
-3. **`.claude/.env`** (For Claude-specific configuration)
-   ```bash
-   # Copy example and edit
-   cp .claude/.env.example .claude/.env
-   # Then edit .claude/.env and set your API key
-   ```
-
-4. **`.claude/skills/.env`** (For shared skills configuration)
-   ```bash
-   # Copy example and edit
-   cp .claude/skills/.env.example .claude/skills/.env
-   # Then edit .claude/skills/.env and set your API key
-   ```
-
-5. **Individual Skill Directory `.env`** (For skill-specific keys)
-   ```bash
-   # Example for gemini-audio skill
-   cp .claude/skills/gemini-audio/.env.example .claude/skills/gemini-audio/.env
-   # Then edit and set your API key
-   ```
-
-### Getting Your API Key
-
-Get your free Gemini API key at: https://aistudio.google.com/apikey
-
-### Vertex AI Support
-
-To use Vertex AI instead of Google AI Studio:
-
-```bash
-# Enable Vertex AI
-export GEMINI_USE_VERTEX=true
-export VERTEX_PROJECT_ID=your-gcp-project-id
-export VERTEX_LOCATION=us-central1  # Optional, defaults to us-central1
-```
-
-Or in `.env` file:
-```
-GEMINI_USE_VERTEX=true
-VERTEX_PROJECT_ID=your-gcp-project-id
-VERTEX_LOCATION=us-central1
-```
-
-### Usage Examples
-
-```bash
-# Audio analysis
-claude "Analyze this audio file and summarize the key points: audio.mp3"
-
-# Video understanding
-claude "Describe what happens in this video: video.mp4"
-
-# Document processing
-claude "Extract all tables from this PDF: document.pdf"
-
-# Image generation
-claude "Generate an image of a serene mountain landscape"
-
-# Image analysis
-claude "What objects are in this image: photo.jpg"
-```
-
-## Model Context Protocol (MCP)
-
-✍️ Please read [my technical blog article about MCP here](https://faafospecialist.substack.com/p/claude-code-solution-to-use-mcp-servers).
-
-### Pre-requisites
-
-In AityKit, you need to setup the MCP servers in `.claude/.mcp.json` file.
-
-Copy the example file:
-```bash
-mv .claude/.mcp.json.example .claude/.mcp.json
-```
-
-Then add your MCP servers, below are some examples:
-
-### [Context7](https://github.com/upstash/context7)
-```json
-{
-   "mcpServers": {
-      "context7": {
-         "command": "npx",
-         "args": ["-y", "@upstash/context7-mcp", "--api-key", "YOUR_API_KEY"],
-      }
-   }
-}
-```
-
-### [Human MCP](https://github.com/mrgoonie/human-mcp/)
-
-```json
-{
-   "mcpServers": {
-      "human": {
-         "command": "npx",
-         "args": ["@goonnguyen/human-mcp@latest"],
-         "env": { "GOOGLE_GEMINI_API_KEY": "YOUR_API_KEY" }
-      }
-   }
-}
-```
-
-### [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp)
-```json
-{
-   "mcpServers": {
-      "chrome-devtools": {
-         "command": "npx",
-         "args": ["-y", "chrome-devtools-mcp@latest"]
-      }
-   }
-}
-```
+### .claude/skills/*/
+Marketing domain knowledge including:
+- SEO mastery and keyword research
+- Social media platform best practices
+- Email marketing and deliverability
+- Paid advertising strategies
+- Content strategy frameworks
+- Analytics and attribution models
+- Brand building principles
 
 ## Best Practices
 
-### Development Principles
-- **YANGI**: You Aren't Gonna Need It - avoid over-engineering
-- **KISS**: Keep It Simple, Stupid - prefer simple solutions
-- **DRY**: Don't Repeat Yourself - eliminate code duplication
+### Marketing Principles
+- **Customer-First**: Always prioritize customer needs and pain points
+- **Data-Driven**: Base decisions on metrics, analytics, and testing
+- **Test & Learn**: Continuous experimentation and optimization
+- **Brand Consistency**: Maintain voice, tone, and messaging alignment
 
-### Code Quality
-- All code changes go through automated review
-- Comprehensive testing is mandatory
-- Security considerations are built-in
-- Performance optimization is continuous
+### Content Quality
+- All content goes through multi-perspective review (brand, SEO, conversion, personas)
+- Comprehensive audience research before creation
+- Brand voice and messaging consistency enforced
+- Conversion optimization is built-in
 
-### Documentation
-- Documentation evolves with code changes
-- API docs are automatically updated
-- Architecture decisions are recorded
-- Codebase summaries are regularly refreshed
+### Campaign Management
+- Clear goals and KPIs defined upfront
+- Regular performance tracking and reporting
+- A/B testing for continuous improvement
+- Documentation of learnings and insights
 
-### Git Workflow
-- Clean, conventional commit messages
-- Professional git history
-- No AI attribution in commits
-- Focused, atomic commits
-
-## Usage Examples
-
-### Starting a New Feature
-```bash
-# Research and plan
-claude "I need to implement user authentication with OAuth2"
-# Planner agent creates comprehensive plan
-
-# Follow the plan
-claude "Implement the authentication plan"
-# Implementation follows the detailed plan
-
-# Ensure quality
-claude "Review and test the authentication system"
-# Testing and code review agents validate the implementation
-```
-
-### Debugging Issues
-```bash
-# Investigate problem
-claude "Debug the slow database queries"
-# Debugger agent analyzes logs and performance
-
-# Create solution
-claude "Optimize the identified query performance issues"
-# Implementation follows debugging recommendations
-
-# Validate fix
-claude "Test query performance improvements"
-# Tester agent validates the optimization
-```
-
-### Project Maintenance
-```bash
-# Check project health
-claude "What's the current project status?"
-# Project manager provides comprehensive status
-
-# Update documentation
-claude "Sync documentation with recent changes"
-# Docs manager updates all relevant documentation
-
-# Plan next sprint
-claude "Plan the next development phase"
-# Planner creates detailed roadmap for upcoming work
-```
+### Documentation Standards
+- Brand guidelines kept up-to-date
+- Campaign playbooks maintained
+- Marketing processes documented
+- Knowledge shared across team
 
 ## Advanced Features
 
-### Multi-Project Support
-- Manage multiple repositories simultaneously
-- Shared agent configurations across projects
-- Consistent development patterns
+### Multi-Brand Support
+- Manage multiple brands/clients simultaneously
+- Shared marketing frameworks across brands
+- Consistent campaign quality standards
 
 ### Custom Agent Creation
-- Define project-specific agents
-- Extend existing agent capabilities
-- Create domain-specific expertise
+- Define brand-specific reviewer personas
+- Extend existing marketing agent capabilities
+- Create industry-specific expertise
 
 ### Integration Capabilities
-- Discord notifications for project updates
-- GitHub Actions integration
-- CI/CD pipeline enhancement
+- Discord/Telegram notifications for campaign updates
+- Marketing automation platform integration
+- Analytics and reporting dashboards
 
 ## Customization Guide
 
-### 1. Project Setup
-- Update `CLAUDE.md` with your project specifics
-- Modify agent configurations in `.opencode/agent/`
-- Customize plan templates in `plans/templates/`
+### 1. Brand Setup
+- Update `CLAUDE.md` with brand specifics and workflows
+- Create brand guidelines in `docs/brand-guidelines.md`
+- Customize reviewer personas for your audience
 
 ### 2. Agent Specialization
-- Add domain-specific knowledge to agents
-- Create custom agents for unique requirements
-- Configure agent interaction patterns
+- Add industry-specific knowledge to agents
+- Create custom agents for unique marketing needs
+- Configure multi-brand workflows
 
 ### 3. Workflow Optimization
-- Define project-specific commands
-- Create shortcuts for common tasks
-- Establish team coding standards
+- Define brand-specific slash commands
+- Create shortcuts for recurring campaigns
+- Establish content review standards
 
 ## Contributing
 
 1. Fork this repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Follow the agent orchestration workflow
-4. Ensure all tests pass and documentation is updated
-5. Create a Pull Request
+2. Create a feature branch (`git checkout -b feature/marketing-enhancement`)
+3. Follow marketing best practices and agent workflows
+4. Ensure all content passes quality review (brand, SEO, conversion)
+5. Update documentation and create a Pull Request
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is proprietary software. A commercial license is required for use. See the [LICENSE](LICENSE) file for details.
+
+For licensing inquiries: [aitykit.cc](https://aitykit.cc)
 
 ## Learn More
 
+### AityKit Resources
+- [AityKit Website](https://aitykit.cc)
+- [AityKit Documentation](https://docs.aitykit.cc)
+- [AityKit CLI](https://github.com/mrgoonie/aitykit-cli)
+
 ### Claude Code Resources
 - [Claude Code Documentation](https://claude.ai/code)
-- [Open Code CLI Documentation](https://docs.opencode.ai)
-- [Agent Development Guide](https://docs.opencode.ai/agents)
+- [Claude Code Setup Guide](https://code.claude.com/docs/en/setup)
+- [Model Context Protocol (MCP)](https://modelcontextprotocol.io)
 
-### Community
-- [Claude Code Community](https://discord.gg/claude-code)
-- [Discussion Forum](https://github.com/anthropic/claude-code/discussions)
-- [Example Projects](https://github.com/topics/claude-code)
-
-### Support
-- [Issue Tracker](https://github.com/anthropic/claude-code/issues)
-- [Feature Requests](https://github.com/anthropic/claude-code/discussions/categories/ideas)
-- [Documentation](https://docs.claude.ai/code)
+### Community & Support
+- [GitHub Issues](https://github.com/leduclinh7141/aitykit-marketing/issues)
+- [GitHub Discussions](https://github.com/leduclinh7141/aitykit-marketing/discussions)
+- [AityKit Blog](https://faafospecialist.substack.com)
 
 ---
 
-**Start building with AI-powered development today!** This boilerplate provides everything you need to create professional software with intelligent agent assistance.
+**Start building AI-powered marketing campaigns today!**
+
+This framework provides everything you need to create professional marketing campaigns with intelligent agent assistance.
+
+---
+
+*Copyright 2024-2025 AityKit Team. All Rights Reserved.*

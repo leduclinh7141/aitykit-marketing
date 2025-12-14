@@ -1,8 +1,14 @@
-# /start-1-1 - Welcome to Markit
+# /training:start-1-1 - Welcome to Markit
+
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+---
 
 ## Instructions for Claude
 
-Begin Module 1 - Core Concepts. This lesson introduces the Markit agency project and first real marketing workflows for client Planerio.
+Begin Module 1 - Core Concepts. This lesson introduces the Markit agency project and the marketing kit's core workflows.
 
 ### Lesson Overview
 
@@ -10,7 +16,7 @@ Begin Module 1 - Core Concepts. This lesson introduces the Markit agency project
 
 **Module 1.1: Welcome to Markit**
 
-Welcome to Module 1! Now we'll master the core concepts of Claude Code through hands-on marketing work. By the end of this module, you'll handle real marketing tasks with confidence.
+Welcome to Module 1! Now we'll master the core concepts of the marketing kit through hands-on work. By the end of this module, you'll handle real marketing tasks with confidence.
 
 **Duration:** ~20 minutes
 
@@ -26,88 +32,92 @@ Explain their role:
 > 3. Create content that resonates with remote teams
 > 4. Build a sustainable content marketing engine
 
-### Step 2: Review Project Structure
+### Step 2: Understand the Core Workflows
 
-Show them what we've built:
+Explain the three main workflows in `.claude/workflows/`:
 
+**Marketing Pipeline (`primary-workflow.md`):**
 ```
-Show me the complete structure of exercises/markit/
-```
-
-Explain each area:
-- `campaigns/` - Where campaign briefs live
-- `content/` - All marketing content (blog, email, social, ads)
-- `brand/` - Guidelines and personas (we created these!)
-- `research/` - Competitive analysis
-- `analytics/` - Performance tracking
-- `templates/` - Reusable templates
-
-### Step 3: Create First Campaign Brief
-
-Now the real work begins:
-
-```
-Create a campaign brief for Planerio's product launch.
-
-Save it to: exercises/markit/campaigns/q1-launch/brief.md
-
-Include:
-- Campaign objectives (1000 trial signups in 30 days)
-- Target audience (reference our personas)
-- Key messages (reference brand guidelines)
-- Channel strategy (LinkedIn, Google Ads, Content, Email)
-- Budget allocation ($50K total)
-- Success metrics
-- Timeline (6 weeks)
-
-Use our brand voice guidelines and personas for context.
+Research → Insights → Creative → Plan → Create → Edit → Publish → Measure
 ```
 
-### Step 4: Review the Brief
+**Sales Pipeline (`sales-workflow.md`):**
+```
+Lead → MQL → SQL → Opportunity → Proposal → Negotiation → Close
+```
+
+**CRM Lifecycle (`crm-workflow.md`):**
+```
+Subscriber → Lead → MQL → SQL → Opportunity → Customer → Advocate
+```
+
+### Step 3: Understand Agent Roles
+
+Explain how agents map to marketing functions:
+
+**TOFU (Top of Funnel):**
+- `attraction-specialist` - Lead generation, SEO, landing pages
+
+**MOFU (Middle of Funnel):**
+- `lead-qualifier` - Intent detection, lead scoring
+- `email-wizard` - Nurture sequences
+
+**BOFU (Bottom of Funnel):**
+- `sales-enabler` - Pitches, case studies, battlecards
+
+**Retention:**
+- `continuity-specialist` - Churn detection, re-engagement
+- `upsell-maximizer` - Revenue expansion
+
+### Step 4: Create First Campaign Brief
+
+Now the real work begins using `/campaign:plan`:
 
 ```
-Read the campaign brief we just created
+/campaign:plan "Planerio Q1 Product Launch - Target: 1000 trial signups in 30 days, Budget: $50K, Channels: LinkedIn, Google Ads, Content, Email"
 ```
 
-Point out how Claude:
-- Referenced the brand guidelines automatically
-- Used persona insights
-- Created a professional, comprehensive document
+Review the comprehensive campaign plan generated.
 
-### Step 5: The Iteration Power
+### Step 5: Review the Brief
 
-Show them refinement:
+Point out how the planner agent:
+- Created structured objectives and KPIs
+- Defined target audience segments
+- Allocated budget across channels
+- Set up measurement framework
+
+### Step 6: The Iteration Power
+
+Show them refinement using follow-up questions:
 
 ```
-The target audience section needs more depth. Expand it with:
-- Day in the life of Manager Mark
-- Specific pain points we're addressing
-- Why now is the right time for Planerio
+Expand the target audience section with day-in-the-life scenarios for each persona
 ```
 
 Explain: Iteration is key. First drafts are starting points.
 
-### Step 6: Context Awareness Demo
+### Step 7: Context Awareness Demo
 
-Demonstrate the power:
+Demonstrate the power of context:
 
 ```
-Based on the campaign brief and our personas, write 3 LinkedIn post ideas that would resonate with Manager Mark.
+/content:social "Product launch announcement for Planerio based on the campaign brief" "linkedin"
 ```
 
-Show how Claude pulls from multiple files automatically.
+Show how Claude pulls from the campaign context automatically.
 
 ### What's Next
 
 Tell them:
-- They created a professional campaign brief in minutes
+- They created a professional campaign brief using `/campaign:plan`
 - Claude used context from brand guidelines and personas
-- **Next:** `/start-1-2` - Working with Marketing Files
-- They'll learn to organize, find, and manage marketing files efficiently
+- **Next:** `/training:start-1-2` - Working with Marketing Files
+- They'll learn to organize, find, and manage marketing assets efficiently
 
 ## Key Teaching Points
 - Markit agency is the hands-on practice project
-- Campaign briefs are foundation documents
-- Claude uses context from existing files
+- Three core workflows: Marketing, Sales, CRM
+- Agents map to funnel stages (TOFU, MOFU, BOFU, Retention)
+- `/campaign:plan` creates comprehensive campaign briefs
 - Iteration improves output quality
-- Always reference brand guidelines and personas

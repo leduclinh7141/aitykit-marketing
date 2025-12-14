@@ -3,7 +3,15 @@ description: Generate customized sales pitch
 argument-hint: [prospect-company] [use-case]
 ---
 
-Activate `sales-workflow.md` skill.
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+**Standards**: Token efficiency, sacrifice grammar for concision, list unresolved questions at end.
+
+**Skills**: Activate `sales-workflow.md` skill.
+
+---
 
 ## Mission
 Create a customized sales pitch for:

@@ -3,6 +3,14 @@ description: Create ad copy for paid campaigns
 argument-hint: [platform] [objective]
 ---
 
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+**Standards**: Token efficiency, sacrifice grammar for concision, list unresolved questions at end.
+
+---
+
 # Ad Copy Creation
 
 ## Objective

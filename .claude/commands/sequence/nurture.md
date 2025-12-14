@@ -3,7 +3,15 @@ description: Create lead nurturing sequence to convert leads to MQL/SQL
 argument-hint: [product-or-service] [target-segment]
 ---
 
-Activate `email-marketing`, `crm-workflow.md`, `sales-workflow.md` skills.
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+**Standards**: Token efficiency, sacrifice grammar for concision, list unresolved questions at end.
+
+**Skills**: Activate `email-marketing`, `crm-workflow.md`, `sales-workflow.md` skills.
+
+---
 
 ## Mission
 Create lead nurturing sequence to move leads through funnel:
