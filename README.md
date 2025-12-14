@@ -1,6 +1,10 @@
-# Claude Code Boilerplate
+# AityKit Marketing
 
-A comprehensive boilerplate template for building professional software projects with **CLI Coding Agents** (**Claude Code** and **Open Code**). This template provides a complete development environment with AI-powered agent orchestration, automated workflows, and intelligent project management.
+**AI-Powered Marketing Automation Framework for Claude Code**
+
+A comprehensive marketing kit that brings systematic, efficient marketing workflows to Claude Code. Plan campaigns, generate content, analyze competitors, and automate marketing operations—all powered by specialized AI agents and the Compounding Marketing philosophy.
+
+**✨ New:** Now includes interactive training modules and plugin architecture from [cc4.marketing](https://github.com/cc4-marketing/cc4.marketing)!
 
 ## What is Claude Code?
 
@@ -66,55 +70,112 @@ A comprehensive boilerplate template for building professional software projects
 
 ## Quick Start
 
-### Prerequisites
+### For New Users (Start with Training)
+
+Learn marketing automation through hands-on practice:
+
+```bash
+# Navigate to project
+cd aitykit-marketing
+
+# Launch Claude Code
+claude
+
+# Begin interactive training
+/training:start-0-0
+```
+
+**Time:** 4-6 hours for complete training
+**What You'll Build:** Campaign briefs, content library, brand guidelines
+**Practice Project:** Markit agency for Planerio client
+
+### For Experienced Users (Jump to Production)
+
+Start using marketing automation immediately:
+
+```bash
+# Plan a campaign
+/campaign:plan "Q1 Product Launch"
+
+# Generate content
+/content:good "Blog post about our new feature"
+
+# SEO research
+/seo:keywords "your topic"
+
+# Competitor analysis
+/competitor:deep "competitor-url.com"
+
+# Create email sequence
+/sequence:welcome "your-product" "trial users"
+```
+
+### Installation
+
+**Prerequisites:**
 - [Claude Code](https://code.claude.com/docs/en/setup) installed and configured
 - Git for version control
-- Node.js 18+ (or your preferred runtime)
-- Operating Systems: macOS 10.15+, Ubuntu 20.04+/Debian 10+, or Windows 10+ (with WSL 1, WSL 2, or Git for Windows)
-- Hardware: 4GB+ RAM
 
-### Setup your new project with AityKit
+**Clone Repository:**
+```bash
+git clone https://github.com/leduclinh7141/aitykit-marketing.git
+cd aitykit-marketing
+claude
+```
 
-1. **Install AityKit CLI**:
-   ```bash
-   npm install -g aitykit-cli
-   ```
+📖 **Complete Documentation:**
+- **[Usage Guide](./docs/usage-guide.md)** - Complete command reference and workflows
+- **[Training Guide](./training/README.md)** - Interactive learning path
+- **[Plugin Guide](./plugins/README.md)** - Plugin system overview
+- **[CC4 Integration Summary](./docs/cc4-integration-summary.md)** - What's new details
+- **[Commands Reference](./guide/COMMANDS.md)** - All slash commands
+- **[Skills Catalog](./guide/SKILLS.md)** - Available marketing skills
 
-2. **Create your new project with AityKit framework**:
-   ```bash
-   ck new --dir my-project --kit engineer
-   ```
-   
-   **Note:** If you want to use the kit with your existing project:
-   ```bash
-   cd /path/to/project
-   ck update --kit engineer
-   ```
+## What's New 🎉
 
-3. **Start development**:
-   ```bash
-   # Begin with Claude Code
-   claude
-   # [YOLO mode - not recommended]
-   # claude --dangerously-skip-permissions
+### CC4.Marketing Integration (2025-12-14)
 
-   # now you can use these specific commands
-   /plan "implement user authentication"
-   /cook "add database integration"
-   ```
+✅ **Interactive Training Modules**
+- 19 hands-on lessons (`/training:*` commands)
+- Practice project: Markit agency → Planerio client
+- Learn by doing real marketing work
 
-📖 **Learn more from our docs:** [https://docs.aitykit.cc](https://docs.aitykit.cc)
+✅ **Plugin Architecture**
+- Content Factory: High-volume content generation
+- Campaign Manager: Systematic campaign planning
+- Modular, specialized workflows
+
+✅ **Persona Reviewers**
+- 6 specialized review agents (Brand, SEO, Conversion, Startup Founder, Marketing Manager, Solopreneur)
+- Multi-perspective content validation
+
+✅ **Enhanced Documentation**
+- Complete usage guide (`./docs/usage-guide.md`)
+- Plugin system overview (`./plugins/README.md`)
+- Training guide (`./training/README.md`)
+
+**See:** `./docs/cc4-integration-summary.md` for complete details
 
 ## Project Structure
 
 ```
 ├── .claude/                 # Claude Code configuration
-│   ├── agents/             # Claude Code agents
-│   ├── commands/           # Claude Code commands
+│   ├── agents/             # Marketing agents + persona reviewers
+│   ├── commands/           # Slash commands + training lessons
 │   ├── hooks/              # Claude Code hooks
-│   ├── skills/             # Claude Code skills
+│   ├── skills/             # Marketing domain skills
+│   ├── workflows/          # Core workflows and protocols
 │   ├── CLAUDE.md           # Global development instructions
 │   └── send-discord.sh     # Notification script
+├── plugins/                # Plugin extensions (NEW)
+│   ├── content-factory/    # Batch content generation
+│   └── campaign-manager/   # Campaign planning & review
+├── training/               # Interactive training (NEW)
+│   ├── exercises/markit/   # Practice project
+│   └── README.md          # Training guide
+├── docs/                   # Documentation
+│   ├── usage-guide.md     # Complete usage reference (NEW)
+│   └── cc4-integration-summary.md  # Integration details (NEW)
 ├── .opencode/              # Open Code CLI agent definitions
 │   ├── agent/              # Specialized agent configurations
 │   │   ├── planner.md      # Technical planning agent
