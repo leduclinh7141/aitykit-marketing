@@ -1,6 +1,18 @@
 # Common Skill Utilities
 
-This directory contains shared utilities used across multiple skills.
+Shared utilities used across multiple skills in the marketing kit.
+
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+**Standards**: Token efficiency, sacrifice grammar for concision, list unresolved questions at end.
+
+---
+
+## Overview
+
+This directory contains shared utilities and helpers used by skills that require API integrations, particularly with Google's Gemini AI.
 
 ## API Key Helper
 
@@ -24,36 +36,29 @@ api_key = get_api_key_or_exit()
 
 ### API Key Lookup Order
 
-The helper checks for `GEMINI_API_KEY` in this order:
+The helper checks for `GEMINI_API_KEY` in this order (first found wins):
 
-1. **Process environment variable** (recommended for development)
-   ```bash
-   export GEMINI_API_KEY='your-api-key'
-   ```
+| Priority | Location | Use Case |
+|----------|----------|----------|
+| 1 | Process environment variable | Development, CI/CD |
+| 2 | Project root `.env` file | Project-specific config |
+| 3 | `.claude/.env` file | Claude Code config |
+| 4 | `.claude/skills/.env` file | Shared across skills |
+| 5 | Skill directory `.env` file | Skill-specific config |
 
-2. **Project root `.env` file**
-   ```bash
-   echo 'GEMINI_API_KEY=your-api-key' > .env
-   ```
+**Set via environment variable (recommended for development)**:
+```bash
+export GEMINI_API_KEY='your-api-key'
+```
 
-3. **.claude/.env file**
-   ```bash
-   echo 'GEMINI_API_KEY=your-api-key' > .claude/.env
-   ```
-
-4. **.claude/skills/.env file** (shared across all Gemini skills)
-   ```bash
-   echo 'GEMINI_API_KEY=your-api-key' > .claude/skills/.env
-   ```
-
-5. **Skill directory `.env` file**
-   ```bash
-   echo 'GEMINI_API_KEY=your-api-key' > .claude/skills/your-skill/.env
-   ```
+**Set via .env file**:
+```bash
+echo 'GEMINI_API_KEY=your-api-key' > .env
+```
 
 ### Vertex AI Support
 
-To use Vertex AI instead of Google AI Studio:
+For enterprise deployments using Vertex AI instead of Google AI Studio:
 
 ```bash
 # Enable Vertex AI
@@ -110,11 +115,28 @@ if vertex_config['use_vertex']:
 ### Error Handling
 
 If the API key is not found, the helper will:
-- Print a clear error message
-- Show all available methods to set the API key
-- Provide the URL to obtain an API key
-- Exit with status code 1
+1. Print a clear error message
+2. Show all available methods to set the API key
+3. Provide the URL to obtain an API key
+4. Exit with status code 1
 
 For Vertex AI, if `VERTEX_PROJECT_ID` is missing when `GEMINI_USE_VERTEX=true`, the helper will provide clear instructions.
 
 This ensures users get immediate, actionable feedback when configuration is missing.
+
+## Best Practices
+
+### Security
+1. **Never commit API keys**: Use `.env` files (gitignored) or environment variables
+2. **Rotate keys regularly**: Especially for production
+3. **Scope appropriately**: Use project-specific keys when possible
+
+### Development
+1. **Test locally first**: Validate API key before deploying
+2. **Use appropriate model**: `gemini-2.5-flash` for most tasks, `gemini-2.5-pro` for complex
+3. **Handle errors gracefully**: Catch API errors and provide helpful messages
+
+### Production
+1. **Use Vertex AI**: Better security, SLAs, and enterprise features
+2. **Monitor usage**: Track API calls and costs
+3. **Cache responses**: Reduce redundant API calls

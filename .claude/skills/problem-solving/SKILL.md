@@ -7,6 +7,14 @@ description: Apply systematic problem-solving techniques for marketing challenge
 
 Systematic techniques for solving complex marketing challenges, breaking through creative blocks, and optimizing campaigns.
 
+## Language & Quality Standards
+
+**CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
+
+**Standards**: Token efficiency, sacrifice grammar for concision, list unresolved questions at end.
+
+---
+
 ## When to Use This Skill
 
 Apply problem-solving techniques when facing:
