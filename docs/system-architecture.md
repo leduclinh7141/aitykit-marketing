@@ -2,11 +2,11 @@
 
 **Last Updated**: 2025-10-26
 **Version**: 1.8.0
-**Project**: ClaudeKit Engineer
+**Project**: AityKit Marketing
 
 ## Overview
 
-ClaudeKit Engineer implements a multi-agent AI orchestration architecture where specialized agents collaborate through a file-based communication protocol. The system enables developers to leverage AI assistance throughout the entire software development lifecycle - from planning and implementation to testing, review, and deployment.
+AityKit Marketing implements a multi-agent AI orchestration architecture where specialized agents collaborate through a file-based communication protocol. The system enables developers to leverage AI assistance throughout the entire software development lifecycle - from planning and implementation to testing, review, and deployment.
 
 ## Architectural Pattern
 

@@ -1,7 +1,7 @@
 ============================= test session starts ==============================
 platform linux -- Python 3.14.0, pytest-8.4.2, pluggy-1.6.0 -- /home/linuxbrew/.linuxbrew/opt/python@3.14/bin/python3.14
 cachedir: .pytest_cache
-rootdir: /mnt/d/www/claudekit/claudekit-engineer/.claude/skills/ai-multimodal/scripts/tests
+rootdir: /mnt/d/www/aitykit/aitykit-marketing/.claude/skills/ai-multimodal/scripts/tests
 plugins: mock-3.15.1, anyio-4.11.0, cov-7.0.0
 collecting ... collected 56 items
 
@@ -80,7 +80,7 @@ ________________ TestPDFPageExtraction.test_extract_single_page ________________
                       ^^^^^^^^^^^^^^^^^^^
 /home/linuxbrew/.linuxbrew/opt/python@3.14/lib/python3.14/unittest/mock.py:1473: in get_original
     raise AttributeError(
-E   AttributeError: <module 'document_converter' from '/mnt/d/www/claudekit/claudekit-engineer/.claude/skills/ai-multimodal/scripts/document_converter.py'> does not have the attribute 'PdfWriter'
+E   AttributeError: <module 'document_converter' from '/mnt/d/www/aitykit/aitykit-marketing/.claude/skills/ai-multimodal/scripts/document_converter.py'> does not have the attribute 'PdfWriter'
 ________________ TestPDFPageExtraction.test_extract_page_range _________________
 /home/linuxbrew/.linuxbrew/opt/python@3.14/lib/python3.14/unittest/mock.py:1429: in patched
     with self.decoration_helper(patched,
@@ -98,7 +98,7 @@ ________________ TestPDFPageExtraction.test_extract_page_range _________________
                       ^^^^^^^^^^^^^^^^^^^
 /home/linuxbrew/.linuxbrew/opt/python@3.14/lib/python3.14/unittest/mock.py:1473: in get_original
     raise AttributeError(
-E   AttributeError: <module 'document_converter' from '/mnt/d/www/claudekit/claudekit-engineer/.claude/skills/ai-multimodal/scripts/document_converter.py'> does not have the attribute 'PdfWriter'
+E   AttributeError: <module 'document_converter' from '/mnt/d/www/aitykit/aitykit-marketing/.claude/skills/ai-multimodal/scripts/document_converter.py'> does not have the attribute 'PdfWriter'
 ________________ TestPDFOptimization.test_optimize_pdf_success _________________
 /home/linuxbrew/.linuxbrew/opt/python@3.14/lib/python3.14/unittest/mock.py:1429: in patched
     with self.decoration_helper(patched,
@@ -116,7 +116,7 @@ ________________ TestPDFOptimization.test_optimize_pdf_success _________________
                       ^^^^^^^^^^^^^^^^^^^
 /home/linuxbrew/.linuxbrew/opt/python@3.14/lib/python3.14/unittest/mock.py:1473: in get_original
     raise AttributeError(
-E   AttributeError: <module 'document_converter' from '/mnt/d/www/claudekit/claudekit-engineer/.claude/skills/ai-multimodal/scripts/document_converter.py'> does not have the attribute 'PdfWriter'
+E   AttributeError: <module 'document_converter' from '/mnt/d/www/aitykit/aitykit-marketing/.claude/skills/ai-multimodal/scripts/document_converter.py'> does not have the attribute 'PdfWriter'
 _______________ TestImageExtraction.test_extract_images_success ________________
 /home/linuxbrew/.linuxbrew/opt/python@3.14/lib/python3.14/unittest/mock.py:1429: in patched
     with self.decoration_helper(patched,
@@ -134,7 +134,7 @@ _______________ TestImageExtraction.test_extract_images_success ________________
                       ^^^^^^^^^^^^^^^^^^^
 /home/linuxbrew/.linuxbrew/opt/python@3.14/lib/python3.14/unittest/mock.py:1473: in get_original
     raise AttributeError(
-E   AttributeError: <module 'document_converter' from '/mnt/d/www/claudekit/claudekit-engineer/.claude/skills/ai-multimodal/scripts/document_converter.py'> does not have the attribute 'Image'
+E   AttributeError: <module 'document_converter' from '/mnt/d/www/aitykit/aitykit-marketing/.claude/skills/ai-multimodal/scripts/document_converter.py'> does not have the attribute 'Image'
 _____________ TestMarkdownConversion.test_convert_markdown_success _____________
 /home/linuxbrew/.linuxbrew/opt/python@3.14/lib/python3.14/unittest/mock.py:1429: in patched
     with self.decoration_helper(patched,

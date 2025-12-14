@@ -1,12 +1,12 @@
-# ClaudeKit Engineer - Project Roadmap
+# AityKit Marketing - Project Roadmap
 
 **Last Updated:** 2025-11-11
 **Current Version:** 1.8.0
-**Repository:** https://github.com/claudekit/claudekit-engineer
+**Repository:** https://github.com/leduclinh7141/aitykit-marketing
 
 ## Executive Summary
 
-ClaudeKit Engineer is an AI-powered development orchestration framework enabling developers to build professional software faster through intelligent agent collaboration, automated workflows, and comprehensive quality management. The project has successfully completed core foundation phases and is advancing cross-platform compatibility and advanced features.
+AityKit Marketing is an AI-powered development orchestration framework enabling developers to build professional software faster through intelligent agent collaboration, automated workflows, and comprehensive quality management. The project has successfully completed core foundation phases and is advancing cross-platform compatibility and advanced features.
 
 ---
 
@@ -396,6 +396,6 @@ Enterprise-grade features and deployment options.
 
 ---
 
-**Maintained By:** ClaudeKit Engineer Team
+**Maintained By:** AityKit Marketing Team
 **Last Review:** 2025-11-11
 **Next Review Target:** 2025-12-11

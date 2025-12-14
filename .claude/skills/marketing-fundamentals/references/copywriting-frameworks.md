@@ -79,7 +79,7 @@ Your product/service as the bridge between them.
 **Example:**
 > **Before:** You're manually tracking 15 spreadsheets, missing deadlines, and losing leads in the chaos.
 > **After:** One dashboard shows everything. Automated follow-ups. Zero leads falling through cracks.
-> **Bridge:** ClaudeKit Marketing connects all your tools and automates your workflow in minutes.
+> **Bridge:** AityKit Marketing connects all your tools and automates your workflow in minutes.
 
 ---
 

@@ -21,7 +21,7 @@ const { execSync } = require('child_process');
   const claudeDir = path.join(projectRoot, '.claude');
   const metadataPath = path.join(claudeDir, 'metadata.json');
   const distDir = path.join(projectRoot, 'dist');
-  const archivePath = path.join(distDir, 'claudekit-engineer.zip');
+  const archivePath = path.join(distDir, 'aitykit-marketing.zip');
 
   try {
     if (!fs.existsSync(packageJsonPath)) {

@@ -1,6 +1,6 @@
-# ClaudeKit Commands Reference
+# AityKit Commands Reference
 
-A comprehensive guide to all available slash commands in ClaudeKit Engineer.
+A comprehensive guide to all available slash commands in AityKit Marketing.
 
 ## Table of Contents
 
@@ -20,7 +20,7 @@ A comprehensive guide to all available slash commands in ClaudeKit Engineer.
 
 ### What are Slash Commands?
 
-Slash commands are powerful shortcuts that trigger specialized AI agents and workflows in ClaudeKit Engineer. They follow the simple syntax:
+Slash commands are powerful shortcuts that trigger specialized AI agents and workflows in AityKit Marketing. They follow the simple syntax:
 
 ```bash
 /<command-name> [arguments]
@@ -1330,12 +1330,12 @@ Usage: `/design:fast`, `/fix:hard`, `/custom:your-command`
 ## Resources
 
 - [Claude Code Documentation](https://docs.claude.com/en/docs/claude-code/overview)
-- [ClaudeKit Official Site](https://claudekit.cc/)
+- [AityKit Official Site](https://aitykit.cc/)
 - [Slash Commands Guide](https://docs.claude.com/en/docs/claude-code/slash-commands)
-- [GitHub Repository](https://github.com/claudekit/claudekit-engineer)
+- [GitHub Repository](https://github.com/leduclinh7141/aitykit-marketing)
 
 ---
 
 **Last Updated**: 2025-01-16
 
-For questions or support, visit [ClaudeKit.cc](https://claudekit.cc/) or open an issue on GitHub.
+For questions or support, visit [AityKit.cc](https://aitykit.cc/) or open an issue on GitHub.
