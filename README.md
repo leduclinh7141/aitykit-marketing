@@ -2,9 +2,14 @@
 
 **AI-Powered Marketing Automation Framework for Claude Code**
 
-A comprehensive marketing kit that brings systematic, efficient marketing workflows to Claude Code. Plan campaigns, generate content, analyze competitors, and automate marketing operations—all powered by specialized AI agents and the Compounding Marketing philosophy.
+A comprehensive marketing kit that brings systematic, efficient marketing workflows to Claude Code. Plan campaigns, generate content, analyze competitors, and automate marketing operations—all powered by 18 specialized AI agents, 76 slash commands, and the Compounding Marketing philosophy.
 
-**✨ New:** Now includes interactive training modules and plugin architecture from [cc4.marketing](https://github.com/cc4-marketing/cc4.marketing)!
+**System Overview:**
+- **18 Marketing Agents** - Core, Supporting, and Reviewer agents
+- **76 Slash Commands** - Organized by category (campaign, content, SEO, analytics, etc.)
+- **9 Marketing Skills** - Domain expertise modules
+- **3 Core Workflows** - Marketing Pipeline, Sales Pipeline, CRM Lifecycle
+- **19 Training Lessons** - Interactive hands-on learning
 
 ## What is Claude Code?
 
@@ -133,28 +138,36 @@ claude
 
 ## What's New 🎉
 
-### CC4.Marketing Integration (2025-12-14)
+### Enterprise-Grade Marketing System (December 2024)
 
-✅ **Interactive Training Modules**
-- 19 hands-on lessons (`/training:*` commands)
-- Practice project: Markit agency → Planerio client
-- Learn by doing real marketing work
+✅ **18 Specialized Marketing Agents**
+- 6 Core agents (Attraction, Lead Qualifier, Email Wizard, Sales Enabler, Continuity, Upsell)
+- 6 Supporting agents (Researcher, Brainstormer, Planner, Copywriter, Project Manager, Docs Manager)
+- 6 Reviewer agents (Brand Voice, CRO, SEO, Manager Maria, Solo Steve, Startup Sam)
 
-✅ **Plugin Architecture**
-- Content Factory: High-volume content generation
-- Campaign Manager: Systematic campaign planning
-- Modular, specialized workflows
+✅ **76 Slash Commands**
+- Campaign management (`/campaign:*`)
+- Content creation (`/content:*`)
+- SEO optimization (`/seo:*`)
+- Analytics & reporting (`/analytics:*`, `/report:*`)
+- Sales & leads (`/sales:*`, `/leads:*`)
+- Email sequences (`/sequence:*`)
+- And more...
 
-✅ **Persona Reviewers**
-- 6 specialized review agents (Brand, SEO, Conversion, Startup Founder, Marketing Manager, Solopreneur)
-- Multi-perspective content validation
+✅ **3 Core Workflows**
+- Marketing Pipeline: TOFU → MOFU → BOFU → Retention
+- Sales Pipeline: Lead → MQL → SQL → Opportunity → Customer
+- CRM Lifecycle: Contact management and automation
 
-✅ **Enhanced Documentation**
-- Complete usage guide (`./docs/usage-guide.md`)
-- Plugin system overview (`./plugins/README.md`)
-- Training guide (`./training/README.md`)
+✅ **19 Interactive Training Lessons**
+- Module 0: Getting Started (3 lessons)
+- Module 1: Core Concepts (7 lessons)
+- Module 2: Advanced Applications (6 lessons)
+- Bonus content: Pattern Library, 10x Marketer Framework
 
-**See:** `./docs/cc4-integration-summary.md` for complete details
+✅ **Multi-Language Support**
+- All agents and commands respond in user's language
+- Enterprise-grade quality standards
 
 ## Project Structure
 
@@ -163,7 +176,7 @@ claude
 │   ├── agents/             # Marketing agents + persona reviewers
 │   │   ├── reviewers/      # Quality assurance persona agents
 │   │   └── *.md           # Core marketing agents
-│   ├── commands/           # Slash commands (70+ marketing commands)
+│   ├── commands/           # Slash commands (76 marketing commands)
 │   │   ├── training/       # Interactive training lessons
 │   │   └── */             # Organized by category (campaign, content, seo, etc.)
 │   ├── hooks/              # Discord/Telegram notification hooks
@@ -499,7 +512,9 @@ Marketing domain knowledge including:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is proprietary software. A commercial license is required for use. See the [LICENSE](LICENSE) file for details.
+
+For licensing inquiries: [aitykit.cc](https://aitykit.cc)
 
 ## Learn More
 
@@ -520,4 +535,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Start building AI-powered marketing campaigns today!** This framework provides everything you need to create professional marketing campaigns with intelligent agent assistance.
+**Start building AI-powered marketing campaigns today!**
+
+This framework provides everything you need to create professional marketing campaigns with intelligent agent assistance.
+
+---
+
+*Copyright 2024-2025 AityKit Team. All Rights Reserved.*
